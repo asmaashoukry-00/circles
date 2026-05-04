@@ -1,0 +1,373 @@
+/* ========================================
+   GLOBAL ACCOUNTING PAGE - CUSTOM CSS (NO BOOTSTRAP)
+   ======================================== */
+
+/* --- CSS Variables --- */
+:root {
+   --primary-blue: #1E40AF;
+   --dark-blue: #1E3A8A;
+   --light-blue: #3B82F6;
+   --deep-black: #121212;
+   --soft-white: #fcfcfc;
+   --text-dark: #1a1a1a;
+   --text-gray: #666666;
+   --text-light: #ffffff;
+   --bg-light: #f9f9f9;
+   --border-color: #eeeeee;
+   --transition-fast: 0.3s ease;
+   --transition-smooth: 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* --- Reset & Base --- */
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+html {
+   scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Tajawal', sans-serif;
+    background-color: var(--soft-white);
+    color: var(--text-dark);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Internal content - use Cairo font */
+.service-content,
+.service-content h2,
+.service-content p,
+.service-features li,
+.service-number,
+.nav-logo,
+.nav-links a,
+.nav-btn {
+    font-family: 'Cairo', sans-serif;
+}
+
+img {
+   max-width: 100%;
+   height: auto;
+   display: block;
+}
+
+a {
+   text-decoration: none;
+   color: inherit;
+   transition: var(--transition-fast);
+}
+
+ul {
+   list-style: none;
+}
+
+/* --- Container --- */
+.container {
+   max-width: 1200px;
+   margin: 0 auto;
+   padding: 0 20px;
+}
+
+/* ----------------------------------------------------------- */
+/* NAVIGATION */
+/* ----------------------------------------------------------- */
+.logo-img {
+  height: 30px; 
+  width: auto;  
+  display: block;
+}
+
+.nav-logo {
+  display: flex;
+  align-items: center;
+}
+.floating-nav {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    max-width: 1000px;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    border-radius: 50px;
+    padding: 10px 25px;
+    z-index: 1000;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05);
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-logo { font-weight: 800; font-size: 20px; letter-spacing: 1px; }
+.nav-logo span { color: var(--primary); }
+
+.nav-links { list-style: none; display: flex; gap: 30px; margin: 0; padding: 0; }
+.nav-links a { text-decoration: none; color: #444; font-size: 14px; font-weight: 500; transition: 0.3s; }
+.nav-links a.active, .nav-links a:hover { color: var(--primary); }
+
+.nav-btn {
+    background: #111;
+    color: #fff;
+    border: none;
+    padding: 8px 20px;
+    border-radius: 25px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+
+
+
+/* ========================================
+   HERO SECTION
+   ======================================== */
+.hero-creative-layered {
+  position: relative;
+  min-height: 65vh; 
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 40px 0;
+}
+
+.hero-inner {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  z-index: 2;
+}
+
+/* تنسيق العناصر الطافية بشفافية */
+.floating-elements .element {
+  position: absolute;
+  z-index: -1; /* خلف النص */
+  opacity: 0.4; /* شفافية عالية لتبدو كخلفية */
+  /* filter: grayscale(100%);  */
+  transition: all 0.6s ease;
+  pointer-events: none; /* لكي لا تعيق الضغط على الزر */
+}
+
+/* توزيع الأماكن بشكل إبداعي */
+.el-1 { width: 300px; top: -50px; right: -50px; transform: rotate(-10deg); }
+.el-2 { width: 250px; bottom: -20px; left: -100px; transform: rotate(15deg); }
+.el-3 { width: 200px; top: 100px; left: 0px; transform: rotate(-5deg); opacity: 0.1 !important; }
+
+/* تأثير عند الـ Hover على السيكشن: العناصر تصبح أوضح قليلاً */
+.hero-creative-layered:hover .element {
+  opacity: 0.5;
+  transform: scale(1.05) rotate(0deg);
+}
+
+.hero-content {
+  text-align: center;
+}
+
+.hero-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #1a1a1a;
+  margin-bottom: 20px;
+}
+
+.gradient-text {
+  background: linear-gradient(90deg, #3a3a3a, #555555);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 600;
+
+}
+
+.hero-subtitle {
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 30px;
+}
+
+
+.btn {
+  display: inline-block;
+  padding: 10px 45px;
+  background: #1a1a1a;
+  color: #fff;
+  border-radius: 50px; 
+  text-decoration: none;
+  font-weight: 600;
+  /* box-shadow: 0 10px 20px rgba(0,0,0,0.1); */
+  transition: 0.3s;
+}
+
+.btn:hover {
+ 
+  transform: translateY(-3px);
+}
+/* ========================================
+   SERVICES SECTION
+   ======================================== */
+.services-section {
+   padding: 100px 0;
+}
+
+.service-row {
+   display: grid;
+  grid-template-columns: .9fr 1fr ;
+   gap: 60px;
+   align-items: center;
+   margin-bottom: 100px;
+}
+
+.service-row:last-child {
+   margin-bottom: 0;
+}
+
+.service-row.reverse {
+   direction: ltr;
+   grid-template-columns: .9fr 1.1fr  ;
+}
+
+.service-row:not(.reverse) .service-content {
+   direction: rtl;
+}
+
+.service-row.reverse .service-content {
+   direction: rtl;
+   text-align: right;
+}
+.service-image {
+  max-width: 660px;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.service-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
+
+
+
+.service-content {
+   position: relative;
+   padding: 20px;
+}
+
+.service-number {
+   font-size: 6rem;
+   font-weight: 900;
+   color: rgba(30, 64, 175, 0.08);
+   position: absolute;
+   top: -20px;
+   right: 10px;
+   line-height: 1;
+}
+
+.service-content h2 {
+   font-size: 2.2rem;
+   font-weight: 800;
+   margin-bottom: 25px;
+   color: var(--text-dark);
+   border-right: 5px solid var(--primary-blue);
+   padding-right: 20px;
+}
+
+/* .service-row.reverse .service-content h2 {
+   border-right: none;
+   border-left: 5px solid var(--primary-blue);
+   padding-right: 20px;
+   padding-right: 0;
+} */
+
+.service-content p {
+   font-size: 1.15rem;
+   color: var(--text-gray);
+   line-height: 1.8;
+   margin-bottom: 25px;
+}
+
+.service-features {
+   padding: 0;
+   margin: 0;
+}
+
+.service-features li {
+   display: flex;
+   align-items: flex-start;
+   gap: 12px;
+   margin-bottom: 15px;
+   font-weight: 600;
+   color: #333;
+   font-size: 1.05rem;
+}
+
+.service-features li i {
+   color: var(--primary-blue);
+   font-size: 0.9rem;
+   margin-top: 5px;
+   margin-left: 8px;
+}
+
+.service-row.reverse .service-features li {
+   flex-direction: row;
+   text-align: right;
+}
+
+@media (max-width: 991px) {
+   .service-row,
+   .service-row.reverse {
+      grid-template-columns: 1fr;
+      gap: 40px;
+      text-align: center;
+      direction: rtl;
+   }
+
+   .service-row.reverse .service-content {
+      direction: rtl;
+      order: -1;
+   }
+
+   .service-content h2 {
+      border-right: none;
+      border-bottom: 4px solid var(--primary-blue);
+      display: inline-block;
+      padding-bottom: 10px;
+      padding-right: 0;
+      padding-left: 0;
+   }
+
+   .service-row.reverse .service-content h2 {
+      border-left: none;
+      border-bottom: 4px solid var(--primary-blue);
+   }
+
+   .service-image img {
+      height: 200px;
+      border-radius: 20px 0 20px 0;
+   }
+}
+
+@media (max-width: 768px) {
+   .service-image img {
+      height: 245px;
+   }
+
+   .service-number {
+      font-size: 4.5rem;
+   }
+
+   .service-content h2 {
+      font-size: 1.8rem;
+   }
+}

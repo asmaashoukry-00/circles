@@ -1,0 +1,137 @@
+<nav class="floating-nav">
+      <div class="nav-container">
+        <div class="nav-logo">
+          <a href="/landingpage/index.html" class="nav-logo-text">
+            <img src="/navbar/Original.png" alt="سيركلز" class="nav-logo-image">
+          </a>
+        </div>
+        
+        <!-- Desktop Menu -->
+        <ul class="nav-links desktop-menu">
+          <li><a href="/landingpage/index.html" class="active">الرئيسية</a></li>
+          <li class="mega-dropdown">
+            <a href="#" class="dropdown-toggle">
+              الخدمات <i class="fa-solid fa-chevron-down"></i>
+            </a>
+            <div class="mega-menu">
+              <div class="mega-menu-grid">
+
+                 <!-- --------------- finance---------------- -->
+                <div class="mega-column">
+                  <a href="/pages/finance/finance.html"><h4>المنظومة المالية والمحاسبية</h4></a>
+                  <a href="/services/finance/accounting/accounting.html">نظام المحاسبة العامة</a>
+                  <a href="/services/finance/banks/banks.html">إدارة حسابات البنوك والنقدية</a>
+                  <a href="/services/finance/receivable/receivable.html">إدارة الحسابات المدينة</a>
+                  <a href="/services/finance/payable/payable.html">إدارة الحسابات الدائنة</a>
+                  <a href="/services/finance/fixed-assets/fixed-assets.html">إدارة الأصول الثابتة</a>
+                  <a href="/services/finance/projects/projects.html">إدارة المشاريع</a>
+                </div>
+                <!-- --------------- hr ---------------- -->
+                <div class="mega-column">
+                  <a href="/pages/hr/hr.html"><h4>إدارة الموارد البشرية والرواتب</h4></a>
+                  <a href="/services/hr/payroll/payroll.html">نظام الرواتب وشؤون الموظفين</a>
+                  <a href="/services/hr/attendance/attendance.html">نظام مراقبة الدوام</a>
+                  <a href="/services/hr/self-service/self-service.html">نظام خدمات الموظفين</a>
+                  <!-- <a href="/services/hr/one-circles">سيركلز ون</a> -->
+                  <a href="/services/hr/mobile-app/mobile-app.html">تطبيق الهاتف المحمول</a>
+                </div>
+
+                 
+
+                <!-- --------------- talent ---------------- -->
+                <div class="mega-column">
+                  <a href="/pages/talent/talent.html"><h4>إدارة المواهب والتطوير</h4></a> 
+                  <a href="/services/talent/development/development.html">نظام إدارة المواهب</a>
+                  <a href="/services/talent/recruitment/recruitment.html">نظام التوظيف</a>
+                  <a href="/services/talent/training/training.html">نظام التدريب</a>
+                  <a href="/services/talent/performance/performance.html">نظام التقييم</a>
+
+                </div>
+
+                <!--  -->
+                <div class="mega-column special">
+                  <a href="/pages/operations/operations.html"><h4>المبيعات والمخزون</h4></a>
+                  <a href="/services/operations/sales/sales.html">إدارة المبيعات</a>
+                  <a href="/services/operations/procurement/procurement.html">إدارة المشتريات</a>
+                  <a href="/services/operations/inventory/inventory.html">إدارة المستودعات والمخزون</a>
+                  <a href="/services/operations/analytics/analytics.html">تحليل البيانات</a>
+                </div>
+              </div>
+            </div>
+          </li>
+          <!-- <li><a href="#">المميزات</a></li> -->
+          <li><a href="/about/aboutt.html">من نحـــن</a></li>
+          <li><a href="/contact/contact.html">اتصل بنــا</a></li>
+        </ul>
+        
+        <!-- Mobile Menu -->
+        <ul class="nav-links mobile-menu" id="mobileMenu">
+          <div class="menu-panel level-0" id="level0">
+            <li class="mobile-nav-item">
+              <a href="/" class="active" onclick="closeMobileMenu()">
+                الرئيسية
+              </a>
+            </li> 
+            <li class="mobile-nav-item has-sub secondary-link">
+              <a href="#" onclick="event.preventDefault(); goToServices();">
+                الخدمات <i class="fa-solid fa-chevron-left"></i>
+              </a>
+            </li>
+            <li class="mobile-nav-item secondary-link">
+              <a href="#" onclick="closeMobileMenu()">المميزات</a>
+            </li>
+            <li class="mobile-nav-item secondary-link">
+              <a href="#" onclick="closeMobileMenu()">الأسعار</a>
+            </li>
+            <li class="mobile-nav-item secondary-link">
+              <a href="#" onclick="closeMobileMenu()">اتصل بنا</a>
+            </li>
+            <div class="mobile-menu-footer">
+              <p class="mobile-menu-desc">من إدارة الموظفين إلى المبيعات والحسابات.. كل شيء تحت سيطرتك بنظام واحد.</p>
+              <button class="mobile-cta-btn" onclick="closeMobileMenu()">اطلب عرض توضيحي</button>
+            </div>
+          </div>
+          <div class="menu-panel level-1" id="level1">
+            <li class="menu-header">
+              <button class="back-btn" onclick="goBack()">
+                <i class="fa-solid fa-arrow-right"></i>
+              </button>
+              <span>الخدمات</span>
+            </li>
+            <li class="mobile-nav-item has-sub main-link" data-service="hr">
+              <a href="#" onclick="event.preventDefault(); goToSubMenu('hr');">
+                إدارة الموارد البشرية والرواتب <i class="fa-solid fa-chevron-left"></i>
+              </a>
+            </li>
+            <li class="mobile-nav-item has-sub main-link" data-service="finance">
+              <a href="#" onclick="event.preventDefault(); goToSubMenu('finance');">
+                المنظومة المالية والمبيعات <i class="fa-solid fa-chevron-left"></i>
+              </a>
+            </li>
+            <li class="mobile-nav-item has-sub main-link" data-service="talent">
+              <a href="#" onclick="event.preventDefault(); goToSubMenu('talent');">
+                إدارة المواهب والتطوير <i class="fa-solid fa-chevron-left"></i>
+              </a>
+            </li>
+            <li class="mobile-nav-item has-sub main-link" data-service="solutions">
+              <a href="#" onclick="event.preventDefault(); goToSubMenu('solutions');">
+                حلول إضافية <i class="fa-solid fa-chevron-left"></i>
+              </a>
+            </li>
+          </div>
+          <div class="menu-panel level-2" id="level2"></div>
+        </ul>
+        
+        <button class="nav-btn">اطلب عرض توضيحي </button>
+        
+        <button class="mobile-toggle" onclick="toggleMobileMenu()" aria-label="Toggle menu">
+          <i class="fa-solid fa-xmark"></i>
+          <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </button>
+      </div>
+    </nav>
+    <div class="mobile-overlay" onclick="closeMobileMenu()"></div>

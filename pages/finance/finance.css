@@ -1,0 +1,211 @@
+.finance-hero {
+  padding: 120px 0 60px;
+  text-align: center;
+  background: linear-gradient(to bottom, #ffffff, #ffffff);
+}
+
+.finance-hero .hero-title {
+  font-size: 48px;
+  font-weight: 800;
+  color: #111827;
+  line-height: 1.4;
+  margin-bottom: 25px;
+}
+
+.finance-hero .highlight-wrap {
+  position: relative;
+  display: inline-block;
+  padding: 5px 20px;
+  z-index: 1;
+}
+
+.finance-hero .scribble-marker {
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 105%;
+  height: 130%;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.finance-hero .scribble-marker path {
+  stroke-dasharray: 1200;
+  stroke-dashoffset: 1200;
+  animation: drawScribble 1.5s ease-out forwards;
+  animation-delay: 0.3s;
+}
+
+@keyframes drawScribble {
+  to { stroke-dashoffset: 0; }
+}
+
+.finance-hero .hero-description {
+  font-size: 19px;
+  color: #4b5563;
+  max-width: 750px;
+  margin: 0 auto 45px;
+  line-height: 1.7;
+}
+
+.finance-hero .hero-btn {
+  background: #000000;
+  color: white;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 700;
+  display: inline-block;
+  transition: 0.3s;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  padding: 18px 45px;
+}
+
+.finance-hero .hero-btn:hover {
+  background: #4f46e5;
+  transform: translateY(-2px);
+}
+
+.features-section { 
+  padding-bottom: 100px;
+  background-color: #fcfcfd; 
+}
+
+.features-section .container { 
+  max-width: 1200px; 
+  margin: 0 auto; 
+  padding: 0 20px; 
+}
+
+.features-section .section-header { 
+  text-align: center; 
+  margin-bottom: 50px; 
+}
+
+.features-section .section-main-title { 
+  font-size: 32px; 
+  color: #111827; 
+  font-weight: 800; 
+  margin-bottom: 10px; 
+}
+
+.underline-container {
+  position: relative;
+  display: inline-block;
+  color: #000000;
+  padding: 0 5px;
+}
+
+.scribble-line {
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  width: 100%;
+  height: 15px;
+  z-index: 1;
+  overflow: visible !important;
+}
+
+.scribble-line path {
+  fill: none;
+  stroke: #4f46e5;
+  stroke-width: 5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 600;
+  stroke-dashoffset: 600;
+  animation: scribbleLoop 4s ease-in-out infinite;
+}
+
+@keyframes scribbleLoop {
+  0% { stroke-dashoffset: 600; }
+  25% { stroke-dashoffset: 0; }
+  75% { stroke-dashoffset: 0; }
+  100% { stroke-dashoffset: 600; }
+}
+
+.bento-grid {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 30px;
+  align-items: start;
+}
+
+.tabs-side-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 24px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+  border: 1px solid #f3f4f6;
+}
+
+.tab-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 14px 20px;
+  border-radius: 16px;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  color: #4b5563;
+  border: 1px solid transparent;
+}
+
+.tab-item .tab-icon {
+  width: 35px; height: 35px;
+  display: flex; align-items: center; justify-content: center;
+  background: #f3f4f6; border-radius: 10px; color: #6b7280;
+  transition: 0.3s;
+}
+
+.tab-item span { font-weight: 600; font-size: 15px; }
+
+.tab-item:hover { background: #111827; color: #fff; }
+.tab-item:hover .tab-icon { background: rgba(255,255,255,0.1); color: #fff; }
+
+.tab-item.active {
+  background: #111827;
+  color: #fff;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.tab-item.active .tab-icon { background: rgba(255,255,255,0.1); color: #fff; }
+
+.display-area {
+  background: #f8fafc;
+  border-radius: 32px;
+  padding: 20px;
+  border: 1px solid #f1f5f9;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.03);
+  width: 100%;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.mockup-wrapper-display {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.display-img {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border-radius: 12px;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  opacity: 1;
+}
+
+
+

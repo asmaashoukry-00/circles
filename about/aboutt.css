@@ -1,0 +1,170 @@
+
+:root {
+    --primary-blue: #0055ff;
+    --pure-white: #ffffff;
+    --soft-black: #1a1a1a;
+    --border-thin: #eeeeee;
+}
+
+.creative-about {
+    background-color: var(--pure-white);
+    padding: 120px 0;
+    font-family: 'Tajawal', sans-serif;
+    color: var(--soft-black);
+}
+
+.about-container {
+    max-width: 1160px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+/* الرؤية والرسالة - تداخل */
+.vision-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 100px;
+    align-items: center;
+    margin-bottom: 150px;
+}
+
+.section-label {
+    font-size: 24px;
+    color: var(--primary-blue);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+.main-para {
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 1.5;
+    position: relative;
+}
+
+.blue-connector {
+    width: 150px;
+    margin-top: 20px;
+}
+
+/* تداخل الصور والكتل */
+.image-layering {
+    position: relative;
+}
+
+.main-img-box {
+    width: 100%;
+    height: 500px;
+    background: #f5f5f5;
+    border-radius: 4px; /* لزيادة حدة التصميم المينيماليست */
+    overflow: hidden;
+}
+
+.pixel-perfect-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: grayscale(100%);
+    transition: 0.6s;
+}
+
+.pixel-perfect-img:hover {
+    filter: grayscale(0%);
+}
+
+.floating-text-box {
+    position: absolute;
+    bottom: -40px;
+    left: -60px;
+    background: var(--soft-black);
+    color: white;
+    padding: 40px;
+    width: 300px;
+    border-radius: 10px;
+    box-shadow: 20px 20px 0px rgba(0, 85, 255, 0.1);
+}
+.floating-text-box h3{
+    font-size: 18px;
+    font-weight: 600;
+}
+.floating-text-box p{
+    font-size: 18px;
+    font-weight: 400;
+}
+/*  responsive */
+@media (max-width: 1024px) {
+    .about-container {
+        padding: 0 30px;
+    }
+    .vision-grid {
+        gap: 50px;
+        margin-bottom: 100px;
+    }
+    .main-para {
+        font-size: 24px;
+    }
+    .floating-text-box {
+        left: -30px;
+        width: 280px;
+        padding: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .creative-about {
+        padding: 60px 0;
+    }
+    .vision-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        margin-bottom: 60px;
+        text-align: center;
+    }
+    .text-block {
+        order: 1;
+    }
+    .image-layering {
+        order: 2;
+        margin-top: 20px;
+    }
+    .blue-connector {
+        margin: 20px auto;
+        display: block;
+    }
+    .main-img-box {
+        height: 350px;
+    }
+    .floating-text-box {
+        position: relative;
+        left: 0;
+        bottom: 0;
+        width: 90%;
+        margin: -50px auto 0;
+        box-shadow: 10px 10px 0px rgba(0, 85, 255, 0.1);
+        text-align: right;
+    }
+    .main-para {
+        font-size: 22px;
+    }
+}
+
+@media (max-width: 480px) {
+    .text-block h1 {
+        margin-top: 20px;
+    }
+    .main-img-box {
+        height: 250px;
+    }
+    .main-para {
+        font-size: 20px;
+    }
+    .section-label {
+        font-size: 18px;
+    }
+    .floating-text-box {
+        width: 100%;
+        padding: 20px;
+    }
+}
