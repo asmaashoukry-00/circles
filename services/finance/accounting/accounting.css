@@ -149,22 +149,22 @@ ul {
   z-index: 2;
 }
 
-/* تنسيق العناصر الطافية بشفافية */
+
 .floating-elements .element {
   position: absolute;
-  z-index: -1; /* خلف النص */
-  opacity: 0.4; /* شفافية عالية لتبدو كخلفية */
+  z-index: -1;
+  opacity: 0.4; 
   /* filter: grayscale(100%);  */
   transition: all 0.6s ease;
-  pointer-events: none; /* لكي لا تعيق الضغط على الزر */
+  pointer-events: none; 
 }
 
-/* توزيع الأماكن بشكل إبداعي */
+
 .el-1 { width: 300px; top: -50px; right: -50px; transform: rotate(-10deg); }
 .el-2 { width: 250px; bottom: -20px; left: -100px; transform: rotate(15deg); }
 .el-3 { width: 200px; top: 100px; left: 0px; transform: rotate(-5deg); opacity: 0.1 !important; }
 
-/* تأثير عند الـ Hover على السيكشن: العناصر تصبح أوضح قليلاً */
+
 .hero-creative-layered:hover .element {
   opacity: 0.5;
   transform: scale(1.05) rotate(0deg);

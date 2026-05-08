@@ -1,25 +1,25 @@
-.finance-hero {
-  padding: 120px 0 60px;
+.page-hero {
+  padding: 150px 0 110px;
   text-align: center;
   background: linear-gradient(to bottom, #ffffff, #ffffff);
 }
 
-.finance-hero .hero-title {
-  font-size: 48px;
+.page-hero .hero-title {
+  font-size: 40px;
   font-weight: 800;
   color: #111827;
   line-height: 1.4;
-  margin-bottom: 25px;
+  margin-bottom: 10px;
 }
 
-.finance-hero .highlight-wrap {
+.page-hero .highlight-wrap {
   position: relative;
   display: inline-block;
   padding: 5px 20px;
   z-index: 1;
 }
 
-.finance-hero .scribble-marker {
+.page-hero .scribble-marker {
   position: absolute;
   top: 55%;
   left: 50%;
@@ -30,7 +30,7 @@
   pointer-events: none;
 }
 
-.finance-hero .scribble-marker path {
+.page-hero .scribble-marker path {
   stroke-dasharray: 1200;
   stroke-dashoffset: 1200;
   animation: drawScribble 1.5s ease-out forwards;
@@ -41,7 +41,7 @@
   to { stroke-dashoffset: 0; }
 }
 
-.finance-hero .hero-description {
+.page-hero .hero-description {
   font-size: 19px;
   color: #4b5563;
   max-width: 750px;
@@ -49,7 +49,7 @@
   line-height: 1.7;
 }
 
-.finance-hero .hero-btn {
+.page-hero .hero-btn {
   background: #000000;
   color: white;
   border-radius: 50px;
@@ -57,15 +57,29 @@
   font-weight: 700;
   display: inline-block;
   transition: 0.3s;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
-  padding: 18px 45px;
+ 
+  padding: 14px 45px;
 }
 
-.finance-hero .hero-btn:hover {
-  background: #4f46e5;
+.page-hero .hero-btn:hover {
+ 
   transform: translateY(-2px);
 }
 
+
+/* dot grid */
+.dot-grid {
+    position: absolute;
+    right: 5%;
+    top: 20%;
+    width: 100px;
+    height: 200px;
+    background-image: radial-gradient(#d1d1d1 2px, transparent 2px);
+    background-size: 20px 20px;
+    opacity: 0.6;
+}
+
+/* --------- */
 .features-section { 
   padding-bottom: 100px;
   background-color: #fcfcfd; 
@@ -209,3 +223,25 @@
 
 
 
+/* --------- */
+.highlight-wrap {
+    position: relative;
+    display: inline-block;
+}
+
+/* شكل الـ SVG */
+.hero-deco-strokes {
+    position: absolute;
+    top: -100px;
+    right: -25px;
+    width: 100px;
+    height: 100px;
+    pointer-events: none;
+}
+
+.hero-deco-strokes path {
+    stroke: #4F46E5;
+    stroke-width: 3;
+    fill: none;
+    stroke-linecap: round;
+}

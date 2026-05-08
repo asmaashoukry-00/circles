@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link
+  href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&family=Almarai:wght@400;700&display=swap"
+  rel="stylesheet"
+  />
+  <link
+  href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap"
+  rel="stylesheet"
+  />
+ <link
+ rel="stylesheet"
+ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+ />
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+ <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+ <link rel="stylesheet" href="accounting.css" />
+
+<link rel="icon" href="/favicon.png">
+
+  <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+     <!-- navbar & footer styles -->
+ <link rel="stylesheet" href="/footer/footer.css" />
+    <link rel="stylesheet" href="/navbar/navbar.css" />
+    <link rel="stylesheet" href="/global/circles-solutions/circles-solutions.css" />
+    <link rel="stylesheet" href="operations.css">
+    <!--  -->
+    
+</head>
+<body>
+    <!-- navbar -->
+     <div id="navbar-placeholder"></div>
+
+
+<!-- her -->
+    <section class="page-hero">
+    <div class="container">
+        <h1 class="hero-title">
+            أنت تبيع… والنظام يدير… <br />
+            <span class="highlight-wrap" style="position: relative; display: inline-block;">
+                لتحقق أرباحاً مستدامة
+                <svg 
+                    class="brush-highlight" 
+                    viewBox="0 0 520 110" 
+                    preserveAspectRatio="none" 
+                    fill="none" 
+                    style="position: absolute; bottom: -10px; right: 4px; width: 97%; height: 85px; z-index: -1; pointer-events: none;"
+                >
+                    <path 
+                        d="M10 55 Q 260 45 510 55" 
+                        stroke="#4F46E5" 
+                        stroke-width="45" 
+                        stroke-linecap="round" 
+                        stroke-opacity="0.2" 
+                    />
+                </svg>
+            </span>
+            بكل اطمئنان.
+        </h1>
+        <!-- dot grid -->
+         <div class="dot-grid"></div>
+        
+        <p class="hero-description">
+            سيركلز يجمع مبيعاتك، مشترياتك، ومحاسبتك في نظام واحد — لتتخذ قرارات مدروسة بناءً على أرقام حقيقية.
+        </p>
+        
+        <a href="/contact/contact.html" class="hero-btn">اطلب عرض توضيحي </a>
+    </div>
+</section>
+<!--  -->
+<section class="features-section">
+        <div class="container">
+            <div class="section-header">
+            <h2 class="section-main-title">
+   <h2 class="section-main-title">
+    ابدأ الآن..         وكل ما تحتاجه
+    <span class="underline-container">
+ لنمو مبيعاتك هنا
+        <svg class="scribble-line" viewBox="0 0 300 20" preserveAspectRatio="none">
+            <path d="M5,15 C50,5 150,5 295,15"/>
+        </svg>
+    </span>
+</h2>
+            </div>
+            <div class="bento-grid">
+                <div class="tabs-side-list">
+                    <div class="tab-item active" data-tab="0">
+                        <div class="tab-icon">
+                            <!-- FaFileInvoice icon would go here -->
+                           <i class="fas fa-file-invoice"></i>
+                        </div>
+                        <span> إدارة المبيعات</span>
+                    </div>
+                    <div class="tab-item" data-tab="1">
+                        <div class="tab-icon">
+                            <!-- FaChartLine icon -->
+                          <i class="fas fa-chart-line"></i>
+                        </div>
+                        <span> إدارة المشتريات</span>
+                    </div>
+                    <div class="tab-item" data-tab="2">
+                        <div class="tab-icon">
+                            <!-- FaWarehouse icon -->
+                         <i class="fas fa-warehouse"></i>
+                        </div>
+                        <span> إدارة المستودعات والمخزون</span>
+                    </div>
+                    <!-- <div class="tab-item" data-tab="3">
+                        <div class="tab-icon">
+                            
+                           <i class="fas fa-chart-bar"></i>
+                        </div>
+                        <span>التقارير والتحليلات</span>
+                    </div> -->
+                </div>
+                <div class="display-area">
+                    <div class="mockup-wrapper-display">
+                        <img src="/pages/operations/assets/sales.png"  class="display-img">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+<!-- solutions -->
+ <div id="solutions-placeholder"></div>
+
+<!-- footer -->
+ <div id="footer-placeholder"></div>
+
+
+
+ <!--  -->
+  <script>
+        // Simple tab switching functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const tabItems = document.querySelectorAll('.tab-item');
+            const displayImg = document.querySelector('.display-img');
+            const dashboardImages = [
+                { img: '/pages/operations/assets/sales.png', title: 'إدارة المبيعات' },
+                { img: '/pages/operations/assets/procurement.png', title: 'إدارة المشتريات' },
+                { img: '/pages/operations/assets/inventory.png', title: 'إدارة المستودعات والمخزون' },
+                // { img: '/pages/operations/assets/reports.png', title: 'التقارير والتحليلات' }
+            ];
+
+            tabItems.forEach((tab, index) => {
+                tab.addEventListener('click', () => {
+                    // Remove active class from all tabs
+                    tabItems.forEach(t => t.classList.remove('active'));
+                    // Add active class to clicked tab
+                    tab.classList.add('active');
+                    // Update image
+                    displayImg.src = dashboardImages[index].img;
+                    displayImg.alt = dashboardImages[index].title;
+                });
+            });
+
+            // Auto-rotate tabs every 4 seconds
+            let activeTab = 0;
+            setInterval(() => {
+                tabItems[activeTab].classList.remove('active');
+                activeTab = (activeTab + 1) % tabItems.length;
+                tabItems[activeTab].classList.add('active');
+                displayImg.src = dashboardImages[activeTab].img;
+                displayImg.alt = dashboardImages[activeTab].title;
+            }, 4000);
+        });
+    </script>
+<!-- navbar & footer scripts -->
+<script src="/global/circles-solutions/circles-solutions.js"></script>
+     <script src="/footer/footer.js"></script>
+<script src="/navbar/navbar.js"></script>
+</body>
+</html>

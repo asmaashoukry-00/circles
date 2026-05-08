@@ -14,9 +14,11 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href=" /landingpage/style.css" />
     <link rel="stylesheet" href="/footer/footer.css" />
     <link rel="stylesheet" href="/navbar/navbar.css" />
+    <!-- <link rel="stylesheet" href="/global/circles-solutions/circles-solutions.css"> -->
     <link rel="stylesheet" href="/landingpage/dashboard.css" />
     <link rel="icon" href="/favicon.png">
     <script src="/landingpage/script.js" defer> </script>
@@ -198,73 +200,92 @@
 
       
      <!----------------- circles-solutions-------------------->
-     <section class="circles-solutions">
+<section class="circles-solutions">
     <div class="container mx-auto px-6">
         
         <div class="header-group">
              <h2 class="main-sentence">
-     من إدارة الموظفين إلى المبيعات والحسابات..<br>
-     كل شيء تحت سيطرتك 
-     <span class="highlight-wrap">
-         بنظام واحد.
-         <svg class="hand-drawn-circle" viewBox="0 0 250 80" preserveAspectRatio="none">
-             <path d="M10,40 C10,10 240,10 240,40 C240,70 10,70 15,45 C18,30 50,15 150,20" 
-                   stroke="#4F46E5" 
-                   stroke-width="3" 
-                   fill="none" 
-                   stroke-linecap="round" />
-         </svg>
-     </span>
-</h2>
+                من إدارة الموظفين إلى المبيعات والحسابات..<br>
+                كل شيء تحت سيطرتك 
+                <span class="highlight-wrap">
+                    بنظام واحد.
+                    <svg class="hand-drawn-circle" viewBox="0 0 250 80" preserveAspectRatio="none">
+                        <path d="M10,40 C10,10 240,10 240,40 C240,70 10,70 15,45 C18,30 50,15 150,20" 
+                              stroke="#4F46E5" 
+                              stroke-width="3" 
+                              fill="none" 
+                              stroke-linecap="round" />
+                    </svg>
+                </span>
+            </h2>
         </div>
 
        <div class="premium-cards-grid">
              
              <div class="modern-card">
                  <div class="card-image-wrapper">
-                     <img src="assets/dashboard.jpg" alt="HR Services">
+                     <img src="/global/circles-solutions/assets/hr.png" alt="HR">
                      <span class="card-badge">الأكثر شمولاً</span>
                  </div>
                  <div class="card-body-content">
-                     <h3 class="card-main-title">إدارة الموارد البشرية والرواتب</h3>
-                     <p class="card-main-desc">حل متكامل يضع بيانات موظفيك ورواتبهم والامتثال بين يديك في نظام واحد مبسط.</p>
+                     <a href="/pages/hr/hr.html" class="title-link">
+                        <h3 class="card-main-title">إدارة الموارد البشرية والرواتب</h3>
+                     </a>
                      <ul class="features-sub-list">
-                         <li>إدارة ملفات الموظفين</li>
-                         <li>مسير الرواتب والتعويضات</li>
-                         <li>الحضور والانصراف</li>
-                         <li>الامتثال للقوانين والتقارير</li>
+                         <li><a href="/services/hr/payroll/payroll.html">الرواتب وشؤون الموظفين</a></li>
+                         <li><a href="/services/hr/attendance/attendance.html">نظام مراقبة الدوام</a></li>
+                         <li><a href="/services/hr/mobile-app/mobile-app.html">تطبيق الهاتف المحمول</a></li>
+                         <li><a href="/services/hr/self-service/self-service.html">  الخدمات الذاتية</a></li>
                      </ul>
                  </div>
              </div>
 
              <div class="modern-card">
                  <div class="card-image-wrapper">
-                     <img src="assets/dashboard2.jpg" alt="Finance Services">
+                     <img src="/global/circles-solutions/assets/talent.png" alt="Talent">
                  </div>
                  <div class="card-body-content">
-                     <h3 class="card-main-title">المنظومة المالية والمبيعات</h3>
-                     <p class="card-main-desc">سيطرة كاملة على مبيعاتك ومشترياتك وحساباتك، مع رؤية واضحة ودقيقة.</p>
+                     <a href="/pages/talent/talent.html" class="title-link">
+                        <h3 class="card-main-title">إدارة المواهب والتطوير</h3>
+                     </a>
                      <ul class="features-sub-list">
-                         <li>إدارة المبيعات والفواتير</li>
-                         <li>المحاسبة العامة</li>
-                         <li>إدارة المخزون والمستودعات</li>
-                         <li>التقارير المالية والتحليلات</li>
+                         <li><a href="/services/talent/development/development.html">نظام إدارة المواهب</a></li>
+                         <li><a href="/services/talent/performance/performance.html">   نظام التقييم</a></li>
+                         <li><a href="/services/talent/recruitment/recruitment.html">نظام التوظيف</a></li>
+                         <li><a href="/services/talent/training/training.html">نظام التدريب</a></li>
                      </ul>
                  </div>
              </div>
 
              <div class="modern-card">
                  <div class="card-image-wrapper">
-                     <img src="assets/dashboard.jpg" alt="Talent Management">
+                     <img src="/global/circles-solutions/assets/finance.png" alt="Finance">
                  </div>
                  <div class="card-body-content">
-                     <h3 class="card-main-title">إدارة المواهب والتطوير</h3>
-                     <p class="card-main-desc">من جذب أفضل الكفاءات إلى تنمية قدراتهم وتقييم أدائهم بشكل متكامل.</p>
+                     <a href="/pages/finance/finance.html" class="title-link">
+                        <h3 class="card-main-title">المنظومة المالية والمحاسبية</h3>
+                     </a>
                      <ul class="features-sub-list">
-                         <li>إدارة التوظيف والمقابلات</li>
-                         <li>تقييم الأداء 360 درجة</li>
-                         <li>التدريب والتطوير</li>
-                         <li>إدارة المسارات الوظيفية</li>
+                         <li><a href="/services/finance/accounting/accounting.html">المحاسبة العامة</a></li>
+                         <li><a href="/services/finance/projects/projects.html">إدارة المشاريع</a></li>
+                         <li><a href="/services/finance/banks/banks.html">حسابات البنوك والنقدية </a></li>
+                         <li><a href="/services/finance/fixed-assets/fixed-assets.html">إدارة الأصول الثابتة </a></li>
+                     </ul>
+                 </div>
+             </div>
+
+             <div class="modern-card">
+                 <div class="card-image-wrapper">
+                     <img src="/global/circles-solutions/assets/sales.png" alt="Sales">
+                 </div>
+                 <div class="card-body-content">
+                     <a href="/pages/operations/operations.html" class="title-link">
+                        <h3 class="card-main-title">إدارة المبيعات والمخزون</h3>
+                     </a>
+                     <ul class="features-sub-list">
+                         <li><a href="/services/operations/sales/sales.html">إدارة المبيعات</a></li>
+                         <li><a href="/services/operations/procurement/procurement.html">إدارة المشتريات</a></li>
+                         <li><a href="/services/operations/inventory/inventory.html">إدارة المخزون</a></li>
                      </ul>
                  </div>
              </div>
@@ -272,8 +293,11 @@
          </div>
      </div>
 </section>
+ 
+<!-- <div id="solutions-placeholder"></div> -->
+
 <!----------------- Solutions-------------------->
-    <section class="solutions-section">
+  <section class="solutions-section">
     <div class="container mx-auto px-6">
         <div class="cards-stack">
 
@@ -284,44 +308,59 @@
                         هل تعبت من تعقيدات التأمينات، الإجازات، ومشاكل مسير الرواتب؟ <br>
                         نحن نرفع عنك هذا العبء؛ <strong>نظامنا يضمن لك دقة 100%</strong> في احتساب الرواتب والامتثال الكامل للقوانين، لتركز أنت على قيادة فريقك فقط.
                     </p>
-                    <a href="#" class="card-btn-black">استكشف حلول الموظفين <i class="fa-solid fa-arrow-left"></i></a>
+                    <a href="/pages/hr/hr.html" class="card-btn-black">تصفح الخدمات  <i class="fa-solid fa-arrow-left"></i></a>
                 </div>
                 <div class="card-visual-box">
-                    <img src="/landingpage/assets/dashboard.jpg" alt="إدارة الموارد البشرية">
+                    <img src="/landingpage/assets/dashboards/hr2.png" alt="إدارة الموارد البشرية">
                 </div>
             </div>
 
-            <div class="custom-solution-card reverse-layout">
+           <div class="custom-solution-card reverse-layout">
                 <div class="card-info">
-                    <h2 class="card-title-black">استعد سيطرتك الكاملة على أرباحك ومخازنك</h2>
+                    <h2 class="card-title-black">حوّل الفوضى المحاسبية إلى نظام واضح واحترافي</h2>
+                    <p class="card-description">
+                        لا مزيد من التشتت بين الأوراق والإكسيل والقيود اليدوية. <br>
+                        <strong>النظام المحاسبي المتكامل</strong> يمنحك سيطرة كاملة على كل العمليات المالية والحسابات، مع دقة عالية ورؤية واضحة في أي لحظة.
+                    </p>
+                    <a href="/pages/finance/finance.html" class="card-btn-black">  تصفح الخدمات  <i class="fa-solid fa-arrow-left"></i></a>
+                </div>
+                <div class="card-visual-box">
+                    <img src="/landingpage/assets/dashboards/finance2.png" alt="نظام محاسبي متكامل">
+                </div>
+            </div>
+
+             <div class="custom-solution-card ">
+                <div class="card-info">
+                    <h2 class="card-title-black">حوّل موظفيك العاديين إلى مواهب استثنائية</h2>
+                    <p class="card-description">
+                        لا تدع أفضل كفاءاتك تتشتت أو تغادر بسبب نقص التطوير والتقييم. <br>
+                        <strong>منظومة إدارة المواهب والتطوير  </strong> تمكنك من اكتشاف المواهب، تنميتها، قياس أدائها، ووضعها في المكان المناسب لتحقيق أقصى إنتاجية وولاء.
+                    </p>
+                    <a href="/pages/talent/talent.html" class="card-btn-black">    تصفح الخدمات <i class="fa-solid fa-arrow-left"></i></a>
+                </div>
+                <div class="card-visual-box">
+                    <img src="/landingpage/assets/dashboards/talent2.png" alt="إدارة المواهب">
+                </div>
+            </div>
+
+              <div class="custom-solution-card reverse-layout">
+                <div class="card-info">
+                   <h2 class="card-title-black">لا داعي للقلق بعد الآن على مبيعاتك ومخازنك</h2>
                     <p class="card-description">
                         التشتت بين الأوراق والجداول المبعثرة يؤدي لضياع الأرباح. <br>
-                        مع <strong>المنظومة المالية المتكاملة</strong>، ستعرف أين يذهب كل قرش، وستراقب مخازنك لحظة بلحظة من شاشة واحدة. لا مفاجآت بعد اليوم، فقط أرقام دقيقة.
+                        مع <strong>منظومة المبيعات والمخازن </strong> المتكاملة ستعرف أين يذهب كل قرش، وستراقب مخازنك لحظة بلحظة      . لا مفاجآت بعد اليوم، فقط أرقام دقيقة.
                     </p>
-                    <a href="#" class="card-btn-black">نظّم ماليتك الآن <i class="fa-solid fa-arrow-left"></i></a>
+                    <a href="/pages/operations/operations.html" class="card-btn-black">  تصفح الخدمات  <i class="fa-solid fa-arrow-left"></i></a>
                 </div>
                 <div class="card-visual-box">
-                    <img src="/landingpage/assets/dashboard2.jpg" alt="المنظومة المالية">
-                </div>
-            </div>
-
-            <div class="custom-solution-card">
-                <div class="card-info">
-                    <h2 class="card-title-black">وداعاً لفوضى الحضور والانصراف وتسرب الوقت</h2>
-                    <p class="card-description">
-                        هل تشعر أن الانضباط يغيب في غيابك؟ <br>
-                        نظام تتبع الدوام الذكي يمنحك <strong>رؤية كاملة وتحكمًا مطلقًا</strong> عبر الموقع الجغرافي وتطبيق الجوال. اطمئن، عملك يسير بدقة احترافية حتى وأنت بعيد.
-                    </p>
-                    <a href="#" class="card-btn-black">فعل نظام الانضباط <i class="fa-solid fa-arrow-left"></i></a>
-                </div>
-                <div class="card-visual-box">
-                    <img src="/landingpage/assets/dashboard.jpg" alt="تتبع الدوام">
+                    <img src="/landingpage/assets/dashboards/sales2.png" alt="المنظومة المالية">
                 </div>
             </div>
 
         </div>
     </div>
 </section>
+
  <!-- ----------------------------------------- -->
 
 
@@ -398,7 +437,88 @@
         </div>
     </section> -->
 </div>
+<!-- testmonials -->
+ <!-- Swiper CSS -->
 
+
+<section class="testimonials-section">
+    <!-- النقاط الزخرفية في الخلفية (تم نقلها لليمين) -->
+    <div class="dot-grid"></div>
+
+    <div class="container">
+        <!-- العنوان -->
+        <div class="section-header">
+            <p class="sub-title">بعض آراء</p>
+            <h2 class="main-title">عملائنا <span class="highlight">المميزين.</span></h2>
+            <div class="zigzag-icon">
+                <svg width="60" height="10" viewBox="0 0 60 10">
+                    <path d="M0 5 Q5 0 10 5 T20 5 T30 5 T40 5 T50 5 T60 5" fill="none" stroke="#4F46E5" stroke-width="3"/>
+                </svg>
+            </div>
+        </div>
+
+        <!-- السلايدر -->
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                
+                <!-- الشريحة 1 -->
+                <div class="swiper-slide">
+                    <div class="testimonial-card">
+                        <!-- أيقونة الاقتباس (تم نقلها لليمين) -->
+                        <div class="quote-icon">“</div>
+                        
+                        <div class="card-content">
+                           <div class="text-side">
+    <p>سيركلز سوفت غيّر طريقة عملنا تماماً. أصبحت عملية إدارة المبيعات والمحاسبة سهلة وواضحة، وأصبح لدينا رؤية واضحة لأداء الشركة .</p>
+    <p>أفضل قرار تقني اتخذناه هذا العام. نظام قوي ودعم ممتاز.</p>
+</div>
+
+                            <div class="profile-side">
+                                <div class="image-wrapper">
+                                    <img src="/landingpage/assets/testmonials/download (2).jpg" alt="محمد العمري">
+                                </div>
+                                <div class="profile-info">
+                                    <h3> محمد العمــري</h3>
+                                    <span>مؤسس ورئيس تنفيذي.</span>
+                                </div>
+                                <div class="yellow-square"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- الشريحة 2 -->
+                <div class="swiper-slide">
+                    <div class="testimonial-card">
+                        <div class="quote-icon">“</div>
+                        <div class="card-content">
+                            <div class="text-side">
+                                <p>تجربة رائعة جداً مع سيركلز سوفت، النظام ساعدنا بشكل كبير في تنظيم الرواتب وإدارة ملفات الموظفين بكل سلاسة واحترافية.</p>
+                                <p>الدعم الفني متميز جداً والاستجابة سريعة، نوصي بهم لكل شركة تطمح للنمو الرقمي.</p>
+                            </div>
+                            <div class="profile-side">
+                                <div class="image-wrapper">
+                                    <img src="/landingpage/assets/testmonials/download (3).jpg" alt="سارة كمال">
+                                </div>
+                                <div class="profile-info">
+                                    <h3>سارة الغامـــدي</h3>
+                                    <span>مديرة الموارد البشرية.</span>
+                                </div>
+                                <div class="yellow-square"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!-- نقاط التنقل (Pagination) -->
+            <div class="swiper-pagination"></div>
+        </div>
+    </div>
+</section>
+
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
 
  <!----------------- Footer-------------------->
@@ -407,6 +527,8 @@
 
 <script src="/footer/footer.js"></script>
 <script src="/navbar/navbar.js"></script>
+<!-- <script src="/global/circles-solutions/circles-solutions.js"></script> -->
+
 
 <!-- --------------- script ------------------ -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
