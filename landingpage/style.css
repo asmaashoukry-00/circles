@@ -855,9 +855,10 @@ html[dir="ltr"] .icon-flip {
     .hero-title {
         position: relative !important;
         display: inline-block !important;
+        font-size: 26px !important;
     }
     .saas-hero{
-        padding-top:40px;
+        padding-top:60px;
     }
 
     .floating-marker {
