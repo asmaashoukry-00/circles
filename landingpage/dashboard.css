@@ -200,3 +200,159 @@ body {
   font-family: monospace;
 }
 
+/* ============================================================
+ * RESPONSIVE DASHBOARD — Mobile First
+ * ============================================================ */
+
+/* Tablet */
+@media (max-width: 992px) {
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .analysis-area {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    /* Dashboard wrapper — remove extra space */
+    .mockup-wrapper {
+        width: 98%;
+        margin: 30px auto 0;
+        border-radius: 12px;
+    }
+
+    .dashboard-core {
+        padding: 16px;
+    }
+
+    /* Header — stack vertically */
+    .db-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        margin-bottom: 20px;
+    }
+
+    .user-welcome h1 {
+        font-size: 18px;
+    }
+
+    .user-welcome p {
+        font-size: 12px;
+    }
+
+    .live-status {
+        font-size: 11px;
+        padding: 6px 12px;
+    }
+
+    /* Stats Grid — 1 per row */
+    .stats-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+        margin-bottom: 20px;
+    }
+
+    .stat-card {
+        padding: 16px;
+        border-radius: 12px;
+    }
+
+    .stat-label {
+        font-size: 11px;
+        justify-content: center;
+    }
+
+    .stat-value {
+        font-size: 28px;
+    }
+
+    .stat-value small {
+        font-size: 14px;
+    }
+
+    .stat-change {
+        font-size: 11px;
+    }
+
+    /* Chart card — wider for mobile */
+    .stat-card:nth-child(3) .progress-bar {
+        margin-top: 10px;
+    }
+
+    /* Analysis Area — stack vertically */
+    .analysis-area {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .chart-box,
+    .recent-actions {
+        padding: 16px;
+        border-radius: 12px;
+    }
+
+    .chart-box h3,
+    .recent-actions h3 {
+        font-size: 15px;
+        margin-bottom: 16px;
+    }
+
+    .canvas-holder {
+        height: 220px;
+    }
+
+    #salesChart {
+        height: 220px !important;
+    }
+
+    .act-icon {
+        width: 32px;
+        height: 32px;
+        font-size: 12px;
+    }
+
+    .activity-item p {
+        font-size: 12px;
+    }
+
+    .progress-bar {
+        height: 5px;
+    }
+}
+
+/* Extra Small — 480px and below */
+@media (max-width: 480px) {
+    .mockup-wrapper {
+        width: 100%;
+        border-radius: 0;
+        box-shadow: none;
+        border-left: none;
+        border-right: none;
+    }
+
+    .dashboard-core {
+        padding: 12px;
+    }
+
+    .user-welcome h1 {
+        font-size: 16px;
+    }
+
+    .stat-value {
+        font-size: 24px;
+    }
+
+    .canvas-holder {
+        height: 180px;
+    }
+
+    #salesChart {
+        height: 180px !important;
+    }
+}
+
+

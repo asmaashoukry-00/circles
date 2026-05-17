@@ -15,12 +15,12 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-    <link rel="stylesheet" href=" /landingpage/style.css" />
+    <link rel="stylesheet" href="/landingpage/style.css" />
     <link rel="stylesheet" href="/footer/footer.css" />
     <link rel="stylesheet" href="/navbar/navbar.css" />
-    <!-- <link rel="stylesheet" href="/global/circles-solutions/circles-solutions.css"> -->
+    <link rel="stylesheet" href="/global/circles-solutions/circles-solutions.css">
     <link rel="stylesheet" href="/landingpage/dashboard.css" />
-    <link rel="icon" href="/favicon.png">
+    <link rel="icon" href=" /global/favicon.png">
     <script src="/landingpage/script.js" defer> </script>
     
     
@@ -31,12 +31,19 @@
       <!----------------- hero-------------------->
     <section class="saas-hero">
       <div class="container mx-auto px-8 md:px-16 relative z-10 text-center">
-        <h1 class="hero-title">
+<h1 class="hero-title">
+          <span class="lang-key" data-ar="أطلق العنان لأعمالك، وحوّل إدارة موظفيك" data-en="Unleash Your Business, Transform Your Employee ">
           أطلق العنان لأعمالك، وحوّل إدارة موظفيك
+          </span>
           <br />
+          <span class="lang-key" data-ar="ومبيعاتك إلى" data-en="Management and Sales into">
           ومبيعاتك إلى
+          </span>
+          
           <span class="highlighted-word">
-            نمو مستدام
+            <span class="lang-key" data-ar="نمو مستدام" data-en="Sustainable Growth">
+              نمو مستدام
+            </span>
             <svg
               class="custom-underline"
               viewBox="0 0 150 50"
@@ -44,33 +51,39 @@
             >
               <path
                 d="M10 42C30 45 100 46 140 40 
-       M15 8C45 3 105 7 140 12 
-       M10 8C8 14 9 38 10 45 
-       M140 10C141 9 138 35 138 42"
+            M15 8C45 3 105 7 140 12 
+            M10 8C8 14 9 38 10 45 
+            M140 10C141 9 138 35 138 42"
                 stroke="#4F46E5"
                 stroke-width="2"
                 fill="none"
                 stroke-linecap="round"
               />
             </svg>
+            <!-- الـ Floating Markers -->
+            <span class="yellow-box floating-marker">
+              <span class="lang-key marker-lang" data-ar="مبيعات أعلى" data-en="Higher Sales">
+                <span class="marker-text">مبيعات أعلى</span>
+              </span>
+              <span class="arrow-y"></span>
+            </span>
 
-            <div class="floating-marker yellow-box">
-              مبيعات أعلى <span class="arrow-y"></span>
-            </div>
-            <div class="floating-marker blue-box">
-              تحكم كامل <span class="arrow-b"></span>
-            </div>
+            <span class="blue-box floating-marker">
+              <span class="lang-key marker-lang" data-ar="تحكم كامل" data-en="Full Control">
+                <span class="marker-text">تحكم كامل</span>
+              </span>
+              <span class="arrow-b"></span>
+            </span>
           </span>
         </h1>
 
-        <p class="hero-description max-w-2xl mx-auto">
-          نظام ERP متكامل + إدارة موارد بشرية في منصة واحدة.<br />
+        <p class="hero-description max-w-2xl mx-auto lang-key" data-en="Integrated ERP system + Human resources management in one platform.">
+          نظام ERP متكامل + إدارة موارد بشرية في منصة واحدة.
          
         </p>
 
-        <a href="/contact/contact.html" class="hero-cta" >
+        <a href="/contact/contact.html" class="hero-cta lang-key" data-en="Request Demo">
           اطلب عرض توضيحي  
-          <!-- <i class="fa-solid fa-arrow-left"></i> -->
         </a>
 
         <div class="mockup-wrapper">
@@ -86,21 +99,21 @@
           <div class="dashboard-core">
             <header class="db-header">
               <div class="user-welcome">
-                <h1>لوحة تحكم الأداء</h1>
-                <p>أهلاً بك مجدداً.. عملك يسير بشكل ممتاز اليوم!</p>
+                <h1 class="lang-key" data-en="Performance Dashboard">لوحة تحكم الأداء</h1>
+                <p class="lang-key" data-en="Welcome back.. Your work is going excellently today!">أهلاً بك مجدداً.. عملك يسير بشكل ممتاز اليوم!</p>
               </div>
               <div class="live-status">
                 <span class="pulse-dot"></span>
-                تحديث فوري للبيانات
+                <span class="lang-key" data-en="Real-time data updates">تحديث فوري للبيانات</span>
               </div>
             </header>
 
             <section class="stats-grid">
               <div class="stat-card">
-                <span class="stat-label">أرباح اليوم</span>
+                <span class="stat-label lang-key" data-en="Today's Profit">أرباح اليوم</span>
                 <div class="stat-value">
                   <span id="profit-counter">0</span>
-                  <small>ج.م</small>
+                  <small class="lang-key" data-en="EGP">ج.م</small>
                 </div>
                 <span class="stat-change positive">
                   <i class="fa-solid fa-arrow-trend-up"></i> 12% +
@@ -108,13 +121,13 @@
               </div>
 
               <div class="stat-card">
-                <span class="stat-label">طلبات قيد التنفيذ</span>
+                <span class="stat-label lang-key" data-en="Orders in Progress">طلبات قيد التنفيذ</span>
                 <div class="stat-value"><span>42</span></div>
-                <span class="stat-change neutral">مستقر</span>
+                <span class="stat-change neutral lang-key" data-en="Stable">مستقر</span>
               </div>
 
               <div class="stat-card">
-                <span class="stat-label">نمو المبيعات</span>
+                <span class="stat-label lang-key" data-en="Sales Growth">نمو المبيعات</span>
                 <div class="stat-value"><span>88%</span></div>
                 <div class="progress-bar">
                   <div class="progress-fill" style="width: 88%"></div>
@@ -124,23 +137,23 @@
 
             <div class="analysis-area">
               <div class="chart-box">
-                <h3>مؤشر المبيعات الأسبوعي</h3>
+                <h3 class="lang-key" data-en="Weekly Sales Indicator">مؤشر المبيعات الأسبوعي</h3>
                 <div class="canvas-holder">
                   <canvas id="salesChart"></canvas>
                 </div>
               </div>
 
               <div class="recent-actions">
-                <h3>آخر النشاطات</h3>
+                <h3 class="lang-key" data-en="Latest Activities">آخر النشاطات</h3>
                 <div class="activity-item">
                   <div class="act-icon"><i class="fa-solid fa-check"></i></div>
-                  <p>تم تحصيل فاتورة <strong>#5021</strong></p>
+                  <p class="lang-key" data-en="Invoice #5021 has been collected">تم تحصيل فاتورة <strong>#5021</strong></p>
                 </div>
                 <div class="activity-item">
                   <div class="act-icon">
                     <i class="fa-solid fa-user-plus"></i>
                   </div>
-                  <p>انضمام عميل جديد: <strong>شركة الأمل</strong></p>
+                  <p class="lang-key" data-en="New client joined: Al-Amal Company">انضمام عميل جديد: <strong>شركة الأمل</strong></p>
                 </div>
               </div>
             </div>
@@ -152,8 +165,7 @@
       <!----------------- logos-------------------->
     <section class="logos-showcase">
       <div class="container mx-auto">
-        <!-- <h3 class="logos-title">نظام موثوق من قبل الشركات الرائدة في المنطقة</h3> -->
-        <h3 class="logos-title">
+        <h3 class="logos-title lang-key" data-en="Join over 2000 companies managing their future through our platform.">
           انضم إلى أكثر من 2000 شركة تدير مستقبلها عبر منصتنا.
         </h3>
 
@@ -199,116 +211,125 @@
 
 
       
-     <!----------------- circles-solutions-------------------->
+<!----------------- circles-solutions-------------------->
 <section class="circles-solutions">
     <div class="container mx-auto px-6">
         
         <div class="header-group">
              <h2 class="main-sentence">
-                من إدارة الموظفين إلى المبيعات والحسابات..<br>
-                كل شيء تحت سيطرتك 
-                <span class="highlight-wrap">
-                    بنظام واحد.
-                    <svg class="hand-drawn-circle" viewBox="0 0 250 80" preserveAspectRatio="none">
-                        <path d="M10,40 C10,10 240,10 240,40 C240,70 10,70 15,45 C18,30 50,15 150,20" 
-                              stroke="#4F46E5" 
-                              stroke-width="3" 
-                              fill="none" 
-                              stroke-linecap="round" />
-                    </svg>
-                </span>
-            </h2>
-        </div>
+                 <span class="lang-key" data-en="From employee management to sales and accounting..">من إدارة الموظفين إلى المبيعات والحسابات..</span>
+                 <br>
+                 <span class="lang-key" data-en="Everything under your control">كل شيء تحت سيطرتك </span>
+                 
+                 <span class="highlight-wrap">
+                     <span class="lang-key" data-en="in one system.">بنظام واحد.</span>
+                     
+                     <svg class="hand-drawn-circle" viewBox="0 0 260 80" preserveAspectRatio="none">
+                         <path d="M10,40 C10,10 250,10 250,40 C250,70 10,70 15,45 C18,30 50,15 150,20" 
+                               stroke="#4F46E5" 
+                               stroke-width="4" 
+                               fill="none" 
+                               stroke-linecap="round" />
+                     </svg>
+                 </span>
+             </h2>
+         </div>
 
-       <div class="premium-cards-grid">
-             
-             <div class="modern-card">
-                 <div class="card-image-wrapper">
-                     <img src="/global/circles-solutions/assets/hr.png" alt="HR">
-                     <span class="card-badge">الأكثر شمولاً</span>
-                 </div>
-                 <div class="card-body-content">
-                     <a href="/pages/hr/hr.html" class="title-link">
-                        <h3 class="card-main-title">إدارة الموارد البشرية والرواتب</h3>
-                     </a>
-                     <ul class="features-sub-list">
-                         <li><a href="/services/hr/payroll/payroll.html">الرواتب وشؤون الموظفين</a></li>
-                         <li><a href="/services/hr/attendance/attendance.html">نظام مراقبة الدوام</a></li>
-                         <li><a href="/services/hr/mobile-app/mobile-app.html">تطبيق الهاتف المحمول</a></li>
-                         <li><a href="/services/hr/self-service/self-service.html">  الخدمات الذاتية</a></li>
-                     </ul>
-                 </div>
-             </div>
+        <div class="premium-cards-grid">
+              
+              <div class="modern-card">
+                  <div class="card-image-wrapper">
+                      <img src="/global/circles-solutions/assets/hr.png" alt="HR">
+                      <span class="card-badge lang-key" data-en="Most Comprehensive">الأكثر شمولاً</span>
+                  </div>
+                  <div class="card-body-content">
+                      <a href="/pages/hr/hr.html" class="title-link">
+                         <h3 class="card-main-title lang-key" data-en="HR & Payroll Management">إدارة الموارد البشرية والرواتب</h3>
+                      </a>
+                      <ul class="features-sub-list">
+                          <li><a href="/services/hr/payroll/payroll.html" class="lang-key" data-en="Payroll & Employee Affairs">الرواتب وشؤون الموظفين</a></li>
+                          <li><a href="/services/hr/attendance/attendance.html" class="lang-key" data-en="Attendance System">نظام مراقبة الدوام</a></li>
+                          <li><a href="/services/hr/mobile-app/mobile-app.html" class="lang-key" data-en="Mobile App">تطبيق الهاتف المحمول</a></li>
+                          <li><a href="/services/hr/self-service/self-service.html" class="lang-key" data-en="Self Services">الخدمات الذاتية</a></li>
+                      </ul>
+                  </div>
+              </div>
 
-             <div class="modern-card">
-                 <div class="card-image-wrapper">
-                     <img src="/global/circles-solutions/assets/talent.png" alt="Talent">
-                 </div>
-                 <div class="card-body-content">
-                     <a href="/pages/talent/talent.html" class="title-link">
-                        <h3 class="card-main-title">إدارة المواهب والتطوير</h3>
-                     </a>
-                     <ul class="features-sub-list">
-                         <li><a href="/services/talent/development/development.html">نظام إدارة المواهب</a></li>
-                         <li><a href="/services/talent/performance/performance.html">   نظام التقييم</a></li>
-                         <li><a href="/services/talent/recruitment/recruitment.html">نظام التوظيف</a></li>
-                         <li><a href="/services/talent/training/training.html">نظام التدريب</a></li>
-                     </ul>
-                 </div>
-             </div>
+<div class="modern-card">
+                  <div class="card-image-wrapper">
+                      <img src="/global/circles-solutions/assets/talent.png" alt="Talent">
+                  </div>
+                  <div class="card-body-content">
+                      <a href="/pages/talent/talent.html" class="title-link">
+                         <h3 class="card-main-title lang-key" data-en="Talent & Development">إدارة المواهب والتطوير</h3>
+                      </a>
+                      <ul class="features-sub-list">
+                          <li><a href="/services/talent/development/development.html" class="lang-key" data-en="Talent Management">نظام إدارة المواهب</a></li>
+                          <li><a href="/services/talent/performance/performance.html" class="lang-key" data-en="Performance Evaluation">نظام التقييم</a></li>
+                          <li><a href="/services/talent/recruitment/recruitment.html" class="lang-key" data-en="Recruitment System">نظام التوظيف</a></li>
+                          <li><a href="/services/talent/training/training.html" class="lang-key" data-en="Training System">نظام التدريب</a></li>
+                      </ul>
+                  </div>
+              </div>
 
-             <div class="modern-card">
-                 <div class="card-image-wrapper">
-                     <img src="/global/circles-solutions/assets/finance.png" alt="Finance">
-                 </div>
-                 <div class="card-body-content">
-                     <a href="/pages/finance/finance.html" class="title-link">
-                        <h3 class="card-main-title">المنظومة المالية والمحاسبية</h3>
-                     </a>
-                     <ul class="features-sub-list">
-                         <li><a href="/services/finance/accounting/accounting.html">المحاسبة العامة</a></li>
-                         <li><a href="/services/finance/projects/projects.html">إدارة المشاريع</a></li>
-                         <li><a href="/services/finance/banks/banks.html">حسابات البنوك والنقدية </a></li>
-                         <li><a href="/services/finance/fixed-assets/fixed-assets.html">إدارة الأصول الثابتة </a></li>
-                     </ul>
-                 </div>
-             </div>
+              <div class="modern-card">
+                  <div class="card-image-wrapper">
+                      <img src="/global/circles-solutions/assets/finance.png" alt="Finance">
+                  </div>
+                  <div class="card-body-content">
+                      <a href="/pages/finance/finance.html" class="title-link">
+                         <h3 class="card-main-title lang-key" data-en="Financial & Accounting System">المنظومة المالية والمحاسبية</h3>
+                      </a>
+                      <ul class="features-sub-list">
+                          <li><a href="/services/finance/accounting/accounting.html" class="lang-key" data-en="General Accounting">المحاسبة العامة</a></li>
+                          <li><a href="/services/finance/projects/projects.html" class="lang-key" data-en="Project Management">إدارة المشاريع</a></li>
+                          <li><a href="/services/finance/banks/banks.html" class="lang-key" data-en="Bank & Treasury Management">حسابات البنوك والنقدية</a></li>
+                          <li><a href="/services/finance/fixed-assets/fixed-assets.html" class="lang-key" data-en="Fixed Assets Management">إدارة الأصول الثابتة</a></li>
+                      </ul>
+                  </div>
+              </div>
 
-             <div class="modern-card">
-                 <div class="card-image-wrapper">
-                     <img src="/global/circles-solutions/assets/sales.png" alt="Sales">
-                 </div>
-                 <div class="card-body-content">
-                     <a href="/pages/operations/operations.html" class="title-link">
-                        <h3 class="card-main-title">إدارة المبيعات والمخزون</h3>
-                     </a>
-                     <ul class="features-sub-list">
-                         <li><a href="/services/operations/sales/sales.html">إدارة المبيعات</a></li>
-                         <li><a href="/services/operations/procurement/procurement.html">إدارة المشتريات</a></li>
-                         <li><a href="/services/operations/inventory/inventory.html">إدارة المخزون</a></li>
-                     </ul>
-                 </div>
-             </div>
+              <div class="modern-card">
+                  <div class="card-image-wrapper">
+                      <img src="/global/circles-solutions/assets/sales.png" alt="Sales">
+                  </div>
+                  <div class="card-body-content">
+                      <a href="/pages/operations/operations.html" class="title-link">
+                         <h3 class="card-main-title lang-key" data-en="Sales & Inventory">إدارة المبيعات والمخزون</h3>
+                      </a>
+                      <ul class="features-sub-list">
+                          <li><a href="/services/operations/sales/sales.html" class="lang-key" data-en="Sales Management">إدارة المبيعات</a></li>
+                          <li><a href="/services/operations/procurement/procurement.html" class="lang-key" data-en="Procurement Management">إدارة المشتريات</a></li>
+                          <li><a href="/services/operations/inventory/inventory.html" class="lang-key" data-en="Warehouse & Inventory">إدارة المخزون</a></li>
+                      </ul>
+                  </div>
+              </div>
 
          </div>
      </div>
 </section>
  
-<!-- <div id="solutions-placeholder"></div> -->
+<!-- -->
 
 <!----------------- Solutions-------------------->
   <section class="solutions-section">
     <div class="container mx-auto px-6">
-        <div class="cards-stack">
-
+<div class="cards-stack">
+            
             <div class="custom-solution-card">
                 <div class="card-info">
-                    <h2 class="card-title-black">توقف عن إضاعة وقتك في الحسابات اليدوية وأخطاء الرواتب</h2>
-                    <p class="card-description">
-                        هل تعبت من تعقيدات التأمينات، الإجازات، ومشاكل مسير الرواتب؟ <br>
-                        نحن نرفع عنك هذا العبء؛ <strong>نظامنا يضمن لك دقة 100%</strong> في احتساب الرواتب والامتثال الكامل للقوانين، لتركز أنت على قيادة فريقك فقط.
-                    </p>
-                    <a href="/pages/hr/hr.html" class="card-btn-black">تصفح الخدمات  <i class="fa-solid fa-arrow-left"></i></a>
+                    <h2 class="card-title-black lang-key" data-en="Stop Wasting Time on Manual Accounting and Payroll Errors">توقف عن إضاعة وقتك في الحسابات اليدوية وأخطاء الرواتب</h2>
+                    <div class="card-description">
+                        <span class="lang-key" data-en="Tired of insurance, leave, and payroll complications?">هل تعبت من تعقيدات التأمينات، الإجازات، ومشاكل مسير الرواتب؟</span>
+                        <br>
+                        <span class="lang-key" data-en="We lift this burden off you;">نحن نرفع عنك هذا العبء؛</span> 
+                        <strong class="lang-key" data-en="Our system guarantees you 100% accuracy">نظامنا يضمن لك دقة 100%</strong> 
+                        <span class="lang-key" data-en="in payroll calculation and full compliance with laws, so you can focus on leading your team only.">في احتساب الرواتب والامتثال الكامل للقوانين، لتركز أنت على قيادة فريقك فقط.</span>
+                    </div>
+                    <a href="/pages/hr/hr.html" class="card-btn-black">
+                        <span class="lang-key" data-en="Browse Services">تصفح الخدمات</span>
+                        <i class="fa-solid fa-arrow-left icon-flip"></i>
+                    </a>
                 </div>
                 <div class="card-visual-box">
                     <img src="/landingpage/assets/dashboards/hr2.png" alt="إدارة الموارد البشرية">
@@ -316,27 +337,37 @@
             </div>
 
            <div class="custom-solution-card reverse-layout">
-                <div class="card-info">
-                    <h2 class="card-title-black">حوّل الفوضى المحاسبية إلى نظام واضح واحترافي</h2>
-                    <p class="card-description">
-                        لا مزيد من التشتت بين الأوراق والإكسيل والقيود اليدوية. <br>
-                        <strong>النظام المحاسبي المتكامل</strong> يمنحك سيطرة كاملة على كل العمليات المالية والحسابات، مع دقة عالية ورؤية واضحة في أي لحظة.
-                    </p>
-                    <a href="/pages/finance/finance.html" class="card-btn-black">  تصفح الخدمات  <i class="fa-solid fa-arrow-left"></i></a>
+                 <div class="card-info">
+                    <h2 class="card-title-black lang-key" data-en="Transform Accounting Chaos into a Clear Professional System">حوّل الفوضى المحاسبية إلى نظام واضح واحترافي</h2>
+                    <div class="card-description">
+                        <span class="lang-key" data-en="No more scattered papers, Excel files, and manual entries.">لا مزيد من التشتت بين الأوراق والإكسيل والقيود اليدوية.</span>
+                        <br>
+                        <strong class="lang-key" data-en="The integrated accounting system">النظام المحاسبي المتكامل</strong> 
+                        <span class="lang-key" data-en="gives you full control over all financial operations and accounts, with high accuracy and clear vision at any moment.">يمنحك سيطرة كاملة على كل العمليات المالية والحسابات، مع دقة عالية ورؤية واضحة في أي لحظة.</span>
+                    </div>
+                    <a href="/pages/finance/finance.html" class="card-btn-black">
+                        <span class="lang-key" data-en="Browse Services">تصفح الخدمات</span>
+                        <i class="fa-solid fa-arrow-left icon-flip"></i>
+                    </a>
                 </div>
                 <div class="card-visual-box">
                     <img src="/landingpage/assets/dashboards/finance2.png" alt="نظام محاسبي متكامل">
                 </div>
             </div>
 
-             <div class="custom-solution-card ">
+              <div class="custom-solution-card ">
                 <div class="card-info">
-                    <h2 class="card-title-black">حوّل موظفيك العاديين إلى مواهب استثنائية</h2>
-                    <p class="card-description">
-                        لا تدع أفضل كفاءاتك تتشتت أو تغادر بسبب نقص التطوير والتقييم. <br>
-                        <strong>منظومة إدارة المواهب والتطوير  </strong> تمكنك من اكتشاف المواهب، تنميتها، قياس أدائها، ووضعها في المكان المناسب لتحقيق أقصى إنتاجية وولاء.
-                    </p>
-                    <a href="/pages/talent/talent.html" class="card-btn-black">    تصفح الخدمات <i class="fa-solid fa-arrow-left"></i></a>
+                    <h2 class="card-title-black lang-key" data-en="Transform Your Ordinary Employees into Exceptional Talents">حوّل موظفيك العاديين إلى مواهب استثنائية</h2>
+                    <div class="card-description">
+                        <span class="lang-key" data-en="Don't let your best talents disperse or leave due to lack of development and evaluation.">لا تدع أفضل كفاءاتك تتشتت أو تغادر بسبب نقص التطوير والتقييم.</span>
+                        <br>
+                        <strong class="lang-key" data-en="Talent and Development system">منظومة إدارة المواهب والتطوير</strong> 
+                        <span class="lang-key" data-en="enables you to discover talents, develop them, measure their performance, and place them in the right position to achieve maximum productivity and loyalty.">تمكنك من اكتشاف المواهب، تنميتها، قياس أدائها، ووضعها في المكان المناسب لتحقيق أقصى إنتاجية وولاء.</span>
+                    </div>
+                    <a href="/pages/talent/talent.html" class="card-btn-black">
+                        <span class="lang-key" data-en="Browse Services">تصفح الخدمات</span>
+                        <i class="fa-solid fa-arrow-left icon-flip"></i>
+                    </a>
                 </div>
                 <div class="card-visual-box">
                     <img src="/landingpage/assets/dashboards/talent2.png" alt="إدارة المواهب">
@@ -345,12 +376,18 @@
 
               <div class="custom-solution-card reverse-layout">
                 <div class="card-info">
-                   <h2 class="card-title-black">لا داعي للقلق بعد الآن على مبيعاتك ومخازنك</h2>
-                    <p class="card-description">
-                        التشتت بين الأوراق والجداول المبعثرة يؤدي لضياع الأرباح. <br>
-                        مع <strong>منظومة المبيعات والمخازن </strong> المتكاملة ستعرف أين يذهب كل قرش، وستراقب مخازنك لحظة بلحظة      . لا مفاجآت بعد اليوم، فقط أرقام دقيقة.
-                    </p>
-                    <a href="/pages/operations/operations.html" class="card-btn-black">  تصفح الخدمات  <i class="fa-solid fa-arrow-left"></i></a>
+                   <h2 class="card-title-black lang-key" data-en="No More Worries About Your Sales and Inventory">لا داعي للقلق بعد الآن على مبيعاتك ومخازنك</h2>
+                    <div class="card-description">
+                        <span class="lang-key" data-en="Scattered papers and tables lead to profit loss.">التشتت بين الأوراق والجداول المبعثرة يؤدي لضياع الأرباح.</span>
+                        <br>
+                        <span class="lang-key" data-en="With">مع</span> 
+                        <strong class="lang-key" data-en="integrated Sales and Inventory system,">منظومة المبيعات والمخازن</strong> 
+                        <span class="lang-key" data-en="you'll know where every penny goes and monitor your warehouses moment by moment. No more surprises, just accurate numbers.">المتكاملة ستعرف أين يذهب كل قرش، وستراقب مخازنك لحظة بلحظة. لا مفاجآت بعد اليوم، فقط أرقام دقيقة.</span>
+                    </div>
+                    <a href="/pages/operations/operations.html" class="card-btn-black">
+                        <span class="lang-key" data-en="Browse Services">تصفح الخدمات</span>
+                        <i class="fa-solid fa-arrow-left icon-flip"></i>
+                    </a>
                 </div>
                 <div class="card-visual-box">
                     <img src="/landingpage/assets/dashboards/sales2.png" alt="المنظومة المالية">
@@ -368,11 +405,11 @@
 <div id="stacking-container">
     <section class="panel">
         <div class="panel-card" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('/landingpage/assets/pannels/pannel1.png');">
-            <div class="content">
-                <span class="badge">الأقوى</span>
-                <h2>إدارة الموارد البشرية بكل سهولة</h2>
-                <p>سيركلز سوفت يخليك تدير موظفيك ورواتبهم بطريقتك وبكل دقة.</p>
-                <a href="/contact/contact.html" class="btn-main">ابدأ الآن</a>
+<div class="content">
+                <span class="badge lang-key" data-en="Powerful">الأقوى</span>
+                <h2 class="lang-key" data-en="HR Management Made Easy">إدارة الموارد البشرية بكل سهولة</h2>
+                <p class="lang-key" data-en="CirclesSoft lets you manage your employees and their payrolls the way you want with complete accuracy.">سيركلز سوفت يخليك تدير موظفيك ورواتبهم بطريقتك وبكل دقة.</p>
+                <a href="/contact/contact.html" class="btn-main lang-key" data-en="Get Started">ابدأ الآن</a>
             </div>
         </div>
     </section>
@@ -380,9 +417,29 @@
     <section class="panel">
         <div class="panel-card" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('/landingpage/assets/pannels/pannel2.png');">
             <div class="content">
-                <h2>منصة شاملة لإدارة أعمالك</h2>
-                <p>سيركلز سوفت يجمع إدارة موظفيك ومبيعاتك وحساباتك في نظام واحد سهل.</p>
-                <a href="/contact/contact.html" class="btn-main">ابدأ الآن</a>
+                <h2 class="lang-key" data-en="Comprehensive Business Management Platform">منصة شاملة لإدارة أعمالك</h2>
+                <p class="lang-key" data-en="CirclesSoft brings together your employee, sales, and accounting management in one easy system.">سيركلز سوفت يجمع إدارة موظفيك ومبيعاتك وحساباتك في نظام واحد سهل.</p>
+                <a href="/contact/contact.html" class="btn-main lang-key" data-en="Get Started">ابدأ الآن</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="panel">
+        <div class="panel-card" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('/landingpage/assets/pannels/pannel3.png');">
+            <div class="content">
+                <h2 class="lang-key" data-en="Your Management Experience Just Got Better">تجربة إدارتك صارت أفضل</h2>
+                <p class="lang-key" data-en="CirclesSoft makes it easy to manage your employees and sales, saving time and increasing productivity.">سيركلز سوفت يسهل عليك إدارة موظفيك ومبيعاتك، ويختصر الوقت ويزيد الإنتاجية.</p>
+                <a href="/contact/contact.html" class="btn-main lang-key" data-en="Get Started">ابدأ الآن</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="panel">
+        <div class="panel-card" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('/landingpage/assets/pannels/pannel4.png');">
+            <div class="content">
+                <h2 class="lang-key" data-en="The Complete Solution for Your Company">الحل الشامل لشركتك</h2>
+                <p class="lang-key" data-en="CirclesSoft manages your payroll, attendance, and sales with complete ease and your way.">سيركلز سوفت يدير رواتبك ودوامك ومبيعاتك بكل سهولة وبطريقتك.</p>
+                <a href="/contact/contact.html" class="btn-main lang-key" data-en="Get Started">ابدأ الآن</a>
             </div>
         </div>
     </section>
@@ -396,26 +453,6 @@
             </div>
         </div>
     </section> -->
-
-    <section class="panel">
-        <div class="panel-card" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('/landingpage/assets/pannels/pannel3.png');">
-            <div class="content">
-                <h2>تجربة إدارتك صارت أفضل</h2>
-                <p>سيركلز سوفت يسهل عليك إدارة موظفيك ومبيعاتك، ويختصر الوقت ويزيد الإنتاجية.</p>
-                <a href="/contact/contact.html" class="btn-main">ابدأ الآن</a>
-            </div>
-        </div>
-    </section>
-
-    <section class="panel">
-        <div class="panel-card" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('/landingpage/assets/pannels/pannel4.png');">
-            <div class="content">
-                <h2>الحل الشامل لشركتك</h2>
-                <p>سيركلز سوفت يدير رواتبك ودوامك ومبيعاتك بكل سهولة وبطريقتك.</p>
-                <a href="/contact/contact.html" class="btn-main">ابدأ الآن</a>
-            </div>
-        </div>
-    </section>
 
     <!-- <section class="panel">
         <div class="panel-card" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1507679799987-c73779587ccf?q=80&w=2000');">
@@ -437,19 +474,26 @@
         </div>
     </section> -->
 </div>
+
+
 <!-- testmonials -->
  <!-- Swiper CSS -->
 
 
 <section class="testimonials-section">
-    <!-- النقاط الزخرفية في الخلفية (تم نقلها لليمين) -->
+    <!-- النقاط الزخرفية في الخلفية -->
     <div class="dot-grid"></div>
 
     <div class="container">
         <!-- العنوان -->
         <div class="section-header">
-            <p class="sub-title">بعض آراء</p>
-            <h2 class="main-title">عملائنا <span class="highlight">المميزين.</span></h2>
+            <p class="sub-title">
+                <span class="lang-key" data-en="Trusted by Hundreds">بعض آراء</span>
+            </p>
+            <h2 class="main-title">
+                <span class="lang-key" data-en="Our Clients">عملائنا</span> 
+                <span class="highlight"><span class="lang-key" data-en="Say About Us">المميزين.</span></span>
+            </h2>
             <div class="zigzag-icon">
                 <svg width="60" height="10" viewBox="0 0 60 10">
                     <path d="M0 5 Q5 0 10 5 T20 5 T30 5 T40 5 T50 5 T60 5" fill="none" stroke="#4F46E5" stroke-width="3"/>
@@ -464,22 +508,29 @@
                 <!-- الشريحة 1 -->
                 <div class="swiper-slide">
                     <div class="testimonial-card">
-                        <!-- أيقونة الاقتباس (تم نقلها لليمين) -->
                         <div class="quote-icon">“</div>
                         
                         <div class="card-content">
-                           <div class="text-side">
-    <p>سيركلز سوفت غيّر طريقة عملنا تماماً. أصبحت عملية إدارة المبيعات والمحاسبة سهلة وواضحة، وأصبح لدينا رؤية واضحة لأداء الشركة .</p>
-    <p>أفضل قرار تقني اتخذناه هذا العام. نظام قوي ودعم ممتاز.</p>
-</div>
+                            <div class="text-side">
+                                <p>
+                                    <span class="lang-key" data-en="Circles Soft has completely transformed the way we work. Managing sales and accounting has become easy and transparent, and we now have a clear vision of the company's performance.">
+                                    سيركلز سوفت غيّر طريقة عملنا تماماً. أصبحت عملية إدارة المبيعات والمحاسبة سهلة وواضحة، وأصبح لدينا رؤية واضحة لأداء الشركة.
+                                    </span>
+                                </p>
+                                <p>
+                                    <span class="lang-key" data-en="The best technical decision we made this year. A powerful system with excellent support.">
+                                    أفضل قرار تقني اتخذناه هذا العام. نظام قوي ودعم ممتاز.
+                                    </span>
+                                </p>
+                            </div>
 
                             <div class="profile-side">
                                 <div class="image-wrapper">
                                     <img src="/landingpage/assets/testmonials/download (2).jpg" alt="محمد العمري">
                                 </div>
                                 <div class="profile-info">
-                                    <h3> محمد العمــري</h3>
-                                    <span>مؤسس ورئيس تنفيذي.</span>
+                                    <h3 class="lang-key" data-en="Mohammed Al-Amry"> محمد العمــري</h3>
+                                    <span class="lang-key" data-en="Founder & CEO">مؤسس ورئيس تنفيذي.</span>
                                 </div>
                                 <div class="yellow-square"></div>
                             </div>
@@ -493,16 +544,24 @@
                         <div class="quote-icon">“</div>
                         <div class="card-content">
                             <div class="text-side">
-                                <p>تجربة رائعة جداً مع سيركلز سوفت، النظام ساعدنا بشكل كبير في تنظيم الرواتب وإدارة ملفات الموظفين بكل سلاسة واحترافية.</p>
-                                <p>الدعم الفني متميز جداً والاستجابة سريعة، نوصي بهم لكل شركة تطمح للنمو الرقمي.</p>
+                                <p>
+                                    <span class="lang-key" data-en="A wonderful experience with Circles Soft. The system has greatly helped us organize payroll and manage employee files smoothly and professionally.">
+                                    تجربة رائعة جداً مع سيركلز سوفت، النظام ساعدنا بشكل كبير في تنظيم الرواتب وإدارة ملفات الموظفين بكل سلاسة واحترافية.
+                                    </span>
+                                </p>
+                                <p>
+                                    <span class="lang-key" data-en="The technical support is outstanding and the response is very fast. We highly recommend them to every company seeking digital growth.">
+                                    الدعم الفني متميز جداً والاستجابة سريعة، نوصي بهم لكل شركة تطمح للنمو الرقمي.
+                                    </span>
+                                </p>
                             </div>
                             <div class="profile-side">
                                 <div class="image-wrapper">
                                     <!-- <img src="/landingpage/assets/testmonials/download (3).jpg" alt="سارة كمال"> -->
                                 </div>
                                 <div class="profile-info">
-                                    <h3>سارة الغامـــدي</h3>
-                                    <span>مديرة الموارد البشرية.</span>
+                                    <h3 class="lang-key" data-en="Sarah Al-Ghamdi">سارة الغامـــدي</h3>
+                                    <span class="lang-key" data-en="HR Manager">مديرة الموارد البشرية.</span>
                                 </div>
                                 <div class="yellow-square"></div>
                             </div>
@@ -511,7 +570,7 @@
                 </div>
 
             </div>
-            <!-- نقاط التنقل (Pagination) -->
+            <!-- نقاط التنقل -->
             <div class="swiper-pagination"></div>
         </div>
     </div>
@@ -521,12 +580,13 @@
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
 
- <!----------------- Footer-------------------->
- 
+<!----------------- Footer-------------------->
+  
 <div id="footer-placeholder"></div>
 
 <script src="/footer/footer.js"></script>
 <script src="/navbar/navbar.js"></script>
+<script src="/english-script.js"></script>
 <!-- <script src="/global/circles-solutions/circles-solutions.js"></script> -->
 
 

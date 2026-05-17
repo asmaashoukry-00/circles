@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;800&family=Tajawal:wght@400;500;700;800&display=swap');
 
 .footer-container {
     background-color: #1a1e23;
@@ -7,6 +7,18 @@
     direction: rtl;
     padding-top: 80px;
 }
+
+html[dir="ltr"] .footer-container {
+    direction: ltr;
+    font-family: 'Montserrat', sans-serif;
+}
+
+html[dir="ltr"] .f-section {
+    border-right: 1px solid rgba(255, 255, 255, 0.05);
+    border-left: none;
+}
+
+html[dir="ltr"] .f-section:first-child { border-right: none; }
 
 .footer-main-grid {
     max-width: 1200px;
@@ -62,6 +74,7 @@
 }
 
 .minimal-footer ul li a:hover { color: #ffffff; padding-right: 5px; }
+html[dir="ltr"] .minimal-footer ul li a:hover { padding-right: 0; padding-left: 5px; }
 
 .f-divider {
     border: 0;

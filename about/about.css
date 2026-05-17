@@ -138,6 +138,12 @@ body.about-page-luxury {
     padding-right: 20px;
 }
 
+html[dir="ltr"] .section-title {
+    padding-right: 0;
+    font-size: 32px;
+    font-weight: 700;
+}
+
 .section-title::before {
     content: '';
     position: absolute;
@@ -148,6 +154,11 @@ body.about-page-luxury {
     height: 24px;
     background: var(--primary);
     border-radius: 10px;
+}
+
+html[dir="ltr"] .section-title::before {
+    right: auto;
+    left: 0;
 }
 
 .solutions-grid {
@@ -162,6 +173,11 @@ body.about-page-luxury {
     padding-right: 25px;
 }
 
+html[dir="ltr"] .solution-item {
+    padding-right: 0;
+    padding-left: 25px;
+}
+
 .dot-indicator {
     position: absolute;
     right: 0;
@@ -170,6 +186,11 @@ body.about-page-luxury {
     height: 8px;
     background: var(--primary);
     border-radius: 50%;
+}
+
+html[dir="ltr"] .dot-indicator {
+    right: auto;
+    left: 0;
 }
 
 .solution-item h4 {

@@ -7,6 +7,7 @@
     <!-- الخطوط والأيقونات -->
     <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" href="/favicon.png">
     <!-- Tailwind CSS للسرعة في التنسيق -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Chart.js للرسوم البيانية -->
@@ -213,16 +214,24 @@
     </section>
 
     <script>
+        // Day labels for Arabic/English
+        const dayLabelsArFull = ['السبت', 'الأحد', 'الاثنين', 'الثلاثاء', 'الأربعاء', 'الخميس', 'الجمعة'];
+        const dayLabelsEnFull = ['Sat', 'Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri'];
+
+        function getDayLabelsFull() {
+            return document.documentElement.lang === 'en' ? dayLabelsEnFull : dayLabelsArFull;
+        }
+
         // الرسم البياني للمبيعات (Area Chart)
         const ctxSales = document.getElementById('salesChart').getContext('2d');
         const gradientSales = ctxSales.createLinearGradient(0, 0, 0, 300);
         gradientSales.addColorStop(0, 'rgba(99, 102, 241, 0.3)');
         gradientSales.addColorStop(1, 'rgba(99, 102, 241, 0)');
 
-        new Chart(ctxSales, {
+        const salesChart = new Chart(ctxSales, {
             type: 'line',
             data: {
-                labels: ['السبت', 'الأحد', 'الاثنين', 'الثلاثاء', 'الأربعاء', 'الخميس', 'الجمعة'],
+                labels: getDayLabelsFull(),
                 datasets: [{
                     label: 'المبيعات',
                     data: [12000, 19000, 15000, 25000, 22000, 30000, 28000],
@@ -239,9 +248,44 @@
                 scales: { 
                     y: { display: false },
                     x: { grid: { display: false }, ticks: { font: { family: 'Tajawal', weight: 'bold' } } }
-                }
             }
         });
+
+        const salesChartEl = document.getElementById('salesChart');
+        let salesChart = null;
+        if (salesChartEl) {
+            salesChart = new Chart(salesChartEl.getContext('2d'), {
+                type: 'line',
+                data: {
+                    labels: getDayLabelsFull(),
+                    datasets: [{
+                        label: 'المبيعات',
+                        data: [12000, 19000, 15000, 25000, 22000, 30000, 28000],
+                        borderColor: '#6366f1',
+                        borderWidth: 4,
+                        fill: true,
+                        backgroundColor: gradientSales,
+                        tension: 0.4,
+                        pointRadius: 0
+                    }]
+                },
+                options: {
+                    plugins: { legend: { display: false } },
+                    scales: {
+                        y: { display: false },
+                        x: { grid: { display: false }, ticks: { font: { family: 'Tajawal', weight: 'bold' } } }
+                    }
+            }
+        });
+
+        // Watch for language changes and update chart labels
+        if (salesChart) {
+            const langObserverTest = new MutationObserver(() => {
+                salesChart.data.labels = getDayLabelsFull();
+                salesChart.update();
+            });
+            langObserverTest.observe(document.documentElement, { attributes: true, attributeFilter: ['lang'] });
+        }
 
         // الرسم البياني للموارد البشرية (Donut Chart)
         const ctxHR = document.getElementById('hrChart').getContext('2d');

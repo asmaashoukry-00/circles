@@ -94,6 +94,11 @@ body.contact-page-luxury {
     margin-bottom: 25px;
 }
 
+html[dir="ltr"] .info-item-luxury {
+    padding-right: 0;
+    padding-left: 20px;
+}
+
 .dot-indicator {
     position: absolute;
     right: 0; top: 8px;
@@ -102,9 +107,18 @@ body.contact-page-luxury {
     border-radius: 50%;
 }
 
+html[dir="ltr"] .dot-indicator {
+    right: auto;
+    left: 0;
+}
+
 .info-item-luxury small { color: #94a3b8; font-size: 13px; }
 .info-item-luxury p { font-weight: 700; font-size: 18px; margin: 5px 0 0 0; }
 .phone-number { text-align: right; }
+
+html[dir="ltr"] .phone-number {
+    text-align: left;
+}
 
 /* الأيقونات الاحترافية */
 .social-wrapper-contact {
@@ -177,6 +191,11 @@ body.contact-page-luxury {
     pointer-events: none;
 }
 
+html[dir="ltr"] .input-luxury-group label {
+    right: auto;
+    left: 0;
+}
+
 .input-luxury-group input:focus ~ label,
 .input-luxury-group input:not(:placeholder-shown) ~ label,
 .input-luxury-group textarea:focus ~ label,
@@ -195,6 +214,11 @@ body.contact-page-luxury {
     width: 0; height: 2px;
     background: var(--primary);
     transition: width 0.4s ease;
+}
+
+html[dir="ltr"] .input-border {
+    right: auto;
+    left: 0;
 }
 
 .input-luxury-group input:focus ~ .input-border { width: 100%; }

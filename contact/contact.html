@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="en" dir="ltr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>تواصل مع سيركلز | Circles Soft</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" href="/favicon.png">
     <link rel="stylesheet" href="contact.css">
      <link
       rel="stylesheet"
@@ -31,8 +32,12 @@
             <div class="contact-master-card">
                 
                 <div class="contact-header">
-                    <span class="ultra-label">  تواصــــل معنــا</span>
-                    <h1 class="contact-main-title">لنصنع <span class="aesthetic-text">الفارق</span> معاً</h1>
+                    <span class="ultra-label lang-key" data-ar="تواصــــل معنــا" data-en="Contact Us">Contact Us</span>
+                    <h1 class="contact-main-title">
+                        <span class="lang-key" data-ar="لنصنع" data-en="Let's Make">Let's Make</span>
+                        <span class="lang-key" style="color: #4F46E5;" data-ar="الفارق" data-en=" the Difference"> the Difference</span>
+                        <span class="lang-key" data-ar="معاً" data-en="Together">Together</span>
+                    </h1>
                 </div>
 
                 <div class="contact-grid">
@@ -40,23 +45,23 @@
                     <!-- الجانب الأيمن: المعلومات -->
                     <div class="info-section">
                         <div class="minimal-info-stack">
-                           
+                            
                             <div class="info-item-luxury">
                                 <div class="dot-indicator"></div>
-                                <small>رقم الاتصــال</small>
+                                <small class="lang-key" data-ar="رقم الاتصــال" data-en="Phone Number">Phone Number</small>
                                 <p dir="ltr" class="phone-number">+962 78 886 8944</p>
                                 <p dir="ltr" class="phone-number">+966 54 386 8253</p>
                             </div>
                             <div class="info-item-luxury">
                                 <div class="dot-indicator"></div>
-                                <small>الدعم الفني</small>
+                                <small class="lang-key" data-ar="الدعم الفني" data-en="Tech Support">Tech Support</small>
                                 <p>info@circlessoft.com</p>
                             </div>
                              <div class="info-item-luxury">
                                 <div class="dot-indicator"></div>
-                                <small>المكتـب الرئيسي</small>
-                                <p>الرياض </p>
-                                <p>عمـــان      </p>
+                                <small class="lang-key" data-ar="المكتـب الرئيسي" data-en="Head Office">Head Office</small>
+                                <p>Riyadh </p>
+                                <p>Amman      </p>
                                
                                 <!-- <p>عمــان |   الأردن</p> -->
                             </div>
@@ -77,39 +82,39 @@
                             <div class="form-inputs-grid">
                                 <div class="input-luxury-group">
                                     <input type="text" required placeholder=" ">
-                                    <label>الأسم الكامل</label>
+                                    <label class="lang-key" data-ar="الأسم الكامل" data-en="Full Name">Full Name</label>
                                     <span class="input-border"></span>
                                 </div>
                                 <div class="input-luxury-group">
                                     <input type="email" required placeholder=" ">
-                                    <label>بريد العمل</label>
+                                    <label class="lang-key" data-ar="بريد العمل" data-en="Work Email">Work Email</label>
                                     <span class="input-border"></span>
                                 </div>
                                 <div class="input-luxury-group">
                                     <input type="tel" required placeholder=" ">
-                                    <label>رقم الجوال</label>
+                                    <label class="lang-key" data-ar="رقم الجوال" data-en="Mobile Number">Mobile Number</label>
                                     <span class="input-border"></span>
                                 </div>
                                 <div class="input-luxury-group">
                                     <select required>
                                         <option value="" disabled selected hidden></option>
-                                        <option>استفسار عن نظام ERP</option>
-                                        <option>حلول الموارد البشرية</option>
-                                        <option>طلب عرض سعر</option>
+                                        <option class="lang-key" data-ar="استفسار عن نظام ERP" data-en="ERP System Inquiry">ERP System Inquiry</option>
+                                        <option class="lang-key" data-ar="حلول الموارد البشرية" data-en="HR Solutions">HR Solutions</option>
+                                        <option class="lang-key" data-ar="طلب عرض سعر" data-en="Request a Quote">Request a Quote</option>
                                     </select>
-                                    <label>نوع الخدمة</label>
+                                    <label class="lang-key" data-ar="نوع الخدمة" data-en="Service Type">Service Type</label>
                                     <span class="input-border"></span>
                                 </div>
                                 <div class="input-luxury-group full-width">
                                     <textarea rows="2" required placeholder=" "></textarea>
-                                    <label>رسالتك (اختياري)</label>
+                                    <label class="lang-key" data-ar="رسالتك (اختياري)" data-en="Your Message (Optional)">Your Message (Optional)</label>
                                     <span class="input-border"></span>
                                 </div>
                             </div>
 
                             <div class="form-footer">
                                 <button type="submit" class="btn">
-                                    <span>اطلب عرض توضيحي</span>
+                                    <span class="lang-key" data-ar="اطلب عرض توضيحي" data-en="Request a Demo">Request a Demo</span>
                                 </button>
                             </div>
                         </form>

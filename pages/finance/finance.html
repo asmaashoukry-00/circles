@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -43,23 +43,22 @@
     <section class="page-hero">
     <div class="container">
        <h1 class="hero-title">
-    تجاوز لغة الأرقام.. إلى <br />
+    <span class="lang-key" data-ar="تجاوز لغة الأرقام.. إلى" data-en="Go Beyond the Numbers..">Go Beyond the Numbers..</span>
+    <br />
     <span class="highlight-wrap" style="position: relative; display: inline-block;">
-        بناء ثروة مستدامة
+        <span class="lang-key" data-ar="بناء ثروة مستدامة" data-en="Building Sustainable Wealth">Building Sustainable Wealth</span>
         <svg class="brush-highlight" viewBox="0 0 520 110" preserveAspectRatio="none" fill="none" style="position: absolute; bottom: -10px; right: 4px; width: 97%; height: 85px; z-index: -1; pointer-events: none;">
             <path d="M10 55 Q 260 45 510 55" stroke="#4F46E5" stroke-width="45" stroke-linecap="round" stroke-opacity="0.2" />
         </svg>
     </span>
-    بمحاسبة ذكية.
+    <span class="lang-key" data-ar="بمحاسبة ذكية." data-en="With Smart Accounting.">With Smart Accounting.</span>
 </h1>
         <!-- dot grid -->
          <div class="dot-grid"></div>
         
-        <p class="hero-description">
-    سيركلز يمنحك سيطرة مطلقة على تدفقاتك النقدية، أصولك، وحساباتك البنكية — لتضمن ميزانية منضبطة تدفع أعمالك نحو التوسع بأمان.
-</p>
+        <p class="hero-description lang-key" data-ar="سيركلز يمنحك سيطرة مطلقة على تدفقاتك النقدية، أصولك، وحساباتك البنكية — لتضمن ميزانية منضبطة تدفع أعمالك نحو التوسع بأمان." data-en="Circles gives you complete control over your cash flows, assets, and bank accounts — to ensure a disciplined budget that drives your business toward secure expansion.">Circles gives you complete control over your cash flows, assets, and bank accounts — to ensure a disciplined budget that drives your business toward secure expansion.</p>
         
-        <a href="/contact/contact.html" class="hero-btn">اطلب عرض توضيحي </a>
+        <a href="/contact/contact.html" class="hero-btn"><span class="lang-key" data-ar="اطلب عرض توضيحي" data-en="Request a Demo">Request a Demo</span></a>
     </div>
 </section>
 <!--  -->
@@ -67,9 +66,9 @@
         <div class="container">
             <div class="section-header">
             <h2 class="section-main-title">
-    كل ما تحتاجه.. 
+    <span class="lang-key" data-ar="كل ما تحتاجه.." data-en="Everything You Need..">Everything You Need..</span> <br>
     <span class="underline-container">
-        لإدارة أموالك بكل ثقة
+        <span class="lang-key" data-ar="لإدارة أموالك بكل ثقة" data-en="To manage your finances with complete confidence">To manage your finances with complete confidence</span>
         <svg class="scribble-line" viewBox="0 0 300 20" preserveAspectRatio="none">
             <path d="M5,15 C50,5 150,5 295,15"/>
         </svg>
@@ -84,42 +83,42 @@
                             <!-- FaChartLine icon -->
                           <i class="fas fa-chart-line"></i>
                         </div>
-                        <span>المحاسبة العامة</span>
+                        <span><span class="lang-key" data-ar="المحاسبة العامة" data-en="General Accounting">General Accounting</span></span>
                     </div>
                     <div class="tab-item" data-tab="2">
                         <div class="tab-icon">
                             <!-- FaWarehouse icon -->
                          <i class="fas fa-warehouse"></i>
                         </div>
-                        <span> البنوك والنقدية</span>
+                        <span><span class="lang-key" data-ar=" البنوك والنقدية" data-en="Bank & Cash">Bank & Cash</span></span>
                     </div>
                     <div class="tab-item" data-tab="3">
                         <div class="tab-icon">
                             <!-- FaChartBar icon -->
                            <i class="fas fa-chart-bar"></i>
                         </div>
-                        <span> الحسابات المدينة</span>
+                        <span><span class="lang-key" data-ar=" الحسابات المدينة" data-en="Accounts Receivable">Accounts Receivable</span></span>
                     </div>
                     <div class="tab-item" data-tab="3">
                         <div class="tab-icon">
                             <!-- FaChartBar icon -->
                            <i class="fas fa-chart-bar"></i>
                         </div>
-                        <span> الحسابات الدائنة </span>
+                        <span><span class="lang-key" data-ar=" الحسابات الدائنة " data-en="Accounts Payable">Accounts Payable</span></span>
                     </div>
                     <div class="tab-item" data-tab="3">
                         <div class="tab-icon">
                             <!-- FaChartBar icon -->
                            <i class="fas fa-chart-bar"></i>
                         </div>
-                        <span>  الأصول الثابتة  </span>
+                        <span><span class="lang-key" data-ar="  الأصول الثابتة  " data-en="Fixed Assets">Fixed Assets</span></span>
                     </div>
                     <div class="tab-item" data-tab="3">
                         <div class="tab-icon">
                             <!-- FaChartBar icon -->
                            <i class="fas fa-chart-bar"></i>
                         </div>
-                        <span>  إدارة المشاريع </span>
+                        <span><span class="lang-key" data-ar="  إدارة المشاريع " data-en="Project Management">Project Management</span></span>
                     </div>
                 </div>
                 <div class="display-area">
@@ -144,14 +143,14 @@
         document.addEventListener('DOMContentLoaded', function() {
             const tabItems = document.querySelectorAll('.tab-item');
             const displayImg = document.querySelector('.display-img');
-            const dashboardImages = [
-             
-                { img: '/pages/finance/assets/accounting.png', title: 'المحاسبة العامة' },
-                { img: '/pages/finance/assets/bank.png', title: 'البنوك والنقدية ' },
-                { img: '/pages/finance/assets/receivable.png', title: 'الحسابات المدينة ' },
-                { img: '/pages/finance/assets/payable.png', title: 'الحسابات الدائنة ' },
-                { img: '/pages/finance/assets/fixed-assets.png', title: '  الأصول الثابتة  ' },
-                { img: '/pages/finance/assets/projects.png', title: '   إدارة المشاريع  ' }
+const dashboardImages = [
+              
+                { img: '/pages/finance/assets/accounting.png', title: 'General Accounting' },
+                { img: '/pages/finance/assets/bank.png', title: 'Bank & Cash' },
+                { img: '/pages/finance/assets/receivable.png', title: 'Accounts Receivable' },
+                { img: '/pages/finance/assets/payable.png', title: 'Accounts Payable' },
+                { img: '/pages/finance/assets/fixed-assets.png', title: 'Fixed Assets' },
+                { img: '/pages/finance/assets/projects.png', title: 'Project Management' }
             ];
 
             tabItems.forEach((tab, index) => {

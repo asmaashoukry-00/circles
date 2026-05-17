@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pay Circles UI | High-End Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="/favicon.png">
+    <style>
+        body {
+            font-family: 'Tajawal', sans-serif;
+            background-color: #080a0f; /* Deep Dark Background */
+            color: #e2e8f0;
+        }
+
+        /* Glassmorphism Effect */
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.02);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 28px;
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .glass-card:hover {
+            background: rgba(255, 255, 255, 0.06);
+            border-color: rgba(59, 130, 246, 0.4);
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+        }
+
+        /* Active State Glow */
+        .tab-active {
+            background: linear-gradient(90deg, rgba(59, 130, 246, 0.1) 0%, rgba(59, 130, 246, 0) 100%);
+            border-right: 3px solid #3b82f6;
+            color: #3b82f6;
+        }
+
+        /* Animated Background Orbs */
+        .orb {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(100px);
+            z-index: -1;
+            opacity: 0.1;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex items-center justify-center p-4">
+
+    <!-- background decorative orbs -->
+    <div class="orb w-96 h-96 bg-blue-600 top-0 left-0"></div>
+    <div class="orb w-80 h-80 bg-purple-600 bottom-0 right-0"></div>
+
+    <div class="w-full max-w-7xl">
+        <header class="text-center mb-12">
+            <h1 class="text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-emerald-400 mb-4">
+                Pay Circles
+            </h1>
+            <p class="text-gray-400 text-lg">الجيل القادم من أنظمة إدارة الرواتب وشؤون الموظفين الذكية</p>
+        </header>
+
+        <div class="glass-panel flex flex-col lg:flex-row min-h-[650px] shadow-2xl overflow-hidden">
+            
+            <!-- Sidebar Navigation -->
+            <aside class="w-full lg:w-80 border-l border-white/5 bg-white/5 p-6 space-y-4">
+                <div class="mb-8 px-4">
+                    <span class="text-xs uppercase tracking-widest text-gray-500 font-bold">القائمة الرئيسية</span>
+                </div>
+                
+                <nav class="space-y-2">
+                    <button class="w-full flex items-center gap-4 p-4 rounded-xl transition-all tab-active font-bold">
+                        <div class="p-2 bg-blue-500/20 rounded-lg text-blue-400">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        </div>
+                        الرواتب والأتمتة
+                    </button>
+
+                    <button class="w-full flex items-center gap-4 p-4 rounded-xl transition-all hover:bg-white/5 text-gray-400 group">
+                        <div class="p-2 bg-gray-500/10 rounded-lg group-hover:text-white transition-colors">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+                        </div>
+                        شؤون الموظفين
+                    </button>
+
+                    <button class="w-full flex items-center gap-4 p-4 rounded-xl transition-all hover:bg-white/5 text-gray-400 group">
+                        <div class="p-2 bg-gray-500/10 rounded-lg group-hover:text-white transition-colors">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+                        </div>
+                        المستحقات والتعويضات
+                    </button>
+                </nav>
+            </aside>
+
+            <!-- Main Feature Grid (Content Area) -->
+            <main class="flex-1 p-8 lg:p-12 overflow-y-auto">
+                <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+                    
+                    <!-- Feature 1: Main Salary Engine -->
+                    <div class="glass-card p-6 rounded-2xl md:col-span-2 border-r-4 border-blue-500">
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-xl font-bold text-white">أتمتة الرواتب والتوطين</h3>
+                            <span class="bg-blue-500/20 text-blue-400 text-xs py-1 px-3 rounded-full">ديناميكي</span>
+                        </div>
+                        <p class="text-gray-400 leading-relaxed mb-4">أتمتة كاملة للرواتب مــن خلال اإلعــداد المرن والتوطين الموصــى بــه وفقــا لسياســات بلدك وشركتك.</p>
+                        <div class="flex gap-2">
+                            <span class="text-[10px] bg-white/5 px-2 py-1 rounded">نظام حماية الأجور</span>
+                            <span class="text-[10px] bg-white/5 px-2 py-1 rounded">الربط المحاسبي</span>
+                            <span class="text-[10px] bg-white/5 px-2 py-1 rounded">قيود الرواتب</span>
+                        </div>
+                    </div>
+
+                    <!-- Feature 2: Compliance -->
+                    <div class="glass-card p-6 rounded-2xl">
+                        <div class="w-10 h-10 bg-emerald-500/20 text-emerald-400 rounded-xl flex items-center justify-center mb-4">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+                        </div>
+                        <h3 class="text-lg font-bold mb-2 text-white">الامتثال والتقارير</h3>
+                        <p class="text-sm text-gray-400">إدارة الضرائب، التقارير الحكومية، وتقارير البيانات المالية والشخصية الشاملة.</p>
+                    </div>
+
+                    <!-- Feature 3: Employees Movements -->
+                    <div class="glass-card p-6 rounded-2xl">
+                        <h3 class="text-lg font-bold mb-4 text-white">حركات الموظفين</h3>
+                        <ul class="space-y-3">
+                            <li class="flex items-center gap-3 text-sm text-gray-400">
+                                <div class="w-1.5 h-1.5 bg-blue-500 rounded-full"></div> العمل الإضافي والإجازات
+                            </li>
+                            <li class="flex items-center gap-3 text-sm text-gray-400">
+                                <div class="w-1.5 h-1.5 bg-blue-500 rounded-full"></div> زيادة الرواتب والسلف
+                            </li>
+                            <li class="flex items-center gap-3 text-sm text-gray-400">
+                                <div class="w-1.5 h-1.5 bg-blue-500 rounded-full"></div> حركات خارج الراتب
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Feature 4: Benefits -->
+                    <div class="glass-card p-6 rounded-2xl border-b-4 border-emerald-500/40">
+                        <h3 class="text-lg font-bold mb-2 text-white">التعويضات والمزايا</h3>
+                        <p class="text-sm text-gray-400 mb-4">إدارة شاملة للتأمين الصحي، تذاكر الموظفين، وصندوق الادخار.</p>
+                        <div class="grid grid-cols-2 gap-2">
+                            <div class="bg-white/5 p-2 rounded text-center text-xs">تذاكر سفر</div>
+                            <div class="bg-white/5 p-2 rounded text-center text-xs">تأمين صحي</div>
+                        </div>
+                    </div>
+
+                    <!-- Feature 5: Lifecycle -->
+                    <div class="glass-card p-6 rounded-2xl bg-gradient-to-br from-blue-600/10 to-transparent">
+                        <h3 class="text-lg font-bold mb-2 text-white text-emerald-400">نهاية الخدمة</h3>
+                        <p class="text-sm text-gray-300">نظام ذكي لحساب تعويضات نهاية الخدمة والمستحقات بدقة متناهية وفقاً للوائح القانونية.</p>
+                    </div>
+
+                    <!-- Feature 6: Profiles -->
+                    <div class="glass-card p-6 rounded-2xl md:col-span-2 lg:col-span-1">
+                        <h3 class="text-lg font-bold mb-4 text-white">الملفات الرقمية</h3>
+                        <div class="space-y-4">
+                            <div class="flex items-center gap-4 bg-white/5 p-3 rounded-xl">
+                                <div class="w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center font-bold">M</div>
+                                <div>
+                                    <p class="text-xs font-bold">الملف المالي</p>
+                                    <p class="text-[10px] text-gray-500">تفاصيل الراتب والبدلات</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-4 bg-white/5 p-3 rounded-xl">
+                                <div class="w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center font-bold text-blue-400">P</div>
+                                <div>
+                                    <p class="text-xs font-bold">الملف الشخصي</p>
+                                    <p class="text-[10px] text-gray-500">الوثائق والبيانات الأساسية</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Feature 7: Attendance -->
+                    <div class="glass-card p-6 rounded-2xl flex items-center justify-between group cursor-pointer border-l-4 border-purple-500">
+                        <div>
+                            <h3 class="text-lg font-bold text-white">بطاقة الدوام</h3>
+                            <p class="text-xs text-gray-500">إدارة الحضور والانصراف</p>
+                        </div>
+                        <div class="text-purple-400 group-hover:translate-x-[-5px] transition-transform">
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        </div>
+                    </div>
+
+                </div>
+            </main>
+        </div>
+    </div>
+</body>
+</html>

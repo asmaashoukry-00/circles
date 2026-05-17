@@ -20,7 +20,8 @@
  />
  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
  <link rel="stylesheet" href="payroll.css" />
-
+<!-- Swiper CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 <link rel="icon" href="/favicon.png">
 
   <link
@@ -30,6 +31,9 @@
      <!-- navbar & footer styles -->
  <link rel="stylesheet" href="/footer/footer.css" />
     <link rel="stylesheet" href="/navbar/navbar.css" />
+    <style>
+    
+</style>
  </head>
  <body>
      <!----------------- navbar-------------------->
@@ -49,10 +53,26 @@
        رواتب مضمونة... موظفون راضون<br>
         <span class="gradient-text">شركة أكثر نمواً</span>
     </h1>
-    <p class="hero-subtitle">
-       من الملف الشخصي  والمالي إلى مسير الرواتب والتقارير الحكومية، <br>
-        كل شيء في منصة واحدة تضمن لك الدقة التامة، الامتثال الكامل، ورضا أعلى لموظفيك.
-    </p>
+   <div class="hero-features-inline">
+    إدارة الضرائب <span class="divider">|</span> 
+    أتمتة الرواتب <span class="divider">|</span> 
+    بناء قيود الرواتب <span class="divider">|</span> 
+    ملفات حماية الأجور <span class="divider">|</span> 
+    الربط المحاسبي <span class="divider">|</span> 
+    تقارير البيانات المالية <span class="divider">|</span> 
+    الملف الشخصي <span class="divider">|</span> 
+    إدارة الإجازات <span class="divider">|</span> 
+    بطاقة الدوام <span class="divider">|</span> 
+    حركات الموظفين <span class="divider">|</span> 
+    التأمين الصحي <span class="divider">|</span> 
+    زيادة الرواتب <span class="divider">|</span> 
+    صندوق الادخار <span class="divider">|</span> 
+    السلف والقروض <span class="divider">|</span> 
+    تذاكر الموظفين <span class="divider">|</span> 
+    إنهاء الخدمة <span class="divider">|</span> 
+    حركات خارج الراتب <span class="divider">|</span> 
+    التقارير الحكومية
+</div>
     <a href="/contact/contact.html" class="btn">اطلب عرض توضيحي</a>
 </div>
   </div>
@@ -61,26 +81,39 @@
  <!-- Services Section -->
 <section class="services-section">
     <div class="container">
-        <!-- Service 1 -->
-        <div class="service-row" data-aos="fade-up">
-            <div class="service-content">
-                <span class="service-number">01</span>
-                <h2>ملف شخصي متكامل</h2>
-                <p>ملف شخصي متكامل ومركزي لكل موظف يحتوي على كافة بياناته الشخصية والوظيفية والعائلية، مع إمكانية التحديث الذاتي وسهولة الوصول للمعلومات في أي وقت.</p>
-                <ul class="service-features">
-                    <li><i class="fas fa-check"></i> بيانات شخصية ووظيفية كاملة ومحدثة</li>
-                    <li><i class="fas fa-check"></i> معلومات العائلة والمؤهلات العلمية والخبرات</li>
-                    <li><i class="fas fa-check"></i> الوثائق والعقود والتقييمات السنوية</li>
-                    <li><i class="fas fa-check"></i> خدمة ذاتية لتحديث البيانات بكل سهولة</li>
-                </ul>
+       <!-- Service 1 -->
+<div class="service-row payroll1" data-aos="fade-up">
+    <div class="service-content">
+        <span class="service-number">01</span>
+        <h2>ملف شخصي متكامل</h2>
+        <p>ملف شخصي متكامل ومركزي لكل موظف يحتوي على كافة بياناته الشخصية والوظيفية والعائلية...</p>
+        <ul class="service-features">
+            <li><i class="fas fa-check"></i> بيانات شخصية ووظيفية كاملة ومحدثة</li>
+            <li><i class="fas fa-check"></i> معلومات العائلة والمؤهلات العلمية</li>
+            <li><i class="fas fa-check"></i> الوثائق والعقود والتقييمات السنوية</li>
+            <li><i class="fas fa-check"></i> خدمة ذاتية لتحديث البيانات بكل سهولة</li>
+        </ul>
+    </div>
+
+    <!-- الجزء المعدل: السلايدر -->
+    <div class="service-image">
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="assets/payroll1-1.png" alt="صورة 1"></div>
+                <div class="swiper-slide"><img src="assets/payroll1-2.png" alt="صورة 2"></div>
+                <div class="swiper-slide"><img src="assets/payroll1-3.png" alt="صورة 3"></div>
             </div>
-            <div class="service-image">
-                <img src="assets/payroll1.png" alt="ملف شخصي متكامل" />
-            </div>
+            <!-- الأسهم -->
+            <!-- <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div> -->
+            <!-- نقاط التنقل (اختياري) -->
+            <div class="swiper-pagination"></div>
         </div>
+    </div>
+</div>
 
         <!-- Service 2 -->
-        <div class="service-row reverse" data-aos="fade-up">
+        <div class="service-row reverse payroll2" data-aos="fade-up">
             <div class="service-content">
                 <span class="service-number">02</span>
                 <h2>الملف المالي والضرائب</h2>
@@ -323,13 +356,33 @@
  <div id="footer-placeholder"></div>
 
 
-
+ <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+ <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="/footer/footer.js"></script>
 <script src="/navbar/navbar.js"></script>
 
- <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
  <script>
  AOS.init({ duration: 1000, once: true });
+ 
+  var swiper = new Swiper(".mySwiper", {
+    loop: true,
+    rtl: true, // ضروري لأن المحتوى عربي
+    autoplay: {
+      delay: 10000,
+      disableOnInteraction: false,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    // اختياري: إضافة نقاط أسفل السلايدر
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+  });
+
  </script>
+
  </body>
 </html>

@@ -27,6 +27,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
      <!-- navbar & footer styles -->
  <link rel="stylesheet" href="/footer/footer.css" />
     <link rel="stylesheet" href="/navbar/navbar.css" />
@@ -49,8 +50,17 @@
        ودّع فوضى الدوام والحضور <br>
         <span class="gradient-text"> مراقبة ذكية، رؤية واضحة، وإدارة سلسة.</span>
       </h1>
-      <p class="hero-subtitle"> متتبع دقيق للحضور والانصراف، إدارة مرنة للورديات، <br>
-وتقارير تحليلية قوية تساعدك على تحسين إنتاجية فريقك.</p>
+      <div class="hero-features-inline">
+    <span class="lang-key" data-en="Multi-Channel Attendance Tracking">تتبع متعدد القنوات للحضور</span> <span class="divider">|</span> 
+    <span class="lang-key" data-en="Biometric Devices Integration">الربط مع أجهزة البصمة</span> <span class="divider">|</span> 
+    <span class="lang-key" data-en="Payroll System Integration">الاندماج مع نظام الرواتب</span> <span class="divider">|</span> 
+    <span class="lang-key" data-en="Self-Service Portal Sync">مزامنة بوابة خدمات الموظفين</span> <span class="divider">|</span> 
+    <span class="lang-key" data-en="Manager Approvals Integration">أتمتة موافقات المديرين</span> <span class="divider">|</span> 
+    <span class="lang-key" data-en="Centralized Web-Based Control">إدارة سحابية مركزية</span> <span class="divider">|</span> 
+    <span class="lang-key" data-en="Multi-Shift Scheduling Rules">جدولة مناوبات متعددة القواعد</span> <span class="divider">|</span> 
+    <span class="lang-key" data-en="Roster & Shift Planning">تخطيط لوائح المناوبات</span> <span class="divider">|</span> 
+    <span class="lang-key" data-en="Geo-Fencing & Mobile Biometrics">التحضير الذكي بموقع وبصمة الهاتف</span>
+</div>
       <a href="/contact/contact.html" class="btn">اطلب عرض توضيحي </a>
     </div>
   </div>
@@ -88,7 +98,7 @@
                     <li><i class="fas fa-check"></i> إعدادات مراقبة الدوام المتقدمة</li>
                     <li><i class="fas fa-check"></i> ربط الأجهزة والتطبيقات</li>
                     <li><i class="fas fa-check"></i> إعداد الورديات والمناوبات</li>
-                    <li><i class="fas fa-check"></i> تفعيل التتبع الجغرافي الدقيق</li>
+                    <li><i class="fas fa-check"></i> تفعيل تحديد الموقع الجغرافي الدقيق</li>
                 </ul>
             </div>
             <div class="service-image">
@@ -97,21 +107,31 @@
         </div>
 
         <!-- Service 3 -->
-        <div class="service-row" data-aos="fade-up">
+        <div class="service-row attendance3" data-aos="fade-up">
             <div class="service-content">
                 <span class="service-number">03</span>
-                <h2>جدولة الورديات بكل مرونة</h2>
-                <p>جدولة ورديات الموظفين بطريقة ذكية ومرنة تدعم كل أنواع الدوام. استورد الجداول عبر الإكسل أو أنشئها يدوياً مع إمكانية التعديل السريع والتنبيهات التلقائية.</p>
+                <h2>تهيئة الورديات بكل مرونة</h2>
+                <p>إعداد مرن ومتكامل للورديات وفق متطلبات المنشأة، يشمل ساعات العمل والعطل وفترات الاستراحة وآليات احتساب الإضافي بدقة.</p>
                 <ul class="service-features">
-                    <li><i class="fas fa-check"></i> جدولة الورديات المتعددة بسهولة</li>
-                    <li><i class="fas fa-check"></i> استيراد وتصدير الجداول عبر الإكسل</li>
-                    <li><i class="fas fa-check"></i> عرض وتعديل الجدول الزمني بصرياً</li>
-                    <li><i class="fas fa-check"></i> تنبيهات تلقائية للتغييرات</li>
+                    <li><i class="fas fa-check"></i>   تهيئة شاملة للورديات  </li>
+                    <li><i class="fas fa-check"></i>    احتساب العمل الإضافي بدقة   </li>
+                    <li><i class="fas fa-check"></i>   جدولة مرنة للورديات     </li>
+                    <li><i class="fas fa-check"></i> استيراد وتصدير الجداول عبر الإكسل </li>
+                    <li><i class="fas fa-check"></i>  تنبيهات تلقائية للتغييرات</li>
                 </ul>
             </div>
-            <div class="service-image">
-                <img src="assets/attendance3.png" alt="جدولة الورديات" />
+           <!-- الجزء المعدل: السلايدر -->
+    <div class="service-image">
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="assets/attendance3-1.png" alt="صورة 1"></div>
+                <div class="swiper-slide"><img src="assets/attendance3-2.png" alt="صورة 2"></div>
+                <!-- <div class="swiper-slide"><img src="assets/attendance3-3.png" alt="صورة 3"></div> -->
             </div>
+         
+            <div class="swiper-pagination"></div>
+        </div>
+    </div>
         </div>
 
         <!-- Service 4 -->
@@ -134,8 +154,8 @@
         <!-- Service 5 -->
         <div class="service-row" data-aos="fade-up">
     <div class="service-content">
-        <span class="service-number">01</span>
-        <h2>تتبع الموقع الجغرافي الذكي</h2>
+        <span class="service-number">05</span>
+        <h2> الموقع الجغرافي الذكي</h2>
         <p>ضمان حضور موظفيك من المكان الصحيح في كل مرة. نظام تتبع جغرافي متقدم يحدد مناطق العمل المسموح بها ويمنع التسجيل خارجها، مما يعزز الانضباط، يحمي وقت الشركة، ويوفر عليك القلق من التلاعب.</p>
         <ul class="service-features">
             <li><i class="fas fa-check"></i> تحديد مناطق العمل بدقة عالية</li>
@@ -151,7 +171,7 @@
         <!-- Service 6 -->
         <div class="service-row reverse" data-aos="fade-up">
             <div class="service-content">
-                <span class="service-number">05</span>
+                <span class="service-number">06</span>
                 <h2>تكامل سلس واندماج كامل</h2>
                 <p>يندمج نظام مراقبة الدوام بسهولة مع أنظمة الرواتب، بوابة خدمات الموظفين، أجهزة البصمة، والتطبيق الجوال، مما يضمن تدفق البيانات تلقائياً وبدون أخطاء.</p>
                 <ul class="service-features">
@@ -178,12 +198,33 @@
 
 
 
+ 
+ <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+ <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="/footer/footer.js"></script>
 <script src="/navbar/navbar.js"></script>
 
- <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
  <script>
  AOS.init({ duration: 1000, once: true });
+ 
+  var swiper = new Swiper(".mySwiper", {
+    loop: true,
+    rtl: true, // ضروري لأن المحتوى عربي
+    autoplay: {
+      delay: 10000,
+      disableOnInteraction: false,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    // اختياري: إضافة نقاط أسفل السلايدر
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+  });
+
  </script>
  </body>
 </html>

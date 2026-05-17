@@ -89,6 +89,11 @@
     background-size: 20px 20px;
     opacity: 0.6;
 }
+
+html[dir="ltr"] .dot-grid {
+    right: auto;
+    left: 5%;
+}
 /*  */
 
 
@@ -203,6 +208,16 @@
     }
 }
 
+/* LTR overrides for 1024px breakpoint */
+html[dir="ltr"] .floating-text-box {
+    left: auto;
+}
+@media (max-width: 1024px) {
+    html[dir="ltr"] .floating-text-box {
+        right: -30px;
+    }
+}
+
 @media (max-width: 768px) {
     .creative-about {
         padding: 60px 0;
@@ -236,6 +251,14 @@
         box-shadow: 10px 10px 0px rgba(0, 85, 255, 0.1);
         text-align: right;
     }
+
+    /* LTR override inside 768px media query */
+    html[dir="ltr"] .floating-text-box {
+        left: auto;
+        right: 0;
+        text-align: left;
+    }
+
     .main-para {
         font-size: 22px;
     }
@@ -264,6 +287,50 @@
     padding: 60px 0 100px;
     background-color: #ffffff;
     direction: rtl;
+}
+
+html[dir="ltr"] .circles-luxury-grid {
+    direction: ltr;
+}
+
+html[dir="ltr"] .dot-indicator {
+    right: auto;
+    left: 0;
+}
+
+html[dir="ltr"] .solution-item {
+    padding-right: 0;
+    padding-left: 25px;
+}
+
+html[dir="ltr"] .section-title::before {
+    right: auto;
+    left: 0;
+}
+
+html[dir="ltr"] .floating-text-box {
+    left: auto;
+    right: -10px;
+}
+
+@media (max-width: 768px) {
+    .floating-text-box {
+        text-align: left;
+    }
+    html[dir="ltr"] .floating-text-box {
+        left: 0;
+        right: 0;
+        text-align: left;
+    }
+}
+
+/* عكس اتجاه الأسهم في وضع LTR */
+.icon-flip {
+    display: inline-block;
+    transition: transform 0.2s ease;
+}
+html[dir="ltr"] .icon-flip {
+    transform: scaleX(-1);
 }
 
 .container-wide {
@@ -304,6 +371,18 @@
     margin-bottom: 10px; /* مسافة بسيطة للسهم */
 }
 
+/* Arabic: clean regular-weight section titles */
+html[dir="rtl"] .ultra-title {
+    font-size: 36px;
+    font-weight: 600;
+}
+
+/* English: bold + slightly larger section titles */
+html[dir="ltr"] .ultra-title {
+    font-size: 48px;
+    font-weight: 700;
+}
+
 /* تنسيق السهم الزرق المقطع */
 .header-visual-divider {
     display: flex;
@@ -321,7 +400,7 @@
     line-height: 1.6;
     color: #555;
     max-width: 700px;
-    margin: 0 auto;
+    margin: 20px auto;
 }
 
 .bullet-item {

@@ -12,6 +12,12 @@
   margin-bottom: 10px;
 }
 
+/* English: smaller & lighter hero title */
+html[dir="ltr"] .page-hero .hero-title {
+  font-size: 32px;
+  font-weight: 600;
+}
+
 .page-hero .highlight-wrap {
   position: relative;
   display: inline-block;
@@ -97,10 +103,17 @@
 }
 
 .features-section .section-main-title { 
-  font-size: 32px; 
+  font-size: 28px; 
   color: #111827; 
-  font-weight: 800; 
+  font-weight: 700;
   margin-bottom: 10px; 
+}
+
+/* Arabic and English: same size and weight */
+html[dir="rtl"] .features-section .section-main-title,
+html[dir="ltr"] .features-section .section-main-title {
+  font-size: 28px;
+  font-weight: 700;
 }
 
 .underline-container {
@@ -244,4 +257,10 @@
     stroke-width: 3;
     fill: none;
     stroke-linecap: round;
+}
+
+/* LTR overrides */
+html[dir="ltr"] .dot-grid {
+    right: auto;
+    left: 5%;
 }
