@@ -1,3 +1,20 @@
+/* ----- */
+body {
+    font-family: 'Tajawal', sans-serif;
+    direction: rtl;
+    background: #fff;
+    margin: 0;
+    overflow-x: hidden;
+    
+}
+html, body {
+    width: 100%;
+    overflow-x: hidden; 
+    margin: 0;
+    padding: 0;
+}
+/* ----- */
+
 .page-hero {
  padding: 150px 0 110px;
   text-align: center;
