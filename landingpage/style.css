@@ -925,6 +925,9 @@ html[dir="ltr"] .icon-flip {
 @media (max-width: 640px) {
     .stats-wrapper { grid-template-columns: 1fr; }
     .stats-title { font-size: 28px; }
+     .desktop-br{
+        display: none !important;
+    }
 }
 
 /* ----------------------------------------------------------- */
