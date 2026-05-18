@@ -219,6 +219,9 @@ html[dir="ltr"] .floating-text-box {
 }
 
 @media (max-width: 768px) {
+    .desktop-only-br{
+        display: none;
+    }
     .hero-title {
     font-size: 26px;
     font-weight: 700;
@@ -273,6 +276,9 @@ html[dir="ltr"] .floating-text-box {
 }
 
 @media (max-width: 480px) {
+    .desktop-only-br{
+        display: none;
+    }
  .hero-title {
     font-size: 26px;
     font-weight: 700;
