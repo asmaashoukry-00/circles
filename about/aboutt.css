@@ -219,6 +219,14 @@ html[dir="ltr"] .floating-text-box {
 }
 
 @media (max-width: 768px) {
+    .hero-title {
+    font-size: 26px;
+    font-weight: 700;
+   
+}
+.section-label{
+    font-size: 18px;
+}
     .creative-about {
         padding: 60px 0;
     }
@@ -265,6 +273,11 @@ html[dir="ltr"] .floating-text-box {
 }
 
 @media (max-width: 480px) {
+ .hero-title {
+    font-size: 26px;
+    font-weight: 700;
+   
+}
     .text-block h1 {
         margin-top: 20px;
     }
@@ -275,7 +288,7 @@ html[dir="ltr"] .floating-text-box {
         font-size: 20px;
     }
     .section-label {
-        font-size: 18px;
+        font-size: 16px;
     }
     .floating-text-box {
         width: 100%;
