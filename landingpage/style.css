@@ -250,6 +250,7 @@ html, body {
 /* ----------------------------------------------------------- */
 /* CIRCLES SOLUTIONS */
 /* ----------------------------------------------------------- */
+
 .container {
     max-width: 1280px; 
     margin-left: auto;
@@ -833,6 +834,12 @@ html[dir="ltr"] .icon-flip {
 }
 
 @media (max-width: 992px) {
+    .desktop-br{
+        display: none;
+    }
+    .main-sentence{
+        font-size: 26px;
+    }
     .hero-title { 
         font-size: 32px;
         margin-top: 20px; 
@@ -852,6 +859,12 @@ html[dir="ltr"] .icon-flip {
 }
 
 @media (max-width: 768px) {
+    .desktop-br{
+        display: none !important;
+    }
+    .main-sentence{
+        font-size: 26px !important;
+    }
     .hero-title {
         position: relative !important;
         display: inline-block !important;
@@ -901,7 +914,7 @@ html[dir="ltr"] .icon-flip {
         overflow: visible !important;
     }
 
-    .main-sentence { font-size: 30px; }
+    
     .panel-card h2 { font-size: 2rem; }
     .panel-card { height: 70vh; width: 95%; border-radius: 25px; }
     .card-content { flex-direction: column-reverse; }
