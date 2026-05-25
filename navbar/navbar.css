@@ -19,6 +19,10 @@ body {
   margin: 0;
   overflow-x: hidden;
 }
+a{
+  text-decoration: none;
+
+}
 
 /* ====================================================================== */
 /* FLOATING NAVBAR - Reduced spacing */
@@ -173,27 +177,6 @@ body {
   z-index: 9999;
 }
 
-.mega-column h4 {
-  font-size: 15px;
-  font-weight: 700;
-  color: #111827;
-  margin-bottom: 12px;
-  padding-bottom: 10px;
-  border-bottom: 2px solid #e5e7eb;
-  text-align: right;
-}
-
-.mega-column a {
-  display: block;
-  padding: 6px 0;
-  color: #374151;
-  text-decoration: none;
-  font-size: 14px;
-  line-height: 1.5;
-  transition: all 0.2s ease;
-  text-align: right;
-}
-
 .mega-dropdown:hover > .mega-menu {
   opacity: 1;
   visibility: visible;
@@ -288,8 +271,6 @@ body {
     font-size: 15px;
   }
 }
-
-/* Small mobile screens */
 
 /* ====================================================================== */
 /* MODERN MOBILE SLIDING MENU (3-LEVEL PANEL) */
@@ -479,6 +460,11 @@ body {
 /* LTR BILINGUAL ALIGNMENT FIXES (ENGLISH COMPATIBILITY) */
 /* ====================================================================== */
 
+html[dir="ltr"] body {
+    direction: ltr !important;
+    font-family: "Montserrat", sans-serif !important;
+}
+
 html[dir="ltr"] .mobile-menu-sidebar {
   right: auto;
   left: -100%;
@@ -542,20 +528,56 @@ html[dir="ltr"] .menu-header .back-icon-dir {
     }
 }
 
-html[dir="ltr"] body {
-    direction: ltr !important;
-}
-
 html[dir="ltr"] .floating-nav {
-    left: auto !important;
-    right: 50% !important;
-    transform: translateX(50%) !important;
+    left: 50% !important;
+    right: auto !important;
+    transform: translateX(-50%) !important;
 }
 
 html[dir="ltr"] .nav-links {
-    margin-left: auto !important;
-    margin-right: auto !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
     flex-direction: row !important; 
+}
+
+/* ====================================================================== */
+/* FIXED LTR MEGA MENU INNER STRUCTURE (ROOT FORCE) */
+/* ====================================================================== */
+html[dir="ltr"] .mega-column {
+    text-align: left !important;
+    direction: ltr !important;
+    border-left: none !important;
+    border-right: 1px solid #e5e7eb !important;
+    padding: 0 20px !important;
+}
+
+html[dir="ltr"] .mega-column:first-child {
+    border-right: 1px solid #e5e7eb !important;
+    padding-right: 20px !important;
+    padding-left: 0 !important;
+}
+
+html[dir="ltr"] .mega-column:last-child {
+    border-right: none !important;
+}
+
+html[dir="ltr"] .mega-column h4 {
+    text-align: left !important;
+    border-bottom: 2px solid #e5e7eb !important;
+}
+
+html[dir="ltr"] .mega-column a {
+    text-align: left !important;
+}
+
+html[dir="ltr"] .mega-column a:hover {
+    padding-right: 0 !important;
+    padding-left: 8px !important;
+}
+
+html[dir="ltr"] .mega-column.special {
+    border-right: 1px solid #e5e7eb !important;
+    border-left: none !important;
 }
 
 
@@ -568,7 +590,7 @@ html[dir="ltr"] .nav-links {
     border: none;
     cursor: pointer;
     padding: 8px;
-    z-index: 10001; /* التأكد من ظهوره فوق اللوحات المنزلقة */
+    z-index: 10001; 
     display: none;
     outline: none;
     -webkit-tap-highlight-color: transparent;
@@ -579,7 +601,7 @@ html[dir="ltr"] .nav-links {
     flex-direction: column;
     justify-content: space-between;
     width: 24px;
-    height: 16px; /* المسافة الإجمالية بين الأسطر */
+    height: 16px; 
     position: relative;
 }
 
@@ -588,9 +610,9 @@ html[dir="ltr"] .nav-links {
     display: block;
     width: 100%;
     height: 2px;
-    background-color: #111827; /* لون داكن فخم يتناسب مع هوية CirclesSoft */
+    background-color: #111827; 
     border-radius: 4px;
-    transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1); /* منحنى حركي ناعم جداً */
+    transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1); 
     transform-origin: center;
     position: absolute;
 }
@@ -602,13 +624,12 @@ html[dir="ltr"] .nav-links {
 
 .mobile-toggle .hamburger span:nth-child(2) {
     top: 7px;
-    /* width: 80%;  */
-    right: 0;   /* يبدأ من اليمين في الـ RTL */
+    right: 0;   
 }
 
 html[dir="ltr"] .mobile-toggle .hamburger span:nth-child(2) {
     right: auto;
-    left: 0;    /* يعكس البداية في الـ LTR */
+    left: 0;    
 }
 
 .mobile-toggle .hamburger span:nth-child(3) {
@@ -704,7 +725,3 @@ html[dir="ltr"] .mobile-toggle .hamburger span:nth-child(2) {
         display: block !important;
     }
 }
-
-
-
-

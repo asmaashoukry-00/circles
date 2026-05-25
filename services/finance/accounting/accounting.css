@@ -418,3 +418,24 @@ html[lang="en"] .service-features li i {
         order: 2 !important; /* Image on bottom for mobile screens */
     }
 }
+
+/* ======================================================================
+   MOBILE TYPOGRAPHY FIX FOR HERO TITLE
+   ====================================================================== */
+
+@media (max-width: 768px) {
+   .hero-creative-layered .hero-title {
+      font-size: 2rem !important; 
+      line-height: 1.3 !important;
+   }
+   
+   .hero-creative-layered {
+      padding: 120px 0 60px 0 !important; 
+   }
+}
+
+@media (max-width: 480px) {
+   .hero-creative-layered .hero-title {
+      font-size: 1.65rem !important; 
+   }
+}
