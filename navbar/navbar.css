@@ -542,7 +542,6 @@ html[dir="ltr"] .menu-header .back-icon-dir {
     }
 }
 
-/* حددنا الـ body والـ floating-nav بشكل مباشر وصريح */
 html[dir="ltr"] body {
     direction: ltr !important;
 }
@@ -555,8 +554,8 @@ html[dir="ltr"] .floating-nav {
 
 html[dir="ltr"] .nav-links {
     margin-left: auto !important;
-    margin-right: 0 !important;
-    flex-direction: row !important; /* يضمن مواءمة روابط الديسكتوب من اليسار لليمين */
+    margin-right: auto !important;
+    flex-direction: row !important; 
 }
 
 
@@ -603,7 +602,7 @@ html[dir="ltr"] .nav-links {
 
 .mobile-toggle .hamburger span:nth-child(2) {
     top: 7px;
-    width: 80%; /* السطر الأوسط أقصر قليلاً لإضفاء لمسة تصميم عصرية */
+    /* width: 80%;  */
     right: 0;   /* يبدأ من اليمين في الـ RTL */
 }
 
@@ -626,7 +625,8 @@ html[dir="ltr"] .mobile-toggle .hamburger span:nth-child(2) {
     gap: 12px;
 }
 
-.mobile-nav-btn {
+.mobile-only-actions .mobile-nav-btn {
+    display: inline-block !important;
     background: #111827;
     color: #fff;
     border: none;
@@ -636,7 +636,7 @@ html[dir="ltr"] .mobile-toggle .hamburger span:nth-child(2) {
     font-weight: 700;
     cursor: pointer;
     font-family: "Tajawal", sans-serif;
-    white-space: nowrap;
+    white-space: nowrap; 
 }
 
 .mobile-toggle {
@@ -698,10 +698,13 @@ html[dir="ltr"] .mobile-toggle .hamburger span:nth-child(2) {
 @media (max-width: 992px) {
     .mobile-only-actions {
         display: flex !important;
+        align-items: center !important;
     }
     .mobile-toggle {
         display: block !important;
     }
 }
+
+
 
 

@@ -1,4 +1,6 @@
-/* Integrated dynamic multi-level navigation and bilingual toggle system */
+// ======================================================================
+// INTEGRATED DYNAMIC NAV-SYSTEM & BILINGUAL TOGGLE (OPTIMIZED & FAST)
+// ======================================================================
 
 const megaMenuData = {
   finance: {
@@ -44,32 +46,62 @@ const megaMenuData = {
   }
 };
 
+// دالة تحميل الناف بار الذكية فائقة السرعة والتخزين اللحظي
 function loadNavbar() {
+    const placeholder = document.getElementById('navbar-placeholder');
+    if (!placeholder) return;
+
+    const cachedNavbar = localStorage.getItem('cachedNavbarHTML');
+    let savedLang = localStorage.getItem("selectedLang") || "en";
+
+    // إذا كان الكود مخزن مسبقاً، يتم عرضه فوراً وبأعلى سرعة ممكنة
+    if (cachedNavbar) {
+        placeholder.innerHTML = cachedNavbar;
+        initNavbarFeatures(savedLang);
+    }
+
+    // بالخلفية يتم جلب الملف للتأكد من عدم وجود تحديثات وتحديث الكاش
     fetch('/navbar/navbar.html')
         .then(res => res.text())
         .then(data => {
-            document.getElementById('navbar-placeholder').innerHTML = data;
-            initLanguageSwitcher();
-            initMegaMenu();
-            
-            window.navbarReady = true;
-            let savedLang = localStorage.getItem("selectedLang") || "en";
-            applyLanguage(savedLang);
+            if (cachedNavbar !== data) {
+                localStorage.setItem('cachedNavbarHTML', data);
+                placeholder.innerHTML = data; // تحديث الواجهة فقط إذا وجد تغيير بالملف الاصلي
+                initNavbarFeatures(savedLang);
+            }
+        })
+        .catch(err => {
+            console.warn("تنبيه: تم استخدام النسخة الاحتياطية المخزنة للناف بار بنجاح.");
         });
 }
 
-function initLanguageSwitcher() {
-    // Left empty deliberately to utilize global direct click listeners
+function initNavbarFeatures(lang) {
+    window.navbarReady = true;
+    applyLanguage(lang);
+    initGlobalListeners();
+}
+
+function initGlobalListeners() {
+    // إغلاق القائمة عند الضغط على الخلفية الشفافة (Overlay)
+    document.addEventListener('click', function(e) {
+        const overlay = document.getElementById('mobileOverlay');
+        if (overlay && e.target === overlay) {
+            closeMobileMenu();
+        }
+    });
+
+    // إغلاق القائمة عند الضغط على زر Escape
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+            closeMobileMenu();
+        }
+    });
 }
 
 function toggleLanguage() {
     const currentLang = localStorage.getItem("selectedLang") || "en";
     const newLang = currentLang === "ar" ? "en" : "ar";
     applyLanguage(newLang);
-}
-
-function initMegaMenu() {
-    // Desktop initialization routines if needed
 }
 
 function applyLanguage(lang) {
@@ -121,6 +153,8 @@ function applyLanguage(lang) {
     
     if (window.AOS) AOS.refresh();
 }
+
+// التحكم بقائمة الموبايل والانتقال السلس
 function toggleMobileMenu() {
     const sidebar = document.getElementById('mobileMenuSidebar');
     const overlay = document.getElementById('mobileOverlay');
@@ -133,7 +167,7 @@ function toggleMobileMenu() {
     } else {
         sidebar.classList.add('mobile-open');
         if (overlay) overlay.style.display = 'block';
-        if (toggleBtn) toggleBtn.classList.add('active'); // تشغيل حركة الـ X فوراً
+        if (toggleBtn) toggleBtn.classList.add('active'); 
         navigateToPanel(0); 
     }
 }
@@ -143,9 +177,13 @@ function closeMobileMenu() {
     const overlay = document.getElementById('mobileOverlay');
     const toggleBtn = document.querySelector('.mobile-toggle .hamburger');
     
-    if (sidebar) sidebar.classList.remove('mobile-open');
+    if (sidebar) {
+        sidebar.classList.remove('mobile-open');
+        sidebar.classList.remove('active-level-1', 'active-level-2');
+        sidebar.classList.add('active-level-0');
+    }
     if (overlay) overlay.style.display = 'none';
-    if (toggleBtn) toggleBtn.classList.remove('active'); // إعادة الخطوط الثلاثة بسلاسة
+    if (toggleBtn) toggleBtn.classList.remove('active'); 
 }
 
 function navigateToPanel(levelIndex) {
@@ -186,6 +224,15 @@ function openSubMenu(moduleKey) {
     });
 
     navigateToPanel(2);
+}
+
+function startSVGAnimation() {
+    document.querySelectorAll('.hand-drawn-circle path')
+        .forEach(path => {
+            path.style.animation = "none";
+            path.getBoundingClientRect(); // force reflow
+            path.style.animation = "drawCircle 5s ease-out infinite";
+        });
 }
 
 document.addEventListener('DOMContentLoaded', loadNavbar);
