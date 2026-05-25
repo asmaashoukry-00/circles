@@ -874,6 +874,9 @@ html[dir="ltr"] .icon-flip {
         padding-top:60px;
     }
 
+    @media (max-width: 768px) {
+    /* Existing code ... */
+
     .floating-marker {
         display: block !important; 
         padding: 4px 10px;
@@ -881,16 +884,25 @@ html[dir="ltr"] .icon-flip {
         z-index: 999 !important;
     }
 
+    /* 1. Elevate the yellow badge much higher and adjust position */
     .yellow-box {
-        top: -55px;
-        right: 0;
-        left: auto;
+        top: -110px !important; /* Increased significantly from -55px to prevent overlapping text */
+        right: 15px !important;  /* Balanced spacing from the right edge */
+        left: auto !important;
     }
 
+    /* 2. Adjust arrow alignment to match the new height seamlessly */
     .yellow-box .arrow-y {
-        left: 20px;
-        transform: none;
+        left: 25px !important;
+        bottom: -10px !important;
+        transform: none !important;
+        border-left: 6px solid transparent !important;
+        border-right: 6px solid transparent !important;
+        border-top: 10px solid #FFB800 !important;
     }
+
+    /* Existing code ... */
+}
 
     .blue-box {
         bottom: -25px;
@@ -920,6 +932,13 @@ html[dir="ltr"] .icon-flip {
     .card-content { flex-direction: column-reverse; }
     .image-wrapper { position: static; margin-bottom: 20px; }
     .profile-info { margin-top: 0; padding-right: 0; text-align: center; }
+}
+@media (max-width: 768px) {
+    html[dir="ltr"] .yellow-box {
+        top: -110px !important; /* Matches RTL height adjustment */
+        left: 15px !important;
+        right: auto !important;
+    }
 }
 
 @media (max-width: 640px) {

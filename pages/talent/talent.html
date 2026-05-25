@@ -65,43 +65,57 @@
                   </span>
                 </h2>
               </div>
-            <div class="bento-grid">
-                <div class="tabs-side-list">
-                     <div class="tab-item active" data-tab="0">
-                         <div class="tab-icon">
-                             <!-- FaFileInvoice icon would go here -->
-                            <i class="fas fa-file-invoice"></i>
-                         </div>
-                         <span class="lang-key" data-ar="نظام إدارة المواهب" data-en="Talent Management System">Talent Management System</span>
-                     </div>
-                     <div class="tab-item" data-tab="1">
-                         <div class="tab-icon">
-                             <!-- FaChartLine icon -->
-                           <i class="fas fa-chart-line"></i>
-                         </div>
-                         <span class="lang-key" data-ar="نظام التوظيف" data-en="Recruitment System">Recruitment System</span>
-                     </div>
-                     <div class="tab-item" data-tab="2">
-                         <div class="tab-icon">
-                             <!-- FaWarehouse icon -->
-                          <i class="fas fa-warehouse"></i>
-                         </div>
-                         <span class="lang-key" data-ar="نظام التدريب" data-en="Training System">Training System</span>
-                     </div>
-                     <div class="tab-item" data-tab="3">
-                         <div class="tab-icon">
-                             <!-- FaChartBar icon -->
-                            <i class="fas fa-chart-bar"></i>
-                         </div>
-                         <span class="lang-key" data-ar="نظام التقييم" data-en="Evaluation System">Evaluation System</span>
-                     </div>
-                </div>
-                <div class="display-area">
-                    <div class="mockup-wrapper-display">
-                        <img src="/pages/talent/assets/development.png"  class="display-img" data-en="Talent Management System" alt="Talent Management System">
-                    </div>
-                </div>
+           <div class="bento-grid">
+    <div class="tabs-side-list">
+        
+        <div class="tab-item active" data-tab="0">
+            <div class="tab-header-inline">
+                <div class="tab-icon"><i class="fas fa-id-card-clip"></i></div>
+                <span><span class="lang-key" data-ar="نظام إدارة المواهب" data-en="Talent Management System">Talent Management System</span></span>
             </div>
+            <div class="mobile-image-holder">
+                <img src="/pages/talent/assets/development.png" alt="Talent Management System">
+            </div>
+        </div>
+
+        <div class="tab-item" data-tab="1">
+            <div class="tab-header-inline">
+                <div class="tab-icon"><i class="fas fa-user-plus"></i></div>
+                <span><span class="lang-key" data-ar="نظام التوظيف" data-en="Recruitment System">Recruitment System</span></span>
+            </div>
+            <div class="mobile-image-holder">
+                <img src="/pages/talent/assets/recruitment.png" alt="Recruitment System">
+            </div>
+        </div>
+
+        <div class="tab-item" data-tab="2">
+            <div class="tab-header-inline">
+                <div class="tab-icon"><i class="fas fa-graduation-cap"></i></div>
+                <span><span class="lang-key" data-ar="نظام التدريب" data-en="Training System">Training System</span></span>
+            </div>
+            <div class="mobile-image-holder">
+                <img src="/pages/talent/assets/training.png" alt="Training System">
+            </div>
+        </div>
+
+        <div class="tab-item" data-tab="3">
+            <div class="tab-header-inline">
+                <div class="tab-icon"><i class="fas fa-star-half-stroke"></i></div>
+                <span><span class="lang-key" data-ar="نظام التقييم" data-en="Evaluation System">Evaluation System</span></span>
+            </div>
+            <div class="mobile-image-holder">
+                <img src="/pages/talent/assets/evaluation.png" alt="Evaluation System">
+            </div>
+        </div>
+
+    </div>
+
+    <div class="display-area">
+        <div class="mockup-wrapper-display">
+            <img src="/pages/talent/assets/development.png" class="display-img" alt="Talent Management System">
+        </div>
+    </div>
+</div>
         </div>
     </section>
 <!-- solutions -->
@@ -113,40 +127,63 @@
 
 
  <!--  -->
-  <script>
-        // Simple tab switching functionality
+ <script>
         document.addEventListener('DOMContentLoaded', function() {
-            const tabItems = document.querySelectorAll('.tab-item');
-            const displayImg = document.querySelector('.display-img');
-            const dashboardImages = [
-                { img: '/pages/talent/assets/development.png', title: 'Talent Management System' },
-                { img: '/pages/talent/assets/recruitment.png', title: 'Recruitment System' },
-                { img: '/pages/talent/assets/training.png', title: 'Training System' },
-                { img: '/pages/talent/assets/performance.png', title: 'Evaluation System' }
-            ];
+    const tabItems = document.querySelectorAll('.tab-item');
+    const displayImg = document.querySelector('.display-img');
+    const tabsContainer = document.querySelector('.tabs-side-list');
 
-            tabItems.forEach((tab, index) => {
-                tab.addEventListener('click', () => {
-                    // Remove active class from all tabs
-                    tabItems.forEach(t => t.classList.remove('active'));
-                    // Add active class to clicked tab
-                    tab.classList.add('active');
-                    // Update image
-                    displayImg.src = dashboardImages[index].img;
-                    displayImg.alt = dashboardImages[index].title;
-                });
+    const dashboardImages = [
+        { img: '/pages/hr/assets/payroll1-1.png', title: 'Payroll Management' },
+        { img: '/pages/hr/assets/attendance.png', title: 'Attendance Monitoring' },
+        { img: '/pages/hr/assets/mobile-app.png', title: 'Mobile App' }
+    ];
+
+    // Smooth scroll navigation center-aligned for mobile interfaces
+    function scrollToActiveTab(index) {
+        if (window.innerWidth <= 992 && tabsContainer) {
+            const activeCard = tabItems[index];
+            const containerWidth = tabsContainer.offsetWidth;
+            const cardOffset = activeCard.offsetLeft;
+            const cardWidth = activeCard.offsetWidth;
+            
+            const scrollPosition = cardOffset - (containerWidth / 2) + (cardWidth / 2);
+            tabsContainer.scrollTo({
+                left: scrollPosition,
+                behavior: 'smooth'
             });
+        }
+    }
 
-            // Auto-rotate tabs every 4 seconds
-            let activeTab = 0;
-            setInterval(() => {
-                tabItems[activeTab].classList.remove('active');
-                activeTab = (activeTab + 1) % tabItems.length;
-                tabItems[activeTab].classList.add('active');
-                displayImg.src = dashboardImages[activeTab].img;
-                displayImg.alt = dashboardImages[activeTab].title;
-            }, 4000);
+    // Manual click handling
+    tabItems.forEach((tab, index) => {
+        tab.addEventListener('click', () => {
+            tabItems.forEach(t => t.classList.remove('active'));
+            tab.classList.add('active');
+            
+            if (displayImg) {
+                displayImg.src = dashboardImages[index].img;
+                displayImg.alt = dashboardImages[index].title;
+            }
+            scrollToActiveTab(index);
         });
+    });
+
+    // Auto-rotate logic synced perfectly with sliding layout
+    let activeTab = 0;
+    setInterval(() => {
+        tabItems[activeTab].classList.remove('active');
+        activeTab = (activeTab + 1) % tabItems.length;
+        tabItems[activeTab].classList.add('active');
+        
+        if (displayImg) {
+            displayImg.src = dashboardImages[activeTab].img;
+            displayImg.alt = dashboardImages[activeTab].title;
+        }
+        
+        scrollToActiveTab(activeTab);
+    }, 4000);
+});
     </script>
 <!-- navbar & footer scripts -->
 <script src="/global/circles-solutions/circles-solutions.js"></script>

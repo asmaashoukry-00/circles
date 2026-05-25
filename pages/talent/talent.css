@@ -280,3 +280,106 @@ html[dir="ltr"] .dot-grid {
     right: auto;
     left: 5%;
 }
+/* ======================================================================
+   MOBILE STYLES: Transform tabs into a premium horizontal card slider
+   ====================================================================== */
+
+.tab-header-inline {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
+}
+
+.mobile-image-holder {
+    display: none; 
+}
+
+@media (max-width: 992px) {
+    /* 1. Hide desktop preview area */
+    .display-area {
+        display: none !important;
+    }
+
+    /* 2. Convert grid layout to single column */
+    .bento-grid {
+        grid-template-columns: 1fr !important;
+        gap: 0px !important;
+    }
+
+    /* 3. Convert tabs container to horizontal carousel slider */
+    .tabs-side-list {
+        flex-direction: row !important;
+        overflow-x: auto !important;
+        scroll-snap-type: x mandatory !important;
+        gap: 24px !important;
+        padding: 10px 4% !important;
+        background: transparent !important;
+        border: none !important;
+        box-shadow: none !important;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    /* Hide default scrollbar */
+    .tabs-side-list::-webkit-scrollbar {
+        display: none !important;
+    }
+
+    /* 4. Format tab items into independent swipeable cards (No Borders) */
+    .tab-item {
+        flex: 0 0 92% !important; 
+        scroll-snap-align: center !important;
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        background: transparent !important;
+        border: none !important;
+        box-shadow: none !important;
+        padding: 0px !important;
+        margin: 0px !important;
+        overflow: visible !important; 
+        height: auto !important;
+        color: #111827 !important;
+    }
+
+    /* Adjust text header padding since card padding is gone */
+    .tab-header-inline {
+        padding: 0 5px !important;
+        margin-bottom: 12px !important;
+    }
+
+    /* Keep icons neat and clean */
+    .tab-item .tab-icon {
+        background: #f3f4f6 !important;
+        color: #4b5563 !important;
+    }
+
+    /* Active tab style changes */
+    .tab-item.active {
+        border: none !important;
+        box-shadow: none !important;
+    }
+    
+    .tab-item.active .tab-icon {
+        background: #4f46e5 !important;
+        color: #ffffff !important;
+    }
+
+    /* 5. Maximize Mobile Mockup Images (No Borders, Full Width) */
+    .mobile-image-holder {
+        display: block !important;
+        width: 100% !important;
+        margin-top: 5px !important;
+        background: transparent !important;
+        border: none !important;
+        padding: 0 !important;
+    }
+
+    .mobile-image-holder img {
+        width: 100% !important;
+        height: auto !important;
+        max-height: none !important;
+        display: block !important;
+        object-fit: contain !important;
+        border-radius: 0px !important;
+    }
+}
