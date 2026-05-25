@@ -72,60 +72,6 @@ ul {
    padding: 0 20px;
 }
 
-/* ----------------------------------------------------------- */
-/* NAVIGATION */
-/* ----------------------------------------------------------- */
-.logo-img {
-  height: 30px; 
-  width: auto;  
-  display: block;
-}
-
-.nav-logo {
-  display: flex;
-  align-items: center;
-}
-.floating-nav {
-    position: fixed;
-    top: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 90%;
-    max-width: 1000px;
-    background: rgba(255, 255, 255, 0.8);
-    backdrop-filter: blur(15px);
-    border: 1px solid rgba(0, 0, 0, 0.05);
-    border-radius: 50px;
-    padding: 10px 25px;
-    z-index: 1000;
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05);
-}
-
-.nav-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.nav-logo { font-weight: 800; font-size: 20px; letter-spacing: 1px; }
-.nav-logo span { color: var(--primary); }
-
-.nav-links { list-style: none; display: flex; gap: 30px; margin: 0; padding: 0; }
-.nav-links a { text-decoration: none; color: #444; font-size: 14px; font-weight: 500; transition: 0.3s; }
-.nav-links a.active, .nav-links a:hover { color: var(--primary); }
-
-.nav-btn {
-    background: #111;
-    color: #fff;
-    border: none;
-    padding: 8px 20px;
-    border-radius: 25px;
-    font-size: 13px;
-    font-weight: 600;
-    cursor: pointer;
-}
-
-
 
 
 /* ========================================
@@ -170,22 +116,22 @@ ul {
   z-index: 2;
 }
 
-/* تنسيق العناصر الطافية بشفافية */
+
 .floating-elements .element {
   position: absolute;
-  z-index: -1; /* خلف النص */
-  opacity: 0.4; /* شفافية عالية لتبدو كخلفية */
+  z-index: -1;
+  opacity: 0.4; 
   /* filter: grayscale(100%);  */
   transition: all 0.6s ease;
-  pointer-events: none; /* لكي لا تعيق الضغط على الزر */
+  pointer-events: none; 
 }
 
-/* توزيع الأماكن بشكل إبداعي */
+
 .el-1 { width: 300px; top: -50px; right: -50px; transform: rotate(-10deg); }
 .el-2 { width: 250px; bottom: -20px; left: -100px; transform: rotate(15deg); }
 .el-3 { width: 200px; top: 100px; left: 0px; transform: rotate(-5deg); opacity: 0.1 !important; }
 
-/* تأثير عند الـ Hover على السيكشن: العناصر تصبح أوضح قليلاً */
+
 .hero-creative-layered:hover .element {
   opacity: 0.5;
   transform: scale(1.05) rotate(0deg);
@@ -257,7 +203,7 @@ ul {
    grid-template-columns: .9fr 1.1fr  ;
 }
 
-.service-row:not(.reverse) .service-content {
+.service-row .service-content {
    direction: rtl;
 }
 
@@ -302,6 +248,7 @@ ul {
    color: var(--text-dark);
    border-right: 5px solid var(--primary-blue);
    padding-right: 20px;
+   
 }
 
 /* .service-row.reverse .service-content h2 {
@@ -316,6 +263,7 @@ ul {
    color: var(--text-gray);
    line-height: 1.8;
    margin-bottom: 25px;
+   text-align: right;
 }
 
 .service-features {
@@ -340,7 +288,7 @@ ul {
    margin-left: 8px;
 }
 
-.service-row.reverse .service-features li {
+.service-row .service-features li {
    flex-direction: row;
    text-align: right;
 }
@@ -354,7 +302,7 @@ ul {
       direction: rtl;
    }
 
-   .service-row.reverse .service-content {
+   .service-row .service-content {
       direction: rtl;
       order: -1;
    }
@@ -366,12 +314,13 @@ ul {
       padding-bottom: 10px;
       padding-right: 0;
       padding-left: 0;
+     
    }
 
-   .service-row.reverse .service-content h2 {
+   /* .service-row .service-content h2 {
       border-left: none;
       border-bottom: 4px solid var(--primary-blue);
-   }
+   } */
 
    .service-image img {
       height: 200px;
@@ -392,36 +341,80 @@ ul {
       font-size: 1.8rem;
    }
 }
-/* English LTR mirroring for service sections */
-html[lang="en"] .service-row {
-    direction: rtl;
-    grid-template-columns: 1fr 0.9fr;
+/* ======================================================================
+   PERFECT ENGLISH LTR FIX (USING FLEX/GRID ORDER SYSTEM)
+   ====================================================================== */
+html[dir="ltr"] .service-row .service-features li {
+    flex-direction: row;
+    text-align: left;
 }
-
-html[lang="en"] .service-row.reverse {
-    direction: ltr;
-    grid-template-columns: 0.9fr 1fr;
+html[dir="ltr"] .service-row p  {
+    flex-direction: row;
+    text-align: left !important;
+}
+html[lang="en"] .service-row {
+    direction: ltr !important; /* Force standard layout direction */
+    grid-template-columns: 1fr 1fr !important; /* Balanced layout for English text */
+    gap: 60px;
 }
 
 html[lang="en"] .service-row .service-content {
-    direction: ltr;
-    text-align: left;
+    direction: ltr !important;
+    text-align: left !important;
+    order: 1 !important; /* Text comes first */
+}
+
+html[lang="en"] .service-row .service-image {
+    order: 2 !important; /* Image comes second */
+}
+
+/* --- Reverse Row Fix for English --- */
+html[lang="en"] .service-row.reverse {
+    grid-template-columns: 1fr 1fr !important;
 }
 
 html[lang="en"] .service-row.reverse .service-content {
-    direction: ltr;
-    text-align: left;
+    order: 2 !important; /* Text moves to the right side */
+    text-align: left !important;
 }
 
+html[lang="en"] .service-row.reverse .service-image {
+    order: 1 !important; /* Image moves to the left side */
+}
+
+/* --- English Title Underline Accent --- */
 html[lang="en"] .service-content h2 {
-    border-right: none;
-    border-left: 5px solid var(--primary-blue);
-    padding-right: 0;
-    padding-left: 20px;
-    text-align: left;
+    border-right: none !important;
+    border-left: none !important;
+    border-bottom: 4px solid var(--primary-blue) !important;
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+    padding-bottom: 10px !important;
+    text-align: left !important;
+    display: inline-block !important; /* Fits perfectly to text width */
 }
 
+/* --- English Icons Spacing Reset --- */
 html[lang="en"] .service-features li i {
-    margin-left: 0;
-    margin-right: 8px;
+    margin-left: 0 !important;
+    margin-right: 8px !important;
+}
+
+/* --- English Layout Protection on Mobile --- */
+@media (max-width: 991px) {
+    html[lang="en"] .service-row,
+    html[lang="en"] .service-row.reverse {
+        grid-template-columns: 1fr !important;
+    }
+    
+    html[lang="en"] .service-row .service-content,
+    html[lang="en"] .service-row.reverse .service-content {
+        order: 1 !important; /* Text on top for mobile screens */
+        text-align: center !important;
+    }
+    
+    html[lang="en"] .service-row .service-image,
+    html[lang="en"] .service-row.reverse .service-image {
+        order: 2 !important; /* Image on bottom for mobile screens */
+    }
 }
