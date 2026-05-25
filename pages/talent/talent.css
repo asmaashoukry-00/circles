@@ -383,3 +383,29 @@ html[dir="ltr"] .dot-grid {
         border-radius: 0px !important;
     }
 }
+/* ======================================================================
+   MOBILE TYPOGRAPHY FIX FOR PAGE HERO TITLE
+   ====================================================================== */
+
+@media (max-width: 768px) {
+    .page-hero .hero-title {
+        font-size: 2rem !important;
+        line-height: 1.3 !important;
+    }
+    
+    .page-hero .brush-highlight {
+        height: 55px !important;
+        bottom: -5px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .page-hero .hero-title {
+        font-size: 1.6rem !important;
+    }
+    
+    .page-hero .brush-highlight {
+        height: 45px !important;
+        bottom: -2px !important;
+    }
+}
