@@ -26,6 +26,14 @@ html, body {
     margin: 0;
     padding: 0;
 }
+html {
+    color-scheme: light !important;
+    forced-color-adjust: none !important;
+}
+body {
+    background-color: #ffffff !important; /* أو أي لون فاتح اخترتِه */
+    color: #000000 !important;           /* لون النص الأسود الثابت */
+}
 
 /* -----------------------------------------------------------
  * NAVIGATION */
