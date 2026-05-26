@@ -18,7 +18,7 @@
 }
 
 .main-sentence {
-    font-size: 42px;
+    font-size: 40px;
     font-weight: 800;
     color: #111827;
     line-height: 1.3;
@@ -126,12 +126,7 @@
     margin-bottom: 80px;
 }
 
-.main-sentence {
-    font-size: 42px;
-    font-weight: 800;
-    color: #111827;
-    line-height: 1.3;
-}
+
 
 .circles-features-section {
     padding: 100px 0;
@@ -238,10 +233,10 @@ html[dir="ltr"] .icon-flip {
     transform: scaleX(-1);
 }
 html [dir=ltr] .main-sentence {
-    font-size: 42px;
-    font-weight: 800;
+    font-size: 40px;
+    font-weight: 700;
     color: #111827;
-    line-height: 1.3;
+    line-height: 1.5;
 }
 /* ======================================================================
    MOBILE TYPOGRAPHY FIX FOR SOLUTIONS MAIN TITLE

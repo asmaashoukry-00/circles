@@ -1009,3 +1009,37 @@ html[dir="ltr"] .testimonials-section {
         left: auto;
     }
 }
+/* تهيئة الحاوية لدعم التأثيرات ثلاثية الأبعاد للكروت */
+.circles-solutions {
+    perspective: 1000px;
+}
+
+/* تحسين شكل وهيكل الكروت لتبدو طائرة وتفاعلية */
+.modern-card {
+    will-change: transform, opacity;
+    transform-style: preserve-3d;
+    transition: transform 0.5s cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 0.5s ease, border-color 0.5s ease;
+}
+
+/* تأثير الـ Hover المبهج والعميق جداً للكروت عند مرور الماوس */
+.modern-card:hover {
+    transform: translateY(-15px) scale(1.03) rotateX(2deg);
+    border-color: #4f46e5; /* تلوين الحواف بلون الهوية الاحترافي */
+    box-shadow: 0 25px 50px rgba(79, 70, 229, 0.18);
+}
+
+/* تحريك البادج (الأكثر شمولاً) بشكل ينبض بالحياة داخل الكارت */
+.card-badge {
+    animation: floatingBadge 3s ease-in-out infinite alternate;
+}
+
+@keyframes floatingBadge {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-5px); }
+}
+
+/* إلغاء أي تأثيرات تثبيت قديمة للألواح وجعلها مرنة */
+.panel {
+    height: auto !important; /* التمرير طبيعي وسلس دون قفز الشاشة */
+    padding: 60px 0;
+}

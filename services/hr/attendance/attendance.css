@@ -72,7 +72,37 @@ ul {
    padding: 0 20px;
 }
 
+/* --- Full Width Banner --- */
+/* تنسيق البانر العريض */
+.full-width-banner {
+    width: 100vw; /* تأخذ كامل عرض نافذة المتصفح */
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    margin-top: 50px; /* مسافة عن السيكشن السابق */
+    margin-bottom: 50px; /* مسافة عن السيكشن التالي */
+    overflow: hidden;
+}
 
+.banner-image {
+    width: 100%;
+    height: auto; /* للحفاظ على أبعاد الصورة */
+    display: block;
+    padding: 0 5%;
+    object-fit: cover; /* لضمان تغطية المساحة بدون تشويه */
+}
+
+/* لتحسين التجاوب على الموبايل */
+@media (max-width: 768px) {
+    .full-width-banner {
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+}
 
 /* ========================================
    HERO SECTION

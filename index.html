@@ -35,7 +35,7 @@
           <span class="lang-key" data-ar="أطلق العنان لأعمالك، وحوّل إدارة موظفيك" data-en="Unleash Your Business, Transform Your Employee ">
           أطلق العنان لأعمالك، وحوّل إدارة موظفيك
           </span>
-          <br class="desktop-br" />
+          <br />
           <span class="lang-key" data-ar="ومبيعاتك إلى" data-en="Management and Sales into">
           ومبيعاتك إلى
           </span>
@@ -218,7 +218,7 @@
         <div class="header-group">
              <h2 class="main-sentence">
                  <span class="lang-key" data-en="From employee management to sales and accounting..">من إدارة الموظفين إلى المبيعات والحسابات..</span>
-                 <br class="desktop-br">
+                 <br>
                  <span class="lang-key" data-en="Everything under your control">كل شيء تحت سيطرتك </span>
                  
                  <span class="highlight-wrap">
@@ -397,97 +397,7 @@
         </div>
     </div>
 </section>
-<!--  -->
-<section class="premium-stats">
-    <div class="container mx-auto px-6">
-        
-        <div class="stats-header">
-            <span class="stats-badge lang-key" 
-                  data-ar="إنجازاتنا بالأرقام" 
-                  data-en="Our Achievements in Numbers">
-                  إنجازاتنا بالأرقام
-            </span>
-            <h2 class="stats-title lang-key" 
-                data-ar="نحن لا نتحدث عن النجاح، <br> بل نجعله واقعاً رقمياً ملموساً" 
-                data-en="We Don't Just Talk Success, <br> We Build It into a Tangible Digital Reality">
-                نحن لا نتحدث عن النجاح، <br> بل نجعله واقعاً رقمياً ملموساً
-            </h2>
-            <p class="stats-subtitle lang-key" 
-               data-ar="انضم إلى الشركات الرائدة التي اعتمدت سيركلز سوفت كشريك تقني أساسي لنمو أعمالها وتطوير إدارتها." 
-               data-en="Join industry leaders who rely on CirclesSoft as their core technology partner to scale operations and optimize management.">
-               انضم إلى الشركات الرائدة التي اعتمدت سيركلز سوفت كشريك تقني أساسي لنمو أعمالها وتطوير إدارتها.
-            </p>
-        </div>
 
-        <div class="stats-wrapper">
-            <div class="stat-box">
-                <div class="stat-number-wrap">
-                    <span class="counter" data-target="450">0</span><span class="symbol">+</span>
-                </div>
-                <p class="stat-label lang-key" 
-                   data-ar="شركة اعتمدت نظامنا" 
-                   data-en="Enterprises Trusting Our System">
-                   شركة اعتمدت نظامنا
-                </p>
-            </div>
-
-            <div class="stat-box">
-                <div class="stat-number-wrap">
-                    <span class="counter" data-target="85">0</span><span class="symbol">%</span>
-                </div>
-                <p class="stat-label lang-key" 
-                   data-ar="زيادة في كفاءة العمل" 
-                   data-en="Increase in Workflow Efficiency">
-                   زيادة في كفاءة العمل
-                </p>
-            </div>
-
-            <div class="stat-box">
-                <div class="stat-number-wrap">
-                    <span class="counter" data-target="100">0</span><span class="symbol">%</span>
-                </div>
-                <p class="stat-label lang-key" 
-                   data-ar="التزام بالمعايير الحكومية" 
-                   data-en="Government Compliance Rate">
-                   التزام بالمعايير الحكومية
-                </p>
-            </div>
-
-            <div class="stat-box">
-                <div class="stat-number-wrap">
-                    <span class="counter" data-target="60">0</span><span class="symbol">%</span>
-                </div>
-                <p class="stat-label lang-key" 
-                   data-ar="توفير في الوقت التشغيلي" 
-                   data-en="Reduction in Operational Time">
-                   توفير في الوقت التشغيلي
-                </p>
-            </div>
-
-            <div class="stat-box">
-                <div class="stat-number-wrap">
-                    <span class="counter" data-target="12000">0</span><span class="symbol">+</span>
-                </div>
-                <p class="stat-label lang-key" 
-                   data-ar="موظف يدار يومياً" 
-                   data-en="Active Employees Managed Daily">
-                   موظف يدار يومياً
-                </p>
-            </div>
-
-            <div class="stat-box">
-                <div class="stat-number-wrap">
-                    <span class="counter" data-target="99.9">0</span><span class="symbol">%</span>
-                </div>
-                <p class="stat-label lang-key" 
-                   data-ar="دقة العمليات المالية" 
-                   data-en="Financial Operations Accuracy">
-                   دقة العمليات المالية
-                </p>
-            </div>
-        </div>
-    </div>
-</section>
  <!-- ----------------------------------------- -->
 
 
@@ -684,6 +594,124 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+<script>
+    // تفعيل إضافة ScrollTrigger
+gsap.registerPlugin(ScrollTrigger);
 
+document.addEventListener("DOMContentLoaded", () => {
+    
+    // ==========================================
+    // 1. أنيميشن قسم الـ Hero (عند فتح الصفحة مباشرة)
+    // ==========================================
+    const heroTimeline = gsap.timeline();
+    heroTimeline
+        .from(".hero-title", { y: 50, opacity: 0, duration: 1.2, ease: "power4.out" })
+        .from(".hero-description", { y: 30, opacity: 0, duration: 0.8, ease: "power3.out" }, "-=0.8")
+        // .from(".hero-cta", { scale: 0.8, opacity: 0, duration: 0.6, ease: "back.out(1.7)" }, "-=0.5")
+        .from(".floating-marker", { scale: 0, opacity: 0, stagger: 0.2, duration: 0.6, ease: "back.out(2)" }, "-=0.3")
+        .from(".mockup-wrapper", { y: 80, opacity: 0, duration: 1.2, ease: "power4.out" }, "-=0.6");
+
+    // ==========================================
+    // 2. أنيميشن كروت الخدمات (إدارة الموارد البشرية وأخواتها) - جذاب ومبهج جداً
+    // ==========================================
+    // جعلنا الكروت تدخل بزاوية دوران خفيفة، وتكبير تدريجي، وتأثير ارتداد نابض بالحياة
+    gsap.from(".modern-card", {
+        scrollTrigger: {
+            trigger: ".premium-cards-grid",
+            start: "top 75%", // يبدأ الأنيميشن أول ما يقرب القسم من الشاشة
+            toggleActions: "play none none none"
+        },
+        opacity: 0,
+        y: 100,             // صعود من الأسفل
+        rotationX: -15,     // تأثير ثلاثي أبعاد خفيف أثناء الدخول
+        scale: 0.85,        // تبدأ صغيرة وتتمدد
+        stagger: 0.2,       // تتابع مبهج جداً بين الكارت والأخر
+        duration: 1.2,
+        ease: "back.out(1.5)", // تأثير الارتداد المرن
+        clearProps: "all"   // مسح الخصائص بعد الانتهاء لضمان عمل الـ Hover بكفاءة
+    });
+
+    // تحريك العناصر الداخلية للكروت (القائمة والبادج) لزيادة التفاعل البصري
+    document.querySelectorAll(".modern-card").forEach((card) => {
+        gsap.from(card.querySelectorAll(".features-sub-list li"), {
+            scrollTrigger: {
+                trigger: card,
+                start: "top 80%",
+            },
+            opacity: 0,
+            x: 20,           // دخول عناصر القائمة من اليمين لليسار بحركة ناعمة
+            stagger: 0.08,
+            duration: 0.6,
+            ease: "power2.out"
+        });
+    });
+
+    // ==========================================
+    // 3. أنيميشن كروت الحلول (Solutions Cards Stack)
+    // ==========================================
+    const solutionCards = document.querySelectorAll(".custom-solution-card");
+    solutionCards.forEach((card, index) => {
+        gsap.from(card, {
+            scrollTrigger: {
+                trigger: card,
+                start: "top 85%",
+            },
+            x: index % 2 === 0 ? -80 : 80, 
+            opacity: 0,
+            duration: 1,
+            ease: "power3.out"
+        });
+
+        gsap.from(card.querySelector(".card-visual-box img"), {
+            scrollTrigger: { trigger: card, start: "top 75%" },
+            scale: 0.8,
+            duration: 1.2,
+            ease: "elastic.out(1, 0.75)"
+        });
+    });
+
+    // ==========================================
+    // 4. الألواح (Panels) - تم إلغاء الـ Stacking وجعلها تظهر بدخول مبهج طبيعي
+    // ==========================================
+    const panels = document.querySelectorAll(".panel");
+    panels.forEach((panel) => {
+        gsap.from(panel, {
+            scrollTrigger: {
+                trigger: panel,
+                start: "top 85%",
+                toggleActions: "play none none none"
+            },
+            opacity: 0,
+            y: 50,
+            duration: 1,
+            ease: "power2.out"
+        });
+
+        gsap.from(panel.querySelector(".content"), {
+            scrollTrigger: { trigger: panel, start: "top 70%" },
+            scale: 0.9,
+            opacity: 0,
+            duration: 0.8,
+            ease: "back.out(1.2)"
+        });
+    });
+
+    // ==========================================
+    // 5. العناوين وقسم آراء العملاء
+    // ==========================================
+    const mainTitles = document.querySelectorAll(".main-sentence, .logos-title, .section-header");
+    mainTitles.forEach(title => {
+        gsap.from(title, {
+            scrollTrigger: { trigger: title, start: "top 85%" },
+            y: 30, opacity: 0, duration: 0.8, ease: "power3.out"
+        });
+    });
+
+    gsap.from(".testimonial-card", {
+        scrollTrigger: { trigger: ".testimonials-section", start: "top 75%" },
+        scale: 0.9, opacity: 0, duration: 1, ease: "power2.out"
+    });
+});
+</script>
   </body>
 </html>

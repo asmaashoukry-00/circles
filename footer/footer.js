@@ -1,32 +1,35 @@
 function loadFooter() {
-    fetch('/footer/footer.html') 
-        .then(response => {
-            if (!response.ok) throw new Error('Footer file not found');
-            return response.text();
-        })
+    const placeholder = document.getElementById('footer-placeholder');
+    if (!placeholder) return;
+
+    // 1. محاولة استرجاع الفوتر من الكاش (عرض فوري)
+    const cachedFooter = localStorage.getItem('cachedFooterHTML');
+    let savedLang = localStorage.getItem("selectedLang") || "en";
+
+    if (cachedFooter) {
+        placeholder.innerHTML = cachedFooter;
+        // تطبيق اللغة فوراً على النسخة المحملة من الكاش
+        if (typeof window.applyLanguage === "function") {
+            window.applyLanguage(savedLang);
+        }
+    }
+
+    // 2. جلب الملف في الخلفية لتحديث الكاش
+    fetch('/footer/footer.html')
+        .then(res => res.text())
         .then(data => {
-            const placeholder = document.getElementById('footer-placeholder');
-            if (placeholder) {
+            // تحديث الكاش والواجهة فقط إذا كان هناك تغيير في الملف
+            if (cachedFooter !== data) {
+                localStorage.setItem('cachedFooterHTML', data);
                 placeholder.innerHTML = data;
-                
-                // التأكد من لغة الصفحة الحالية
-                const currentLang = document.documentElement.getAttribute('lang');
-                
-                // إذا كانت لغة الموقع الحالية إنجليزية، نترجم عناصر الفوتر فوراً
-                if (currentLang === 'en') {
-                    const footerElements = placeholder.querySelectorAll('.lang-key');
-                    footerElements.forEach(el => {
-                        const enText = el.getAttribute('data-en');
-                        if (enText) {
-                            if (el.tagName === 'A' || el.tagName === 'P' || el.tagName === 'H3' || el.tagName === 'SPAN') {
-                                el.textContent = enText;
-                            }
-                        }
-                    });
+                // تطبيق اللغة بعد التحديث
+                if (typeof window.applyLanguage === "function") {
+                    window.applyLanguage(savedLang);
                 }
             }
         })
-        .catch(error => console.error('Error loading footer:', error));
+        .catch(err => console.warn("ملاحظة: فشل جلب تحديثات الفوتر، تم استخدام النسخة المحفوظة."));
 }
 
+// تنفيذ عند تحميل الصفحة
 document.addEventListener('DOMContentLoaded', loadFooter);
