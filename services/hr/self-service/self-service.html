@@ -1,246 +1,165 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
- <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title class="lang-key" data-ar="الخدمات المحاسبية | Circles Soft" data-en="Accounting Services | Circles Soft">الخدمات المحاسبية | Circles Soft</title>
+    <title class="lang-key" data-ar="بوابة خدمات الموظف | Circles Soft" data-en="Employee Self-Service Portal | Circles Soft">بوابة خدمات الموظف | Circles Soft</title>
 
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&family=Almarai:wght@400;700&display=swap" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
-    <link rel="stylesheet" href="accounting.css" />
+    <link rel="stylesheet" href="self-service.css" />
     <link rel="icon" href="../../../global/favicon.png">
 
-    <link rel="stylesheet" href="../../../footer/footer.css" />
-    <link rel="stylesheet" href="../../../navbar/navbar.css" />
-    
-    <script src="../../../english-script.js"></script>
+    <link rel="stylesheet" href="/global/circles-solutions/circles-solutions.css" />
+    <link rel="stylesheet" href="/footer/footer.css" />
+    <link rel="stylesheet" href="/navbar/navbar.css" />
 </head>
- <body>
-     <!----------------- navbar-------------------->
-     <div id="navbar-placeholder"></div>
- <!-- Hero Section -->
-<section class="hero-creative-layered">
-  <div class="container hero-inner">
-    
-    <div class="floating-elements">
-      <img src="assets/Chart (1).png" class="element el-1" alt="Accounting Table">
-      <img src="assets/Chart (2).png" class="element el-2" alt="Analytics Chart">
-      <img src="assets/Chart.png" class="element el-3" alt="Balance Card">
-    </div>
+<body>
 
-    <div class="hero-content">
-      <h1 class="hero-title">
-        المحاسبة كما يجب أن تكون: <br>
-        <span class="gradient-text">سهلة، دقيقة، وفورية.</span>
-      </h1>
-      <p class="hero-subtitle">إدارة مالية متكاملة تبدأ بنقرة وتنتهي بميزانية دقيقة.</p>
-      <a href="/contact/contact.html" class="btn">اطلب عرض توضيحي </a>
-    </div>
-  </div>
-</section>
+    <div id="navbar-placeholder"></div>
 
- <!-- Services Section -->
- <section class="services-section">
- <div class="container">
+    <!-- Hero Section -->
+    <section class="hero-creative-layered">
+        <div class="container hero-inner">
+            <div class="floating-elements">
+                <img src="assets/Chart (1).png" class="element el-1" alt="Employee Portal">
+                <img src="assets/Chart (2).png" class="element el-2" alt="Analytics">
+                <img src="assets/Chart.png" class="element el-3" alt="Dashboard">
+            </div>
 
- <!-- Service 1: Flexible Chart of Accounts -->
- <div class="service-row" data-aos="fade-up">
- <div class="service-content">
- <span class="service-number">01</span>
- <h2>شـجرة حسـابات مرنة وقابلـة للتخصيص</h2>
- <p>نظام شجرة حسابات مرن وقابل للتخصيص بالكامل ليتناسب مع طبيعة نشاطك التجاري، مع إمكانية إضافة وتعديل الحسابـات الفرعية بسهولة ويسر ليعكس بدقة هيكل شركتك المالي.</p>
- <ul class="service-features">
- <li><i class="fas fa-check"></i> تصميم هيكل شجرة الحسابات حسب نوع النشاط</li>
- <li><i class="fas fa-check"></i> إضافة وتعديل الحسابات الفرعية بمرونة تامة</li>
- <li><i class="fas fa-check"></i> ربط الحسابات بالتقارير المالية التلقائية</li>
- <li><i class="fas fa-check"></i> دعم متعدد الأبعاد لتحليل التكاليف والأرباح</li>
- </ul>
- </div>
- <div class="service-image">
- <img src="assets/accounting 1 (2).png" alt="شجرة حسابات مرنة" />
- </div>
- </div>
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    كل ما يحتاجه الموظف والمدير في مكان واحد<br>
+                    <span class="gradient-text">بوابة ذاتية ذكية تجعل الحياة الإدارية أسهل وأسرع.</span>
+                </h1>
+                <div class="hero-features-inline">
+                    <span>خدمات الموظف الذاتية</span> <span class="divider">|</span> 
+                    <span>لوحة بيانات الموظف</span> <span class="divider">|</span> 
+                    <span>خدمات المدير الذاتية</span> <span class="divider">|</span> 
+                    <span>لوحة بيانات المدير</span> <span class="divider">|</span> 
+                    <span>موافقات وقوائم تحقق</span>
+                </div>
+                <a href="/contact/contact.html" class="btn">اطلب عرض توضيحي</a>
+            </div>
+        </div>
+    </section>
 
- <!-- Service 2: Fiscal Periods -->
- <div class="service-row reverse" data-aos="fade-up">
- <div class="service-content">
- <span class="service-number">02</span>
- <h2>فتـرات محاسـبية ضمن السـنة المالية</h2>
- <p>تقسيم السنة المالية إلى فترات محاسبية دقيقة (شهرية، ربع سنوية، نصف سنوية) مع إغلاق تلقائي وحفظ البيانات لمنع التعديلات غير المصرح بها على الفترات المغلقة.</p>
- <ul class="service-features">
- <li><i class="fas fa-check"></i> تعريف وتخصيص فترات السنة المالية</li>
- <li><i class="fas fa-check"></i> إغلاق فترات محاسبية تلقائي مع حفظ السجلات</li>
- <li><i class="fas fa-check"></i> مقارنة الأداء بين الفترات المالية المختلفة</li>
- <li><i class="fas fa-check"></i> تحديد صلاحيات  تسجيل المعاملات الماليــة</li>
- </ul>
- </div>
- <div class="service-image">
- <img src="assets/accounting 2.png" alt="فترات محاسبية" />
- </div>
- </div>
+    <!-- Services Section -->
+    <section class="services-section">
+        <div class="container">
 
- <!-- Service 3: Default Account Structure -->
- <div class="service-row" data-aos="fade-up">
- <div class="service-content">
- <span class="service-number">03</span>
- <h2> تهيئة الحسابات</h2>
- <p>   شاشة تهيئة الحسابات صممت لتوفر لك تحكماً مرناً في ربط الحسابات وإدارتها، مما يساعد في تسريع العمليات وتحسين دقة التقارير.</p>
- <ul class="service-features">
- <li><i class="fas fa-check"></i> ربط مرن بين حساباتك في شجرة الحسابات والشاشات الخاصة.</li>
- <li><i class="fas fa-check"></i> تخصيص سهل للحسابات وربطها حسب نوع المعاملة.</li>
- <li><i class="fas fa-check"></i> تقليل الأخطاء البشرية في إدخال البيانات.</li>
- <li><i class="fas fa-check"></i> مرونة في الاستخدام تناسب متطلبات عملك.</li>
- <li><i class="fas fa-check"></i> تقارير دقيقة تنعكس بوضوح بناءً على الحسابات المخصصة.</li>
- </ul>
- </div>
- <div class="service-image">
- <img src="assets/accounting 3.png" alt="حسابات افتراضية" />
- </div>
- </div>
+            <!-- 01 خدمات الموظف الذاتية -->
+            <div class="service-row" data-aos="fade-up">
+                <div class="service-content">
+                    <span class="service-number">01</span>
+                    <h2>خدمات الموظف الذاتية</h2>
+                    <p>بوابة خدمة ذاتية متكاملة وسهلة الاستخدام تمنح الموظف القدرة على إدارة كافة احتياجاته اليومية بكل استقلالية وشفافية.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> طلبات الموظف (العمل الإضافي، المغادرة، الإجازة)</li>
+                        <li><i class="fas fa-check"></i> تسجيل الحضور والانصراف</li>
+                        <li><i class="fas fa-check"></i> طلب تغيير البيانات الشخصية</li>
+                        <li><i class="fas fa-check"></i> تخطيط الإجازات ورصيدها</li>
+                        <li><i class="fas fa-check"></i> الاستعلام عن قسيمة الرواتب والمتغيرات الشهرية</li>
+                        <li><i class="fas fa-check"></i> الوصول إلى مركز وثائق الشركة</li>
+                    </ul>
+                </div>
+                <div class="service-image">
+                    <img src="assets/employee-self-service.png" alt="خدمات الموظف الذاتية" />
+                </div>
+            </div>
 
- <!-- Service 4: Daily Transactions -->
- <div class="service-row reverse" data-aos="fade-up">
- <div class="service-content">
- <span class="service-number">04</span>
- <h2>معامــلات اليومية العامة</h2>
- <p>نظام متكامل وسهل الاستخدام لتسجيل جميع المعاملات اليومية (قيد يومي) مع قوة ربط الوثائق والفواتير بالقيود المحاسبية، ودعم الترحيل التلقائي للرصيد إلى نهاية الفترة المحاسبية.</p>
- <ul class="service-features">
- <li><i class="fas fa-check"></i> تسجيل القيود اليومية بواجهة مستخدم سهلة</li>
- <li><i class="fas fa-check"></i> ربط الفواتير والوثائق بالقيود المحاسبية</li>
- <li><i class="fas fa-check"></i> الترحيل التلقائي للرصيد بنهاية كل فترة</li>
- <li><i class="fas fa-check"></i> مراجعة وتعديل القيود مع سجل تتبع التغييرات</li>
- </ul>
- </div>
- <div class="service-image">
- <img src="assets/accounting 4 .png" alt="معاملات يومية" />
- </div>
- </div>
+            <!-- 02 لوحة بيانات الموظف -->
+            <div class="service-row reverse" data-aos="fade-up">
+                <div class="service-content">
+                    <span class="service-number">02</span>
+                    <h2>لوحة بيانات الموظف</h2>
+                    <p>لوحة شخصية متطورة تعرض للموظف كل معلوماته وإنجازاته في مكان واحد بطريقة واضحة ومريحة.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> عرض قسيمة الراتب والمتغيرات الشهرية</li>
+                        <li><i class="fas fa-check"></i> رصيد الإجازات وتخطيطها</li>
+                        <li><i class="fas fa-check"></i> تقييم الأداء والأهداف الوظيفية</li>
+                        <li><i class="fas fa-check"></i> التصويت والمشاركة في استطلاعات الشركة</li>
+                    </ul>
+                </div>
+                <div class="service-image">
+                    <img src="assets/employee-dashboard.png" alt="لوحة بيانات الموظف" />
+                </div>
+            </div>
 
- <!-- Service 5: General Ledger -->
- <div class="service-row" data-aos="fade-up">
- <div class="service-content">
- <span class="service-number">05</span>
- <h2>دفتر الأستاذ العام</h2>
- <p>دفتر الاستاذ العام الشامل الذي يعرض جميع الحسابات مع الرصيد المبدئي، والمدين، والدائن، والرصيد النهائي لكل حساب، مع إمكانية تصدير البيانات لعدة صيغ وتكامل تام مع دفاتر الاستاذ الفرعية.</p>
- <ul class="service-features">
- <li><i class="fas fa-check"></i> عرض شامل لجميع الحسابات مع الأرصدة</li>
- <li><i class="fas fa-check"></i> تتبع الحركة المحاسبية لكل حساب على حدة</li>
- <li><i class="fas fa-check"></i> تصدير البيانات إلى Excel و PDF</li>
- <li><i class="fas fa-check"></i> ربط مباشر بدفاتر الاستاذ الفرعية للعملاء والموردين</li>
- </ul>
- </div>
- <div class="service-image">
- <img src="assets/accounting 5 .png" alt="دفتر الاستاذ العام" />
- </div>
- </div>
+            <!-- 03 خدمات المدير الذاتية -->
+            <div class="service-row" data-aos="fade-up">
+                <div class="service-content">
+                    <span class="service-number">03</span>
+                    <h2>خدمات المدير الذاتية</h2>
+                    <p>أدوات احترافية تمكن المدير من إدارة فريقه بكفاءة عالية واتخاذ قرارات سريعة.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> خدمات المدير الذاتية المتكاملة</li>
+                        <li><i class="fas fa-check"></i> متابعة طلبات الفريق</li>
+                        <li><i class="fas fa-check"></i> تقييم الموظفين</li>
+                    </ul>
+                </div>
+                <div class="service-image">
+                    <img src="assets/manager-self-service.png" alt="خدمات المدير الذاتية" />
+                </div>
+            </div>
 
- <!-- Service 6: Integration -->
- <div class="service-row reverse" data-aos="fade-up">
- <div class="service-content">
- <span class="service-number">06</span>
- <h2>التكامـل مـع جميع الإدارات</h2>
- <p>تكامل تام وشامل لنظام المحاسبة مع جميع وحدات وإدارات الشركة (المبيعات، المشتريات، المخازن، الموارد البشرية) لضمان تدفق المعلومات المالية بدقة وبدون تدخل يدوي يسبب الأخطاء.</p>
- <ul class="service-features">
- <li><i class="fas fa-check"></i> ارتباط تام بنظام المبيعات وإصدار الفواتير</li>
- <li><i class="fas fa-check"></i> تكامل مع نظام المشتريات والمخازن</li>
- <li><i class="fas fa-check"></i> ربط مع كشوف المرتبات وحسابات الموظفين</li>
- <li><i class="fas fa-check"></i> تحديث تلقائي للأرصدة بناءً على نشاط الإدارات</li>
- </ul>
- </div>
- <div class="service-image">
- <img src="assets/accounting 6.png" alt="تكامل الوحدات" />
- </div>
- </div>
+            <!-- 04 لوحة بيانات المدير -->
+            <div class="service-row reverse" data-aos="fade-up">
+                <div class="service-content">
+                    <span class="service-number">04</span>
+                    <h2>لوحة بيانات المدير</h2>
+                    <p>رؤية شاملة وفورية لأداء الفريق تساعد المدير على مراقبة كل شيء بكفاءة.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> لوحة بيانات المدير الشاملة</li>
+                        <li><i class="fas fa-check"></i> إحصائيات الأداء والحضور</li>
+                        <li><i class="fas fa-check"></i> متابعة الأهداف الوظيفية</li>
+                    </ul>
+                </div>
+                <div class="service-image">
+                    <img src="assets/manager-dashboard.png" alt="لوحة بيانات المدير" />
+                </div>
+            </div>
 
- <!-- Service 7: Balance Sheet -->
- <!-- <div class="service-row" data-aos="fade-up">
- <div class="service-content">
- <span class="service-number">07</span>
- <h2>تقريـر الميزانيـة العمومية</h2>
- <p>تقارير الميزانية العمومية الدقيقة والشاملة التي تعرض المركز المالي الحقيقي للشركة في أي وقت، مع تحليلات للقيمة الدفترية للأصول والالتزامات، ومقارنة الفترات المختلفة لاتخاذ قرارات استراتيجية مدروسة.</p>
- <ul class="service-features">
- <li><i class="fas fa-check"></i> عرض الأصول والالتزامات ورأس المال الحقيقي</li>
- <li><i class="fas fa-check"></i> مقارنة ميزانيات فترات متعددة</li>
- <li><i class="fas fa-check"></i> تحليل النسب المالية الرئيسية</li>
- <li><i class="fas fa-check"></i> تصدير التقارير بأشكال متعددة</li>
- </ul>
- </div>
- <div class="service-image">
- <img src="assets/accounting 7.png" alt="ميزانية عمومية" style="filter: grayscale(50%);"/>
- </div>
- </div> -->
+            <!-- 05 موافقات المدير وقوائم التحقق -->
+            <div class="service-row" data-aos="fade-up">
+                <div class="service-content">
+                    <span class="service-number">05</span>
+                    <h2>موافقات المدير وقوائم التحقق</h2>
+                    <p>نظام موافقات ذكي وقوي يضمن سلاسة العمليات الإدارية مع الحفاظ على الدقة والامتثال.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> موافقات المدير الفورية</li>
+                        <li><i class="fas fa-check"></i> قوائم التحقق للموظفين الجدد</li>
+                        <li><i class="fas fa-check"></i> إجراءات إنهاء الخدمات</li>
+                        <li><i class="fas fa-check"></i> طلب شواغر وعمليات المقابلات</li>
+                        <li><i class="fas fa-check"></i> تقييم الموظفين</li>
+                    </ul>
+                </div>
+                <div class="service-image">
+                    <img src="assets/manager-approvals.png" alt="موافقات المدير" />
+                </div>
+            </div>
 
- <!-- Service 8: Income Statement -->
- <!-- <div class="service-row reverse" data-aos="fade-up">
- <div class="service-content">
- <span class="service-number">08</span>
- <h2>قائمة الدخل</h2>
- <p>قائمة الدخل التفصيلية التي توضح كافة مصادر الإيرادات والتكاليف والمصروفات لتحديد صافي الربح أو الخسارة للفترة، مع مقارنة الأرباح بين الفترات المختلفة وتحليل هوامش الربحية لكل نشاط.</p>
- <ul class="service-features">
- <li><i class="fas fa-check"></i> تفصيل كامل للإيرادات والمصروفات</li>
- <li><i class="fas fa-check"></i> حساب صافي الربح أو الخسارة للفترة</li>
- <li><i class="fas fa-check"></i> مقارنة الأرباح بين فترات زمنية مختلفة</li>
- <li><i class="fas fa-check"></i> تحليل هوامش الربحية حسب النشاط والمنتج</li>
- </ul>
- </div>
- <div class="service-image">
- <img src="assets/accounting 8.png" alt="قائمة الدخل" style="filter: grayscale(50%);"/>
- </div>
- </div> -->
+        </div>
+    </section>
 
- <!-- Service 9: Trial Balance -->
- <!-- <div class="service-row" data-aos="fade-up">
- <div class="service-content">
- <span class="service-number">09</span>
- <h2>ميـزان المراجعة</h2>
- <p>ميـزان المراجعة الشامل الذي يؤكد تساوي الجانبين (مدين ودائن) ويكشف عن أي أخطاء أو اختلافات في القيود المحاسبية قبل إغلاق الفترة المالية، مع تسهيل عملية الترحيل وضمان صحة البيانات المحاسبية.</p>
- <ul class="service-features">
- <li><i class="fas fa-check"></i> التأكد من تساوي جانبي المدين والدائن</li>
- <li><i class="fas fa-check"></i> اكتشاف الأخطاء والمبالغ غير متوازنة</li>
- <li><i class="fas fa-check"></i> تسهيل عملية الترحيل بنهاية الفترة</li>
- <li><i class="fas fa-check"></i> توليد تلقائي قبل إغلاق الفترة المالية</li>
- </ul>
- </div>
- <div class="service-image">
- <img src="../assets/accounting3.png" alt="ميزان المراجعة" style="filter: grayscale(50%);"/>
- </div>
- </div> -->
+    <!-- solutions -->
+    <div id="solutions-placeholder"></div>
 
- <!-- Service 10: Detailed Reports -->
- <!-- <div class="service-row reverse" data-aos="fade-up">
- <div class="service-content">
- <span class="service-number">10</span>
- <h2>كشـوفات تفصيليـة للعملاء والمورديـن والموظفين</h2>
- <p>كشوفات تفصيلية ودقيقة لحسابات العملاء والموردين والموظفين تعرض حركة كل حساب على حدة مع أرصدة المديونيات والدائنات، وعمليات المتابعة والتحصيل، ونظام تنبيهات تلقائي للديون المستحقة والمتأخرة.</p>
- <ul class="service-features">
- <li><i class="fas fa-check"></i> كشوف تفصيلية لحركة العملاء ومديونياتهم</li>
- 
- <li><i class="fas fa-check"></i> كشوف مرتبات وحسابات الموظفين</li>
- <li><i class="fas fa-check"></i> نظام تنبيهات آلي للديون المستحقة والمتأخرة</li>
- </ul>
- </div>
- <div class="service-image">
- <img src="../assets/accounting4.png" alt="كشوفات تفصيلية" style="filter: grayscale(50%);"/>
- </div>
- </div> -->
+    <!-- footer -->
+    <div id="footer-placeholder"></div>
 
- </div>
- </section>
-
-<!-- footer -->
- <div id="footer-placeholder"></div>
-
-
-
+    <script src="/global/circles-solutions/circles-solutions.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="../../../footer/footer.js"></script>
-<script src="/navbar/navbar.js"></script>
+    <script src="../../../navbar/navbar.js"></script>
 
- <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
- <script>
- AOS.init({ duration: 1000, once: true });
- </script>
- </body>
+    <script>
+        AOS.init({ duration: 1000, once: true });
+    </script>
+</body>
 </html>

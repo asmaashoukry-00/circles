@@ -146,6 +146,7 @@ ul {
   font-weight: 800;
   color: #1a1a1a;
   margin-bottom: 20px;
+  padding-top: 40px;
 }
 
 .gradient-text {
@@ -183,7 +184,7 @@ ul {
    SERVICES SECTION
    ======================================== */
 .services-section {
-   padding: 100px 0;
+   padding: 70px 0;
 }
 
 .service-row {
@@ -418,6 +419,7 @@ html[lang="en"] .service-features li i {
         order: 2 !important; /* Image on bottom for mobile screens */
     }
 }
+
 /* ======================================================================
    MOBILE TYPOGRAPHY FIX FOR HERO TITLE
    ====================================================================== */
