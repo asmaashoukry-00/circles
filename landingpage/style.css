@@ -4,6 +4,9 @@
     --primary: #4F46E5;
     --yellow: #FFB800;
     --blue-tag: #5856D6;
+    
+  color-scheme: light;
+
 }
 
 * { 
