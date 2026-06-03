@@ -125,23 +125,23 @@ function applyLanguage(lang) {
     document.documentElement.dir = lang === "en" ? "ltr" : "rtl";
     document.body.setAttribute("dir", lang === "en" ? "ltr" : "rtl");
 
-    const updateFlagAndText = (flagId, textId) => {
-        const flagImg = document.getElementById(flagId);
-        const textSpan = document.getElementById(textId);
+    // const updateFlagAndText = (flagId, textId) => {
+    //     const flagImg = document.getElementById(flagId);
+    //     const textSpan = document.getElementById(textId);
         
-        if (flagImg && textSpan) {
-            if (lang === 'en') {
-                flagImg.src = "https://flagcdn.com/w20/sa.png"; 
-                textSpan.textContent = "العربية";
-            } else {
-                flagImg.src = "https://flagcdn.com/w20/us.png"; 
-                textSpan.textContent = "English";
-            }
-        }
-    };
+    //     if (flagImg && textSpan) {
+    //         if (lang === 'en') {
+    //             flagImg.src = "https://flagcdn.com/w20/sa.png"; 
+    //             textSpan.textContent = "العربية";
+    //         } else {
+    //             flagImg.src = "https://flagcdn.com/w20/us.png"; 
+    //             textSpan.textContent = "English";
+    //         }
+    //     }
+    // };
 
-    updateFlagAndText("desktopLangFlag", "desktopLangText");
-    updateFlagAndText("mobileLangFlag", "mobileLangText");
+    // updateFlagAndText("desktopLangFlag", "desktopLangText");
+    // updateFlagAndText("mobileLangFlag", "mobileLangText");
 
     localStorage.setItem("selectedLang", lang);
     
