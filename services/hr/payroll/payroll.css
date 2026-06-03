@@ -146,7 +146,7 @@ ul {
   font-weight: 800;
   color: #1a1a1a;
   margin-bottom: 20px;
-  padding-top: 20px;
+  padding-top: 40px;
 }
 
 .gradient-text {
@@ -184,7 +184,7 @@ ul {
    SERVICES SECTION
    ======================================== */
 .services-section {
-   padding: 100px 0;
+   padding: 70px 0;
 }
 
 .service-row {
@@ -401,6 +401,16 @@ html[lang="en"] .service-features li i {
     margin-right: 8px !important;
 }
 
+html[lang="en"] .service-number {
+   font-size: 6rem;
+   font-weight: 900;
+   color: rgba(30, 64, 175, 0.08);
+   position: absolute;
+   top: -13px;
+   left: 1px;
+   line-height: 1;
+}
+
 /* --- English Layout Protection on Mobile --- */
 @media (max-width: 991px) {
     html[lang="en"] .service-row,
@@ -419,6 +429,7 @@ html[lang="en"] .service-features li i {
         order: 2 !important; /* Image on bottom for mobile screens */
     }
 }
+
 /* ======================================================================
    MOBILE TYPOGRAPHY FIX FOR HERO TITLE
    ====================================================================== */

@@ -72,10 +72,15 @@ ul {
    padding: 0 20px;
 }
 
-/* --- Full Width Banner --- */
-/* تنسيق البانر العريض */
+
+
+/* ========================================
+  banner
+   ======================================== */
+
+
 .full-width-banner {
-    width: 100vw; /* تأخذ كامل عرض نافذة المتصفح */
+    width: 100vw; 
     position: relative;
     left: 50%;
     right: 50%;
@@ -83,26 +88,27 @@ ul {
     margin-right: -50vw;
     margin-left: -50vw;
     margin-right: -50vw;
-    margin-top: 50px; /* مسافة عن السيكشن السابق */
-    margin-bottom: 50px; /* مسافة عن السيكشن التالي */
+    margin-top: 50px;
+    margin-bottom: 50px; 
     overflow: hidden;
 }
 
 .banner-image {
     width: 100%;
-    height: auto; /* للحفاظ على أبعاد الصورة */
+    height: auto; 
     display: block;
     padding: 0 5%;
-    object-fit: cover; /* لضمان تغطية المساحة بدون تشويه */
+    object-fit: cover; 
 }
 
-/* لتحسين التجاوب على الموبايل */
+
 @media (max-width: 768px) {
     .full-width-banner {
         margin-top: 30px;
         margin-bottom: 30px;
     }
 }
+
 
 /* ========================================
    HERO SECTION
@@ -176,6 +182,7 @@ ul {
   font-weight: 800;
   color: #1a1a1a;
   margin-bottom: 20px;
+  padding-top: 40px;
 }
 
 .gradient-text {
@@ -213,7 +220,7 @@ ul {
    SERVICES SECTION
    ======================================== */
 .services-section {
-   padding: 100px 0;
+   padding: 70px 0;
 }
 
 .service-row {
@@ -430,6 +437,16 @@ html[lang="en"] .service-features li i {
     margin-right: 8px !important;
 }
 
+html[lang="en"] .service-number {
+   font-size: 6rem;
+   font-weight: 900;
+   color: rgba(30, 64, 175, 0.08);
+   position: absolute;
+   top: -13px;
+   left: 1px;
+   line-height: 1;
+}
+
 /* --- English Layout Protection on Mobile --- */
 @media (max-width: 991px) {
     html[lang="en"] .service-row,
@@ -448,6 +465,7 @@ html[lang="en"] .service-features li i {
         order: 2 !important; /* Image on bottom for mobile screens */
     }
 }
+
 /* ======================================================================
    MOBILE TYPOGRAPHY FIX FOR HERO TITLE
    ====================================================================== */
