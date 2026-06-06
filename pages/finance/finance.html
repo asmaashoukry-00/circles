@@ -7,7 +7,7 @@
       <!-- light mode -->
 <meta name="color-scheme" content="only light">
 <meta name="supported-color-schemes" content="only light">
-<link rel="stylesheet" href="light-mode.css">
+<link rel="stylesheet" href="/light-mode.css">
 <!-- ----------- -->
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cloudflare-ajax-libs-font-awesome/6.5.1/css/all.min.css" />
@@ -75,7 +75,7 @@
             <span><span class="lang-key" data-ar="المحاسبة العامة" data-en="General Accounting">General Accounting</span></span>
         </div>
         <div class="mobile-image-holder">
-            <img src="/pages/finance/assets/accounting.png" alt="General Accounting">
+            <img src="/pages/finance/assets/accounting.png" alt="General Accounting" data-ar-src="/pages/finance/assets/accounting.png" data-en-src="/pages/finance/assets/accounting-en.png" class="lang-image">
         </div>
     </div>
 
@@ -85,7 +85,7 @@
             <span><span class="lang-key" data-ar="البنوك والنقدية" data-en="Bank & Cash">Bank & Cash</span></span>
         </div>
         <div class="mobile-image-holder">
-            <img src="/pages/finance/assets/bank.png" alt="Bank & Cash">
+            <img src="/pages/finance/assets/bank.png" alt="Bank & Cash" data-ar-src="/pages/finance/assets/bank.png" data-en-src="/pages/finance/assets/bank-en.png" class="lang-image">
         </div>
     </div>
 
@@ -95,7 +95,7 @@
             <span><span class="lang-key" data-ar="الحسابات المدينة" data-en="Accounts Receivable">Accounts Receivable</span></span>
         </div>
         <div class="mobile-image-holder">
-            <img src="/pages/finance/assets/receivable.png" alt="Accounts Receivable">
+            <img src="/pages/finance/assets/receivable4.png" alt="Accounts Receivable" data-ar-src="/pages/finance/assets/receivable4.png" data-en-src="/pages/finance/assets/receivable4-en.png" class="lang-image">
         </div>
     </div>
 
@@ -105,7 +105,7 @@
             <span><span class="lang-key" data-ar="الحسابات الدائنة" data-en="Accounts Payable">Accounts Payable</span></span>
         </div>
         <div class="mobile-image-holder">
-            <img src="/pages/finance/assets/payable.png" alt="Accounts Payable">
+            <img src="/pages/finance/assets/payable.png" alt="Accounts Payable" data-ar-src="/pages/finance/assets/payable.png" data-en-src="/pages/finance/assets/payable-en.png" class="lang-image">
         </div>
     </div>
 
@@ -115,7 +115,7 @@
             <span><span class="lang-key" data-ar="الأصول الثابتة" data-en="Fixed Assets">Fixed Assets</span></span>
         </div>
         <div class="mobile-image-holder">
-            <img src="/pages/finance/assets/fixed-assets.png" alt="Fixed Assets">
+            <img src="/pages/finance/assets/fixed-assets.png" alt="Fixed Assets" data-ar-src="/pages/finance/assets/fixed-assets.png" data-en-src="/pages/finance/assets/fixed-assets-en.png" class="lang-image">
         </div>
     </div>
 
@@ -125,7 +125,7 @@
             <span><span class="lang-key" data-ar="إدارة المشاريع" data-en="Project Management">Project Management</span></span>
         </div>
         <div class="mobile-image-holder">
-            <img src="/pages/finance/assets/projects.png" alt="Project Management">
+            <img src="/pages/finance/assets/projects.png" alt="Project Management" data-ar-src="/pages/finance/assets/projects.png" data-en-src="/pages/finance/assets/projects-en.png" class="lang-image">
         </div>
     </div>
 
@@ -133,7 +133,7 @@
 
     <div class="display-area">
         <div class="mockup-wrapper-display">
-            <img src="/pages/finance/assets/accounting.png" class="display-img" alt="General Accounting">
+            <img src="/pages/finance/assets/accounting.png" class="display-img lang-image" alt="General Accounting" data-ar-src="/pages/finance/assets/accounting.png" data-en-src="/pages/finance/assets/accounting-en.png">
         </div>
     </div>
 </div>
@@ -152,69 +152,79 @@
 <script src="  /navbar/navbar.js"></script>
 
   <script>
-       document.addEventListener('DOMContentLoaded', function() {
-    const tabItems = document.querySelectorAll('.tab-item');
-    const displayImg = document.querySelector('.display-img');
-    const tabsContainer = document.querySelector('.tabs-side-list');
+    document.addEventListener('DOMContentLoaded', function() {
+        const tabItems = document.querySelectorAll('.tab-item');
+        const displayImg = document.querySelector('.display-img');
+        const tabsContainer = document.querySelector('.tabs-side-list');
 
-    const dashboardImages = [
-        { img: '/pages/finance/assets/accounting.png', title: 'General Accounting' },
-        { img: '/pages/finance/assets/bank.png', title: 'Bank & Cash' },
-        { img: '/pages/finance/assets/receivable.png', title: 'Accounts Receivable' },
-        { img: '/pages/finance/assets/payable.png', title: 'Accounts Payable' },
-        { img: '/pages/finance/assets/fixed-assets.png', title: 'Fixed Assets' },
-        { img: '/pages/finance/assets/projects.png', title: 'Project Management' }
-    ];
+        const dashboardImages = [
+            { ar: '/pages/finance/assets/accounting.png', en: '/pages/finance/assets/accounting-en.png' },
+            { ar: '/pages/finance/assets/bank.png', en: '/pages/finance/assets/bank-en.png' },
+            { ar: '/pages/finance/assets/receivable4.png', en: '/pages/finance/assets/receivable4-en.png' },
+            { ar: '/pages/finance/assets/payable.png', en: '/pages/finance/assets/payable-en.png' },
+            { ar: '/pages/finance/assets/fixed-assets.png', en: '/pages/finance/assets/fixed-assets-en.png' },
+            { ar: '/pages/finance/assets/projects.png', en: '/pages/finance/assets/projects-en.png' }
+        ];
 
-    // دالة الانتقال للعنصر وتوسيطه برفق (مفيدة جداً للموبايل)
-    function scrollToActiveTab(index) {
-        if (window.innerWidth <= 992 && tabsContainer) {
-            const activeCard = tabItems[index];
-            const containerWidth = tabsContainer.offsetWidth;
-            const cardOffset = activeCard.offsetLeft;
-            const cardWidth = activeCard.offsetWidth;
-            
-            // حساب نقطة التمرير الدقيقة لتوسيط الكارت تماماً في الشاشة
-            const scrollPosition = cardOffset - (containerWidth / 2) + (cardWidth / 2);
-            tabsContainer.scrollTo({
-                left: scrollPosition,
-                behavior: 'smooth'
+        function switchImages(lang) {
+            document.querySelectorAll('.lang-image').forEach(img => {
+                if (lang === 'en' && img.dataset.enSrc) {
+                    img.src = img.dataset.enSrc;
+                } else if (lang === 'ar' && img.dataset.arSrc) {
+                    img.src = img.dataset.arSrc;
+                }
             });
         }
-    }
 
-    // تفعيل الضغط اليدوي على الأزرار والكروت
-    tabItems.forEach((tab, index) => {
-        tab.addEventListener('click', () => {
-            tabItems.forEach(t => t.classList.remove('active'));
-            tab.classList.add('active');
+        function scrollToActiveTab(index) {
+            if (window.innerWidth <= 992 && tabsContainer) {
+                const activeCard = tabItems[index];
+                const containerWidth = tabsContainer.offsetWidth;
+                const cardOffset = activeCard.offsetLeft;
+                const cardWidth = activeCard.offsetWidth;
+                
+                const scrollPosition = cardOffset - (containerWidth / 2) + (cardWidth / 2);
+                tabsContainer.scrollTo({
+                    left: scrollPosition,
+                    behavior: 'smooth'
+                });
+            }
+        }
+
+        tabItems.forEach((tab, index) => {
+            tab.addEventListener('click', () => {
+                tabItems.forEach(t => t.classList.remove('active'));
+                tab.classList.add('active');
+                
+                if (displayImg) {
+                    const currentLang = document.documentElement.lang || 'ar';
+                    displayImg.src = (currentLang === 'en') ? dashboardImages[index].en : dashboardImages[index].ar;
+                    displayImg.alt = tab.querySelector('span:last-child').textContent;
+                }
+                scrollToActiveTab(index);
+            });
+        });
+
+        let activeTab = 0;
+        setInterval(() => {
+            tabItems[activeTab].classList.remove('active');
+            activeTab = (activeTab + 1) % tabItems.length;
+            tabItems[activeTab].classList.add('active');
             
             if (displayImg) {
-                displayImg.src = dashboardImages[index].img;
-                displayImg.alt = dashboardImages[index].title;
+                const currentLang = document.documentElement.lang || 'ar';
+                displayImg.src = (currentLang === 'en') ? dashboardImages[activeTab].en : dashboardImages[activeTab].ar;
             }
-            scrollToActiveTab(index);
-        });
+            
+            scrollToActiveTab(activeTab);
+        }, 4000);
+
+        // Initial language check
+        const initialLang = document.documentElement.lang || 'ar';
+        switchImages(initialLang);
     });
-
-    // الدوران التلقائي الذكي كل 4 ثوانٍ مع محاذاة السحب اللحظي
-    let activeTab = 0;
-    setInterval(() => {
-        tabItems[activeTab].classList.remove('active');
-        activeTab = (activeTab + 1) % tabItems.length;
-        tabItems[activeTab].classList.add('active');
-        
-        if (displayImg) {
-            displayImg.src = dashboardImages[activeTab].img;
-            displayImg.alt = dashboardImages[activeTab].title;
-        }
-        
-        scrollToActiveTab(activeTab);
-    }, 4000);
-});
-// ----- language
-
-    </script>
+    
+</script>
 <!-- navbar & footer scripts -->
 <script src="/global/circles-solutions/circles-solutions.js"></script>
     <script src="/english-script.js"></script>

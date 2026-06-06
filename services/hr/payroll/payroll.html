@@ -1,395 +1,239 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
- <head>
- <meta charset="UTF-8" />
- <meta name="viewport" content="width=device-width, initial-scale=1.0" />
- <title>الخدمات المحاسبية | Circles Soft</title>
-  <!-- light mode -->
-<meta name="color-scheme" content="only light">
-<meta name="supported-color-schemes" content="only light">
-<link rel="stylesheet" href="light-mode.css">
-<!-- ----------- -->
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>الخدمات المحاسبية | Circles Soft</title>
+    
+    <!-- light mode -->
+    <meta name="color-scheme" content="only light">
+    <meta name="supported-color-schemes" content="only light">
+    <link rel="stylesheet" href="light-mode.css">
 
-  <link
-  href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&family=Almarai:wght@400;700&display=swap"
-  rel="stylesheet"
-  />
-  <link
-  href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap"
-  rel="stylesheet"
-  />
- <link
- rel="stylesheet"
- href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
- />
- <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
- <link rel="stylesheet" href="payroll.css" />
- <!-- solutions -->
-     <link rel="stylesheet" href="/global/circles-solutions/circles-solutions.css" />
-<!-- Swiper CSS -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-<link rel="icon" href="/favicon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&family=Almarai:wght@400;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet" />
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link rel="stylesheet" href="payroll.css" />
+    
+    <!-- solutions -->
+    <link rel="stylesheet" href="/global/circles-solutions/circles-solutions.css" />
+    
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="icon" href="/favicon.png">
 
-  <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-    />
-     <!-- navbar & footer styles -->
- <link rel="stylesheet" href="/footer/footer.css" />
+    <!-- navbar & footer styles -->
+    <link rel="stylesheet" href="/footer/footer.css" />
     <link rel="stylesheet" href="/navbar/navbar.css" />
-    <style>
-    
-</style>
- </head>
- <body>
-     <!----------------- navbar-------------------->
-     <div id="navbar-placeholder"></div>
- <!-- Hero Section -->
-<section class="hero-creative-layered">
-  <div class="container hero-inner">
-    
-    <div class="floating-elements">
-      <img src="assets/Chart (1).png" class="element el-1" alt="Accounting Table">
-      <img src="assets/Chart (2).png" class="element el-2" alt="Analytics Chart">
-      <img src="assets/Chart.png" class="element el-3" alt="Balance Card">
-    </div>
+</head>
+<body>
+    <!-- Navbar -->
+    <div id="navbar-placeholder"></div>
 
-    <div class="hero-content">
-    <h1 class="hero-title">
-       رواتب مضمونة... موظفون راضون<br>
-        <span class="gradient-text">شركة أكثر نمواً</span>
-    </h1>
-   <div class="hero-features-inline">
-    إدارة الضرائب <span class="divider">|</span> 
-    أتمتة الرواتب <span class="divider">|</span> 
-    بناء قيود الرواتب <span class="divider">|</span> 
-    ملفات حماية الأجور <span class="divider">|</span> 
-    الربط المحاسبي <span class="divider">|</span> 
-    تقارير البيانات المالية <span class="divider">|</span> 
-    الملف الشخصي <span class="divider">|</span> 
-    إدارة الإجازات <span class="divider">|</span> 
-    بطاقة الدوام <span class="divider">|</span> 
-    حركات الموظفين <span class="divider">|</span> 
-    التأمين الصحي <span class="divider">|</span> 
-    زيادة الرواتب <span class="divider">|</span> 
-    صندوق الادخار <span class="divider">|</span> 
-    السلف والقروض <span class="divider">|</span> 
-    تذاكر الموظفين <span class="divider">|</span> 
-    إنهاء الخدمة <span class="divider">|</span> 
-    حركات خارج الراتب <span class="divider">|</span> 
-    التقارير الحكومية
-</div>
-    <a href="/contact/contact.html" class="btn">اطلب عرض توضيحي</a>
-</div>
-  </div>
-</section>
-
- <!-- Services Section -->
-<section class="services-section">
-    <div class="container">
-       <!-- Service 1 -->
-<div class="service-row payroll1" data-aos="fade-up">
-    <div class="service-content">
-        <span class="service-number">01</span>
-        <h2>ملف شخصي متكامل</h2>
-        <p>ملف شخصي متكامل ومركزي لكل موظف يحتوي على كافة بياناته الشخصية والوظيفية والعائلية...</p>
-        <ul class="service-features">
-            <li><i class="fas fa-check"></i> بيانات شخصية ووظيفية كاملة ومحدثة</li>
-            <li><i class="fas fa-check"></i> معلومات العائلة والمؤهلات العلمية</li>
-            <li><i class="fas fa-check"></i> الوثائق والعقود والتقييمات السنوية</li>
-            <li><i class="fas fa-check"></i> خدمة ذاتية لتحديث البيانات بكل سهولة</li>
-        </ul>
-    </div>
-
-    <!-- الجزء المعدل: السلايدر -->
-    <div class="service-image">
-        <div class="swiper mySwiper">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide"><img src="assets/payroll1-1.png" alt="صورة 1"></div>
-                <div class="swiper-slide"><img src="assets/payroll1-2.png" alt="صورة 2"></div>
-                <div class="swiper-slide"><img src="assets/payroll1-3.png" alt="صورة 3"></div>
+    <!-- Hero Section -->
+    <section class="hero-creative-layered">
+        <div class="container hero-inner">
+            <div class="floating-elements">
+                <img src="assets/Chart (1).png" class="element el-1" alt="Accounting Table">
+                <img src="assets/Chart (2).png" class="element el-2" alt="Analytics Chart">
+                <img src="assets/Chart.png" class="element el-3" alt="Balance Card">
             </div>
-            <!-- الأسهم -->
-            <!-- <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div> -->
-            <!-- نقاط التنقل (اختياري) -->
-            <div class="swiper-pagination"></div>
-        </div>
-    </div>
-</div>
 
-        <!-- Service 2 -->
-        <div class="service-row reverse payroll2" data-aos="fade-up">
-            <div class="service-content">
-                <span class="service-number">02</span>
-                <h2>الملف المالي والضرائب</h2>
-                <p>إدارة كاملة ودقيقة لكل البيانات المالية للموظف مع احتساب الضرائب والتأمينات الاجتماعية تلقائياً، وضمان الامتثال الكامل للقوانين.</p>
-                <ul class="service-features">
-                    <li><i class="fas fa-check"></i> الراتب الأساسي وجميع أنواع البدلات</li>
-                    <li><i class="fas fa-check"></i> حسابات تلقائية للضرائب والتأمينات الاجتماعية</li>
-                    <li><i class="fas fa-check"></i> إدارة طرق الدفع والحسابات البنكية</li>
-                    <li><i class="fas fa-check"></i> تقارير مالية شخصية دقيقة ومفصلة</li>
-                </ul>
-            </div>
-            <div class="service-image">
-                <img src="assets/payroll2.png" alt="الملف المالي" />
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    <span class="lang-key" data-ar="رواتب مضمونة... موظفون راضون" data-en="Guaranteed Payroll... Satisfied Employees">رواتب مضمونة... موظفون راضون</span><br>
+                    <span class="gradient-text lang-key" data-ar="شركة أكثر نمواً" data-en="A More Growing Company">شركة أكثر نمواً</span>
+                </h1>
+                
+                <div class="hero-features-inline">
+                    <span class="lang-key" data-ar="إدارة الضرائب" data-en="Tax Management">إدارة الضرائب</span> <span class="divider">|</span> 
+                    <span class="lang-key" data-ar="أتمتة الرواتب" data-en="Payroll Automation">أتمتة الرواتب</span> <span class="divider">|</span> 
+                    <span class="lang-key" data-ar="بناء قيود الرواتب" data-en="Payroll Journal Entries">بناء قيود الرواتب</span> <span class="divider">|</span> 
+                    <span class="lang-key" data-ar="ملفات حماية الأجور" data-en="Wage Protection Files">ملفات حماية الأجور</span> <span class="divider">|</span> 
+                    <span class="lang-key" data-ar="الربط المحاسبي" data-en="Accounting Integration">الربط المحاسبي</span> <span class="divider">|</span> 
+                    <span class="lang-key" data-ar="تقارير البيانات المالية" data-en="Financial Data Reports">تقارير البيانات المالية</span> <span class="divider">|</span> 
+                    <span class="lang-key" data-ar="الملف الشخصي" data-en="Employee Profile">الملف الشخصي</span> <span class="divider">|</span> 
+                    <span class="lang-key" data-ar="إدارة الإجازات" data-en="Leave Management">إدارة الإجازات</span> <span class="divider">|</span> 
+                    <span class="lang-key" data-ar="بطاقة الدوام" data-en="Attendance Card">بطاقة الدوام</span> <span class="divider">|</span> 
+                    <span class="lang-key" data-ar="حركات الموظفين" data-en="Employee Movements">حركات الموظفين</span> <span class="divider">|</span> 
+                    <span class="lang-key" data-ar="التأمين الصحي" data-en="Health Insurance">التأمين الصحي</span> <span class="divider">|</span> 
+                    <span class="lang-key" data-ar="زيادة الرواتب" data-en="Salary Increases">زيادة الرواتب</span> <span class="divider">|</span> 
+                    <span class="lang-key" data-ar="صندوق الادخار" data-en="Savings Fund">صندوق الادخار</span> <span class="divider">|</span> 
+                    <span class="lang-key" data-ar="السلف والقروض" data-en="Advances & Loans">السلف والقروض</span> <span class="divider">|</span> 
+                    <span class="lang-key" data-ar="تذاكر الموظفين" data-en="Employee Tickets">تذاكر الموظفين</span> <span class="divider">|</span> 
+                    <span class="lang-key" data-ar="إنهاء الخدمة" data-en="Service Termination">إنهاء الخدمة</span> <span class="divider">|</span> 
+                    <span class="lang-key" data-ar="حركات خارج الراتب" data-en="Non-Salary Transactions">حركات خارج الراتب</span> <span class="divider">|</span> 
+                    <span class="lang-key" data-ar="التقارير الحكومية" data-en="Government Reports">التقارير الحكومية</span>
+                </div>
+                
+                <a href="/contact/contact.html" class="btn lang-key" data-ar="اطلب عرض توضيحي" data-en="Request a Demo">اطلب عرض توضيحي</a>
             </div>
         </div>
+    </section>
 
-        <!-- Service 3 -->
-        <div class="service-row" data-aos="fade-up">
-            <div class="service-content">
-                <span class="service-number">03</span>
-                <h2>إدارة حركات الموظفين</h2>
-                <p>إدارة شاملة لكل الحركات اليومية مثل العمل الإضافي، الإجازات، زيادة الرواتب والاقتطاعات مع ربط تلقائي بالراتب الشهري.</p>
-                <ul class="service-features">
-                    <li><i class="fas fa-check"></i> تسجيل العمل الإضافي والمغادرات</li>
-                    <li><i class="fas fa-check"></i> إدارة الإجازات والغياب بكل أنواعها</li>
-                    <li><i class="fas fa-check"></i> زيادات الرواتب والبدلات مع تأثيرها التلقائي</li>
-                    <li><i class="fas fa-check"></i> استيراد الحركات عبر ملفات الإكسل</li>
-                </ul>
+    <!-- Services Section -->
+    <section class="services-section">
+        <div class="container">
+
+            <!-- Service 1 -->
+            <div class="service-row payroll1" data-aos="fade-up">
+                <div class="service-content">
+                    <span class="service-number">01</span>
+                    <h2 class="lang-key" data-ar="ملف شخصي متكامل" data-en="Comprehensive Employee Profile">ملف شخصي متكامل</h2>
+                    <p class="lang-key" data-ar="ملف شخصي متكامل ومركزي لكل موظف يحتوي على كافة بياناته الشخصية والوظيفية والعائلية..." data-en="A complete and centralized profile for each employee containing all personal, professional, and family data...">ملف شخصي متكامل ومركزي لكل موظف يحتوي على كافة بياناته الشخصية والوظيفية والعائلية...</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> <span class="lang-key" data-ar="بيانات شخصية ووظيفية كاملة ومحدثة" data-en="Complete and up-to-date personal and job data">بيانات شخصية ووظيفية كاملة ومحدثة</span></li>
+                        <li><i class="fas fa-check"></i> <span class="lang-key" data-ar="معلومات العائلة والمؤهلات العلمية" data-en="Family information and academic qualifications">معلومات العائلة والمؤهلات العلمية</span></li>
+                        <li><i class="fas fa-check"></i> <span class="lang-key" data-ar="الوثائق والعقود والتقييمات السنوية" data-en="Documents, contracts, and annual evaluations">الوثائق والعقود والتقييمات السنوية</span></li>
+                        <li><i class="fas fa-check"></i> <span class="lang-key" data-ar="خدمة ذاتية لتحديث البيانات بكل سهولة" data-en="Self-service to update data easily">خدمة ذاتية لتحديث البيانات بكل سهولة</span></li>
+                    </ul>
+                </div>
+
+                <div class="service-image">
+                    <div class="swiper mySwiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide"><img src="assets/payroll1-1.png" alt="صورة 1"></div>
+                            <div class="swiper-slide"><img src="assets/payroll1-2.png" alt="صورة 2"></div>
+                            <div class="swiper-slide"><img src="assets/payroll1-3.png" alt="صورة 3"></div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
             </div>
-            <div class="service-image">
-                <img src="assets/payroll3.png" alt="حركات الموظفين" />
+
+            <!-- Service 2 -->
+            <div class="service-row reverse payroll2" data-aos="fade-up">
+                <div class="service-content">
+                    <span class="service-number">02</span>
+                    <h2 class="lang-key" data-ar="الملف المالي والضرائب" data-en="Financial Profile & Tax Management">الملف المالي والضرائب</h2>
+                    <p class="lang-key" data-ar="إدارة كاملة ودقيقة لكل البيانات المالية للموظف مع احتساب الضرائب والتأمينات الاجتماعية تلقائياً، وضمان الامتثال الكامل للقوانين." data-en="Complete and accurate management of all financial data with automatic tax and social insurance calculations.">
+                        إدارة كاملة ودقيقة لكل البيانات المالية للموظف مع احتساب الضرائب والتأمينات الاجتماعية تلقائياً، وضمان الامتثال الكامل للقوانين.
+                    </p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> <span class="lang-key" data-ar="الراتب الأساسي وجميع أنواع البدلات" data-en="Basic salary and all types of allowances">الراتب الأساسي وجميع أنواع البدلات</span></li>
+                        <li><i class="fas fa-check"></i> <span class="lang-key" data-ar="حسابات تلقائية للضرائب والتأمينات الاجتماعية" data-en="Automatic tax and social insurance calculations">حسابات تلقائية للضرائب والتأمينات الاجتماعية</span></li>
+                        <li><i class="fas fa-check"></i> <span class="lang-key" data-ar="إدارة طرق الدفع والحسابات البنكية" data-en="Payment methods and bank accounts management">إدارة طرق الدفع والحسابات البنكية</span></li>
+                        <li><i class="fas fa-check"></i> <span class="lang-key" data-ar="تقارير مالية شخصية دقيقة ومفصلة" data-en="Accurate and detailed personal financial reports">تقارير مالية شخصية دقيقة ومفصلة</span></li>
+                    </ul>
+                </div>
+                <div class="service-image">
+                    <img src="assets/payroll2.png" alt="الملف المالي" />
+                </div>
             </div>
+
+            <!-- Service 3 -->
+            <div class="service-row" data-aos="fade-up">
+                <div class="service-content">
+                    <span class="service-number">03</span>
+                    <h2 class="lang-key" data-ar="إدارة حركات الموظفين" data-en="Employee Movements Management">إدارة حركات الموظفين</h2>
+                    <p class="lang-key" data-ar="إدارة شاملة لكل الحركات اليومية مثل العمل الإضافي، الإجازات، زيادة الرواتب والاقتطاعات مع ربط تلقائي بالراتب الشهري." data-en="Comprehensive management of daily movements such as overtime, leaves, salary increases and deductions with automatic payroll linkage.">
+                        إدارة شاملة لكل الحركات اليومية مثل العمل الإضافي، الإجازات، زيادة الرواتب والاقتطاعات مع ربط تلقائي بالراتب الشهري.
+                    </p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> <span class="lang-key" data-ar="تسجيل العمل الإضافي والمغادرات" data-en="Recording overtime and exits">تسجيل العمل الإضافي والمغادرات</span></li>
+                        <li><i class="fas fa-check"></i> <span class="lang-key" data-ar="إدارة الإجازات والغياب بكل أنواعها" data-en="Leave and absence management">إدارة الإجازات والغياب بكل أنواعها</span></li>
+                        <li><i class="fas fa-check"></i> <span class="lang-key" data-ar="زيادات الرواتب والبدلات مع تأثيرها التلقائي" data-en="Salary increases and allowances with automatic effect">زيادات الرواتب والبدلات مع تأثيرها التلقائي</span></li>
+                        <li><i class="fas fa-check"></i> <span class="lang-key" data-ar="استيراد الحركات عبر ملفات الإكسل" data-en="Import movements via Excel">استيراد الحركات عبر ملفات الإكسل</span></li>
+                    </ul>
+                </div>
+                <div class="service-image">
+                    <img src="assets/payroll3.png" alt="حركات الموظفين" />
+                </div>
+            </div>
+
+            <!-- Service 4 -->
+            <div class="service-row reverse" data-aos="fade-up">
+                <div class="service-content">
+                    <span class="service-number">04</span>
+                    <h2 class="lang-key" data-ar="بطاقة الدوام والمشاريع" data-en="Attendance Card & Projects">بطاقة الدوام والمشاريع</h2>
+                    <p class="lang-key" data-ar="إدارة شاملة لبطاقات الدوام مع تسجيل ساعات العمل حسب المشاريع والوظائف، مع دعم العمل الإضافي العادي والعطل والمغادرات وربط مباشر بمسير الرواتب." data-en="Comprehensive attendance management with hours recording per project and job, supporting overtime and direct payroll linkage.">
+                        إدارة شاملة لبطاقات الدوام مع تسجيل ساعات العمل حسب المشاريع والوظائف، مع دعم العمل الإضافي العادي والعطل والمغادرات وربط مباشر بمسير الرواتب.
+                    </p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> <span class="lang-key" data-ar="تسجيل الحضور والانصراف حسب المشروع" data-en="Check-in/out per project">تسجيل الحضور والانصراف حسب المشروع</span></li>
+                        <li><i class="fas fa-check"></i> <span class="lang-key" data-ar="تخصيص الساعات حسب الوظيفة والمشروع" data-en="Hours allocation by job and project">تخصيص الساعات حسب الوظيفة والمشروع</span></li>
+                        <li><i class="fas fa-check"></i> <span class="lang-key" data-ar="حساب العمل الإضافي العادي والعطل" data-en="Regular and holiday overtime calculation">حساب العمل الإضافي العادي والعطل</span></li>
+                        <li><i class="fas fa-check"></i> <span class="lang-key" data-ar="تقارير مفصلة بالساعات والمغادرات والإجازات" data-en="Detailed reports of hours, exits and leaves">تقارير مفصلة بالساعات والمغادرات والإجازات</span></li>
+                    </ul>
+                </div>
+                <div class="service-image">
+                    <img src="assets/payroll4.png" alt="بطاقة الدوام والمشاريع" />
+                </div>
+            </div>
+
+            <!-- Service 5 -->
+            <div class="service-row" data-aos="fade-up">
+                <div class="service-content">
+                    <span class="service-number">05</span>
+                    <h2 class="lang-key" data-ar="إدارة السلف والسداد" data-en="Advances & Repayments Management">إدارة السلف والسداد</h2>
+                    <p class="lang-key" data-ar="إدارة متكاملة للسلف والسداد مع متابعة مستمرة للرصيد المتبقي، وجدولة الخصم الشهري، مع تقارير شاملة تضمن السيطرة التامة على هذه العملية." data-en="Integrated management of advances and repayments with balance tracking and automatic deduction.">
+                        إدارة متكاملة للسلف والسداد مع متابعة مستمرة للرصيد المتبقي، وجدولة الخصم الشهري، مع تقارير شاملة تضمن السيطرة التامة على هذه العملية.
+                    </p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> <span class="lang-key" data-ar="تقديم واعتماد طلبات السلف بطريقة إلكترونية سلسة" data-en="Electronic submission and approval of advances">تقديم واعتماد طلبات السلف بطريقة إلكترونية سلسة</span></li>
+                        <li><i class="fas fa-check"></i> <span class="lang-key" data-ar="جدولة خصم السلف بشكل تلقائي على الرواتب الشهرية" data-en="Automatic monthly deduction scheduling">جدولة خصم السلف بشكل تلقائي على الرواتب الشهرية</span></li>
+                        <li><i class="fas fa-check"></i> <span class="lang-key" data-ar="تقارير واضحة توضح رصيد السلف المتبقي لكل موظف" data-en="Clear reports of remaining advance balance">تقارير واضحة توضح رصيد السلف المتبقي لكل موظف</span></li>
+                        <li><i class="fas fa-check"></i> <span class="lang-key" data-ar="متابعة دقيقة لعمليات السداد الشهرية" data-en="Accurate tracking of monthly repayments">متابعة دقيقة لعمليات السداد الشهرية</span></li>
+                    </ul>
+                </div>
+                <div class="service-image">
+                    <img src="assets/payroll5.png" alt="إدارة السلف" />
+                </div>
+            </div>
+
+            <!-- Service 6 -->
+            <div class="service-row reverse" data-aos="fade-up">
+                <div class="service-content">
+                    <span class="service-number">06</span>
+                    <h2 class="lang-key" data-ar="حركات مالية خارج الراتب" data-en="Non-Salary Financial Transactions">حركات مالية خارج الراتب</h2>
+                    <p class="lang-key" data-ar="إدارة كاملة لكل الحركات المالية خارج الراتب الأساسي مثل المكافآت، الخصومات، البدلات العينية والاقتطاعات مع ربط تلقائي بالمسير الشهري." data-en="Complete management of all non-salary financial movements with automatic payroll linkage.">
+                        إدارة كاملة لكل الحركات المالية خارج الراتب الأساسي مثل المكافآت، الخصومات، البدلات العينية والاقتطاعات مع ربط تلقائي بالمسير الشهري.
+                    </p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> <span class="lang-key" data-ar="تسجيل جميع الحركات المالية الخارجة عن الراتب" data-en="Recording all non-salary transactions">تسجيل جميع الحركات المالية الخارجة عن الراتب</span></li>
+                        <li><i class="fas fa-check"></i> <span class="lang-key" data-ar="استيراد الحركات بسهولة عبر ملفات الإكسل" data-en="Easy import via Excel">استيراد الحركات بسهولة عبر ملفات الإكسل</span></li>
+                        <li><i class="fas fa-check"></i> <span class="lang-key" data-ar="ربط تلقائي للحركات بالراتب الشهري" data-en="Automatic linkage to monthly payroll">ربط تلقائي للحركات بالراتب الشهري</span></li>
+                        <li><i class="fas fa-check"></i> <span class="lang-key" data-ar="تقارير شهرية مفصلة عن الحركات الخارجية" data-en="Detailed monthly reports">تقارير شهرية مفصلة عن الحركات الخارجية</span></li>
+                    </ul>
+                </div>
+                <div class="service-image">
+                    <img src="assets/payroll6.png" alt="حركات خارج الراتب" />
+                </div>
+            </div>
+
         </div>
+    </section>
 
-        <!-- Service 4 -->
-        <div class="service-row reverse" data-aos="fade-up">
-            <div class="service-content">
-                <span class="service-number">04</span>
-                <h2>بطاقة الدوام والمشاريع</h2>
-                <p>إدارة شاملة لبطاقات الدوام مع تسجيل ساعات العمل حسب المشاريع والوظائف، مع دعم العمل الإضافي العادي والعطل والمغادرات وربط مباشر بمسير الرواتب.</p>
-                <ul class="service-features">
-                    <li><i class="fas fa-check"></i> تسجيل الحضور والانصراف حسب المشروع</li>
-                    <li><i class="fas fa-check"></i> تخصيص الساعات حسب الوظيفة والمشروع</li>
-                    <li><i class="fas fa-check"></i> حساب العمل الإضافي العادي والعطل</li>
-                    <li><i class="fas fa-check"></i> تقارير مفصلة بالساعات والمغادرات والإجازات</li>
-                </ul>
-            </div>
-            <div class="service-image">
-                <img src="assets/payroll4.png" alt="بطاقة الدوام والمشاريع" />
-            </div>
-        </div>
+    <!-- Solutions -->
+    <div id="solutions-placeholder"></div>
 
-        <!-- Service 5 -->
-        <div class="service-row" data-aos="fade-up">
-            <div class="service-content">
-                <span class="service-number">05</span>
-                <h2>إدارة السلف والسداد</h2>
-                <p>إدارة متكاملة للسلف والسداد مع متابعة مستمرة للرصيد المتبقي، وجدولة الخصم الشهري، مع تقارير شاملة تضمن السيطرة التامة على هذه العملية.</p>
-                <ul class="service-features">
-                    <li><i class="fas fa-check"></i> تقديم واعتماد طلبات السلف بطريقة إلكترونية سلسة</li>
-                    <li><i class="fas fa-check"></i> جدولة خصم السلف بشكل تلقائي على الرواتب الشهرية</li>
-                    <li><i class="fas fa-check"></i> تقارير واضحة توضح رصيد السلف المتبقي لكل موظف</li>
-                    <li><i class="fas fa-check"></i> متابعة دقيقة لعمليات السداد الشهرية</li>
-                </ul>
-            </div>
-            <div class="service-image">
-                <img src="assets/payroll5.png" alt="إدارة السلف" />
-            </div>
-        </div>
+    <!-- Footer -->
+    <div id="footer-placeholder"></div>
 
-        <!-- Service 6 -->
-        <div class="service-row reverse" data-aos="fade-up">
-            <div class="service-content">
-                <span class="service-number">06</span>
-                <h2>حركات مالية خارج الراتب</h2>
-                <p>إدارة كاملة لكل الحركات المالية خارج الراتب الأساسي مثل المكافآت، الخصومات، البدلات العينية والاقتطاعات مع ربط تلقائي بالمسير الشهري.</p>
-                <ul class="service-features">
-                    <li><i class="fas fa-check"></i> تسجيل جميع الحركات المالية الخارجة عن الراتب</li>
-                    <li><i class="fas fa-check"></i> استيراد الحركات بسهولة عبر ملفات الإكسل</li>
-                    <li><i class="fas fa-check"></i> ربط تلقائي للحركات بالراتب الشهري</li>
-                    <li><i class="fas fa-check"></i> تقارير شهرية مفصلة عن الحركات الخارجية</li>
-                </ul>
-            </div>
-            <div class="service-image">
-                <img src="assets/payroll6.png" alt="حركات خارج الراتب" />
-            </div>
-        </div>
-
-        <!-- Service 7 -->
-        <!-- <div class="service-row" data-aos="fade-up">
-            <div class="service-content">
-                <span class="service-number">07</span>
-                <h2>تقارير تحليلية شاملة</h2>
-                <p>مجموعة تقارير تحليلية قوية وفورية تساعد على متابعة الرواتب والحركات والضرائب والتأمينات الاجتماعية بدقة عالية.</p>
-                <ul class="service-features">
-                    <li><i class="fas fa-check"></i> تقارير الرواتب والحركات الشهرية</li>
-                    <li><i class="fas fa-check"></i> تقارير الضمان الاجتماعي والتأمينات</li>
-                    <li><i class="fas fa-check"></i> تقارير الضرائب الشهرية والسنوية</li>
-                    <li><i class="fas fa-check"></i> تقارير تحليلية مخصصة حسب الحاجة</li>
-                </ul>
-            </div>
-            <div class="service-image">
-                <img src="assets/reports.png" alt="تقارير تحليلية" />
-            </div>
-        </div>
-    </div>
-</section> -->
-
-</div>
-</section>
-
-
- 
-<!-- <section class="services-section">
-    <div class="container">
-
-        <div class="service-row" data-aos="fade-up">
-            <div class="service-content">
-                <span class="service-number">01</span>
-                <h2>الملف الشخصي الشامل</h2>
-                <p>ملف شخصي متكامل ومركزي لكل موظف يحتوي على كل بياناته الشخصية والوظيفية والعائلية، مع إمكانية التحديث الذاتي وسهولة الوصول للمعلومات في أي وقت.</p>
-                <ul class="service-features">
-                    <li><i class="fas fa-check"></i> بيانات شخصية ووظيفية كاملة</li>
-                    <li><i class="fas fa-check"></i> معلومات العائلة والمؤهلات العلمية</li>
-                    <li><i class="fas fa-check"></i> الوثائق والعقود والتقييمات</li>
-                    <li><i class="fas fa-check"></i> خدمة ذاتية لتحديث البيانات</li>
-                </ul>
-            </div>
-            <div class="service-image">
-                <img src="assets/employee-profile.png" alt="الملف الشخصي" />
-            </div>
-        </div>
-
-        <div class="service-row reverse" data-aos="fade-up">
-            <div class="service-content">
-                <span class="service-number">02</span>
-                <h2>الملف المالي والضرائب</h2>
-                <p>إدارة كاملة ودقيقة لكل البيانات المالية للموظف مع احتساب الضرائب والتأمينات الاجتماعية تلقائياً، وضمان الامتثال الكامل للقوانين.</p>
-                <ul class="service-features">
-                    <li><i class="fas fa-check"></i> الراتب الأساسي والبدلات</li>
-                    <li><i class="fas fa-check"></i> حسابات الضرائب والتأمينات</li>
-                    <li><i class="fas fa-check"></i> طرق الدفع والحسابات البنكية</li>
-                    <li><i class="fas fa-check"></i> تقارير مالية شخصية دقيقة</li>
-                </ul>
-            </div>
-            <div class="service-image">
-                <img src="assets/financial-profile.png" alt="الملف المالي" />
-            </div>
-        </div>
-
-        <div class="service-row" data-aos="fade-up">
-            <div class="service-content">
-                <span class="service-number">03</span>
-                <h2>حركات الموظفين</h2>
-                <p>إدارة شاملة لكل الحركات اليومية مثل العمل الإضافي، الإجازات، زيادة الرواتب والاقتطاعات بكل سهولة ودقة مع ربط تلقائي بالراتب.</p>
-                <ul class="service-features">
-                    <li><i class="fas fa-check"></i> العمل الإضافي والمغادرات</li>
-                    <li><i class="fas fa-check"></i> إدارة الإجازات والغياب</li>
-                    <li><i class="fas fa-check"></i> زيادات الرواتب والبدلات</li>
-                    <li><i class="fas fa-check"></i> استيراد الحركات عبر الإكسل</li>
-                </ul>
-            </div>
-            <div class="service-image">
-                <img src="assets/employee-movements.png" alt="حركات الموظفين" />
-            </div>
-        </div>
-
-        <div class="service-row reverse" data-aos="fade-up">
-            <div class="service-content">
-                <span class="service-number">04</span>
-                <h2>إدارة بطاقة الدوام</h2>
-                <p>نظام ذكي لتتبع حضور وانصراف الموظفين بدقة عالية مع دعم بطاقات الدوام والورديات المرنة وربط مباشر مع مسير الرواتب.</p>
-                <ul class="service-features">
-                    <li><i class="fas fa-check"></i> تسجيل الحضور والانصراف</li>
-                    <li><i class="fas fa-check"></i> إدارة الورديات والمناوبات</li>
-                    <li><i class="fas fa-check"></i> تتبع الوقت عبر التطبيق</li>
-                    <li><i class="fas fa-check"></i> تقارير الدوام الشهرية</li>
-                </ul>
-            </div>
-            <div class="service-image">
-                <img src="assets/attendance-card.png" alt="بطاقة الدوام" />
-            </div>
-        </div>
-
-        <div class="service-row" data-aos="fade-up">
-            <div class="service-content">
-                <span class="service-number">05</span>
-                <h2>إدارة السلف</h2>
-                <p>إدارة متكاملة للسلف والسداد مع تتبع الرصيد المتبقي، جدولة الخصم، وتقارير شاملة تضمن الشفافية والسيطرة على هذه العملية.</p>
-                <ul class="service-features">
-                    <li><i class="fas fa-check"></i> طلب واعتماد السلف</li>
-                    <li><i class="fas fa-check"></i> جدولة خصم السلف</li>
-                    <li><i class="fas fa-check"></i> تقارير رصيد السلف</li>
-                    <li><i class="fas fa-check"></i> متابعة السداد الشهري</li>
-                </ul>
-            </div>
-            <div class="service-image">
-                <img src="assets/advances.png" alt="إدارة السلف" />
-            </div>
-        </div>
-
-        <div class="service-row reverse" data-aos="fade-up">
-            <div class="service-content">
-                <span class="service-number">06</span>
-                <h2>حركات خارج الراتب</h2>
-                <p>إدارة كل الحركات المالية خارج الراتب الأساسي مثل المكافآت، الخصومات، البدلات العينية والاقتطاعات بكل مرونة ودقة.</p>
-                <ul class="service-features">
-                    <li><i class="fas fa-check"></i> تسجيل الحركات الخارجية</li>
-                    <li><i class="fas fa-check"></i> استيراد عبر الإكسل</li>
-                    <li><i class="fas fa-check"></i> ربط تلقائي بالراتب</li>
-                    <li><i class="fas fa-check"></i> تقارير الحركات الشهرية</li>
-                </ul>
-            </div>
-            <div class="service-image">
-                <img src="assets/outside-salary.png" alt="حركات خارج الراتب" />
-            </div>
-        </div>
-
-        <div class="service-row" data-aos="fade-up">
-            <div class="service-content">
-                <span class="service-number">07</span>
-                <h2>التقارير الشاملة</h2>
-                <p>مجموعة تقارير تحليلية قوية وفورية تساعدك على متابعة كل ما يتعلق بالرواتب، الحركات، الضرائب، والتأمينات الاجتماعية بدقة عالية.</p>
-                <ul class="service-features">
-                    <li><i class="fas fa-check"></i> تقارير الرواتب والحركات</li>
-                    <li><i class="fas fa-check"></i> تقارير الضمان الاجتماعي</li>
-                    <li><i class="fas fa-check"></i> تقارير الضرائب الشهرية والسنوية</li>
-                    <li><i class="fas fa-check"></i> تقارير تحليلية مخصصة</li>
-                </ul>
-            </div>
-            <div class="service-image">
-                <img src="assets/reports.png" alt="التقارير" />
-            </div>
-        </div>
-
-    </div>
-</section> -->
-<!-- solutions -->
- <div id="solutions-placeholder"></div>
-<!-- footer -->
- <div id="footer-placeholder"></div>
-
-<script src="/global/circles-solutions/circles-solutions.js"></script>
- <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
- <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="/global/circles-solutions/circles-solutions.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="/footer/footer.js"></script>
-<script src="/navbar/navbar.js"></script>
+    <script src="/navbar/navbar.js"></script>
 
- <script>
- AOS.init({ duration: 1000, once: true });
- 
-  var swiper = new Swiper(".mySwiper", {
-    loop: true,
-    rtl: true, // ضروري لأن المحتوى عربي
-    autoplay: {
-      delay: 10000,
-      disableOnInteraction: false,
-    },
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-    // اختياري: إضافة نقاط أسفل السلايدر
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-    },
-  });
+    <script>
+        AOS.init({ duration: 1000, once: true });
 
- </script>
-
- </body>
+        var swiper = new Swiper(".mySwiper", {
+            loop: true,
+            rtl: true,
+            autoplay: {
+                delay: 10000,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+        });
+    </script>
+    <script src="/english-script.js"></script>
+</body>
 </html>

@@ -96,7 +96,11 @@
                 <span><span class="lang-key" data-ar="إدارة المشتريات" data-en="Procurement Management">Procurement Management</span></span>
             </div>
             <div class="mobile-image-holder">
-                <img src="/pages/operations/assets/procurement.png" alt="Procurement Management">
+                <img src="/pages/operations/assets/procurement.png" 
+                 class="lang-image"
+              data-ar-src="/pages/operations/assets/procurement.png"
+              data-en-src="/pages/operations/assets/procurement-en.png"
+                alt="Procurement Management">
             </div>
         </div>
 
@@ -106,7 +110,10 @@
                 <span><span class="lang-key" data-ar="إدارة المستودعات والمخزون" data-en="Warehouse & Inventory Management">Warehouse & Inventory Management</span></span>
             </div>
             <div class="mobile-image-holder">
-                <img src="/pages/operations/assets/inventory.png" alt="Warehouse & Inventory Management">
+                <img src="/pages/operations/assets/inventory.png"
+                 class="lang-image"
+              data-ar-src="/pages/operations/assets/inventory.png"
+              data-en-src="/pages/operations/assets/inventory-en.png" alt="Warehouse & Inventory Management">
             </div>
         </div>
 
@@ -114,7 +121,9 @@
 
     <div class="display-area">
         <div class="mockup-wrapper-display">
-            <img src="/pages/operations/assets/sales.png" class="display-img" alt="Sales Management">
+            <img src="/pages/operations/assets/sales.png"
+            
+             class="display-img" alt="Sales Management">
         </div>
     </div>
 </div>
@@ -129,64 +138,85 @@
 
 
  <!--  -->
- <script>
-      document.addEventListener('DOMContentLoaded', function() {
+<script>
+document.addEventListener('DOMContentLoaded', function() {
     const tabItems = document.querySelectorAll('.tab-item');
     const displayImg = document.querySelector('.display-img');
     const tabsContainer = document.querySelector('.tabs-side-list');
 
     const dashboardImages = [
-        { img: '/pages/operations/assets/sales.png', title: 'Sales Management' },
-        { img: '/pages/operations/assets/procurement.png', title: 'Procurement Management' },
-        { img: '/pages/operations/assets/inventory.png', title: 'Warehouse & Inventory Management' }
+        { ar: '/pages/operations/assets/sales.png',          en: '/pages/operations/assets/sales-en.png' },
+        { ar: '/pages/operations/assets/procurement.png',   en: '/pages/operations/assets/procurement-en.png' },
+        { ar: '/pages/operations/assets/inventory.png',     en: '/pages/operations/assets/inventory-en.png' }
     ];
 
-    // Smooth scroll navigation center-aligned for mobile interfaces
+    function getCurrentLang() {
+        return document.documentElement.lang === 'ar' ? 'ar' : 'en';
+    }
+
+    function updateAllLangImages() {
+        const lang = getCurrentLang();
+        document.querySelectorAll('.lang-image').forEach(img => {
+            const src = img.getAttribute(`data-${lang}-src`);
+            if (src) img.src = src;
+        });
+    }
+
+    function updateDisplayImage(index) {
+        const lang = getCurrentLang();
+        if (displayImg) {
+            displayImg.src = dashboardImages[index][lang];
+        }
+    }
+
     function scrollToActiveTab(index) {
         if (window.innerWidth <= 992 && tabsContainer) {
             const activeCard = tabItems[index];
             const containerWidth = tabsContainer.offsetWidth;
             const cardOffset = activeCard.offsetLeft;
             const cardWidth = activeCard.offsetWidth;
-            
             const scrollPosition = cardOffset - (containerWidth / 2) + (cardWidth / 2);
-            tabsContainer.scrollTo({
-                left: scrollPosition,
-                behavior: 'smooth'
-            });
+            tabsContainer.scrollTo({ left: scrollPosition, behavior: 'smooth' });
         }
     }
 
-    // Manual click handling
+    // Click handler
     tabItems.forEach((tab, index) => {
         tab.addEventListener('click', () => {
             tabItems.forEach(t => t.classList.remove('active'));
             tab.classList.add('active');
-            
-            if (displayImg) {
-                displayImg.src = dashboardImages[index].img;
-                displayImg.alt = dashboardImages[index].title;
-            }
+            updateDisplayImage(index);
             scrollToActiveTab(index);
         });
     });
 
-    // Auto-rotate logic synced perfectly with sliding layout
+    // Auto-rotate مع تحديث اللغة
     let activeTab = 0;
-    setInterval(() => {
+    const autoRotate = setInterval(() => {
         tabItems[activeTab].classList.remove('active');
         activeTab = (activeTab + 1) % tabItems.length;
         tabItems[activeTab].classList.add('active');
         
-        if (displayImg) {
-            displayImg.src = dashboardImages[activeTab].img;
-            displayImg.alt = dashboardImages[activeTab].title;
-        }
-        
+        updateDisplayImage(activeTab);
         scrollToActiveTab(activeTab);
     }, 4000);
+
+    // تحديث عند تغيير اللغة
+    window.addEventListener('languageChanged', () => {
+        updateAllLangImages();
+        updateDisplayImage(activeTab);   // مهم: تحديث الصورة الكبيرة فورًا
+    });
+
+    // أول تحميل + إعادة تحديث بعد نص ثانية (للحالات اللي اللغة بتتغير بعد الـ load)
+    updateAllLangImages();
+    updateDisplayImage(0);
+
+    setTimeout(() => {
+        updateAllLangImages();
+        updateDisplayImage(activeTab);
+    }, 800);
 });
-    </script>
+</script>
 <!-- navbar & footer scripts -->
 <script src="/global/circles-solutions/circles-solutions.js"></script>
      <script src="/footer/footer.js"></script>

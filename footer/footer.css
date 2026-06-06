@@ -39,9 +39,9 @@ html[dir="ltr"] .f-section:first-child { border-right: none; }
 .f-section:last-child { border-left: none; }
 
 .f-logo-white {
-    height: 45px;
+    height: 48px;
     margin-bottom: 20px;
-    filter: brightness(0) invert(1);
+   
 }
 
 .brand-text {

@@ -91,7 +91,7 @@
         <div class="tab-item" data-tab="3">
             <div class="tab-header-inline">
                 <div class="tab-icon"><i class="fas fa-star-half-stroke"></i></div>
-                <span><span class="lang-key" data-ar="نظام التقييم" data-en=" System">Evaluation System</span></span>
+                <span><span class="lang-key" data-ar="نظام التقييم" data-en=" Evaluation System">Evaluation System</span></span>
             </div>
             <div class="mobile-image-holder">
                 <img src="/pages/talent/assets/performance.png" alt="Evaluation System">
@@ -117,65 +117,86 @@
 
 
  <!--  -->
- <script>
-        document.addEventListener('DOMContentLoaded', function() {
+<script>
+document.addEventListener('DOMContentLoaded', function() {
     const tabItems = document.querySelectorAll('.tab-item');
     const displayImg = document.querySelector('.display-img');
     const tabsContainer = document.querySelector('.tabs-side-list');
 
     const dashboardImages = [
-        { img: '/pages/talent/assets/development.png', title: 'Talent Management' },
-        { img: '/pages/talent/assets/recruitment.png', title: 'Recruitment' },
-        { img: '/pages/talent/assets/training.png', title: 'Training' },
-        { img: '/pages/talent/assets/performance.png', title: 'Performance' }
+        { ar: '/pages/talent/assets/development.png',          en: '/pages/talent/assets/development-en.png' },
+        { ar: '/pages/talent/assets/recruitment.png',   en: '/pages/talent/assets/recruitment-en.png' },
+        { ar: '/pages/talent/assets/training.png',     en: '/pages/talent/assets/training-en.png' },
+        { ar: '/pages/talent/assets/performance.png',  en: '/pages/talent/assets/performance-en.png' }
     ];
 
-    // Smooth scroll navigation center-aligned for mobile interfaces
+    function getCurrentLang() {
+        return document.documentElement.lang === 'ar' ? 'ar' : 'en';
+    }
+
+    function updateAllLangImages() {
+        const lang = getCurrentLang();
+        document.querySelectorAll('.lang-image').forEach(img => {
+            const src = img.getAttribute(`data-${lang}-src`);
+            if (src) img.src = src;
+        });
+    }
+
+    function updateDisplayImage(index) {
+        const lang = getCurrentLang();
+        if (displayImg) {
+            displayImg.src = dashboardImages[index][lang];
+        }
+    }
+
     function scrollToActiveTab(index) {
         if (window.innerWidth <= 992 && tabsContainer) {
             const activeCard = tabItems[index];
             const containerWidth = tabsContainer.offsetWidth;
             const cardOffset = activeCard.offsetLeft;
             const cardWidth = activeCard.offsetWidth;
-            
             const scrollPosition = cardOffset - (containerWidth / 2) + (cardWidth / 2);
-            tabsContainer.scrollTo({
-                left: scrollPosition,
-                behavior: 'smooth'
-            });
+            tabsContainer.scrollTo({ left: scrollPosition, behavior: 'smooth' });
         }
     }
 
-    // Manual click handling
+    // Click handler
     tabItems.forEach((tab, index) => {
         tab.addEventListener('click', () => {
             tabItems.forEach(t => t.classList.remove('active'));
             tab.classList.add('active');
-            
-            if (displayImg) {
-                displayImg.src = dashboardImages[index].img;
-                displayImg.alt = dashboardImages[index].title;
-            }
+            updateDisplayImage(index);
             scrollToActiveTab(index);
         });
     });
 
-    // Auto-rotate logic synced perfectly with sliding layout
+    // Auto-rotate مع تحديث اللغة
     let activeTab = 0;
-    setInterval(() => {
+    const autoRotate = setInterval(() => {
         tabItems[activeTab].classList.remove('active');
         activeTab = (activeTab + 1) % tabItems.length;
         tabItems[activeTab].classList.add('active');
         
-        if (displayImg) {
-            displayImg.src = dashboardImages[activeTab].img;
-            displayImg.alt = dashboardImages[activeTab].title;
-        }
-        
+        updateDisplayImage(activeTab);
         scrollToActiveTab(activeTab);
     }, 4000);
+
+    // تحديث عند تغيير اللغة
+    window.addEventListener('languageChanged', () => {
+        updateAllLangImages();
+        updateDisplayImage(activeTab);   // مهم: تحديث الصورة الكبيرة فورًا
+    });
+
+    // أول تحميل + إعادة تحديث بعد نص ثانية (للحالات اللي اللغة بتتغير بعد الـ load)
+    updateAllLangImages();
+    updateDisplayImage(0);
+
+    setTimeout(() => {
+        updateAllLangImages();
+        updateDisplayImage(activeTab);
+    }, 800);
 });
-    </script>
+</script>
 <!-- navbar & footer scripts -->
 <script src="/global/circles-solutions/circles-solutions.js"></script>
      <script src="/footer/footer.js"></script>

@@ -893,6 +893,7 @@ html[dir="ltr"] .icon-flip {
         padding: 4px 10px;
         font-size: 11px;
         z-index: 999 !important;
+        display: none   ;
     }
 
     /* 1. Elevate the yellow badge much higher and adjust position */
@@ -900,6 +901,7 @@ html[dir="ltr"] .icon-flip {
         top: -110px !important; /* Increased significantly from -55px to prevent overlapping text */
         right: 15px !important;  /* Balanced spacing from the right edge */
         left: auto !important;
+        display: none !important; /* Hide on small screens to prevent overlap */
     }
 
     /* 2. Adjust arrow alignment to match the new height seamlessly */
@@ -944,13 +946,7 @@ html[dir="ltr"] .icon-flip {
     .image-wrapper { position: static; margin-bottom: 20px; }
     .profile-info { margin-top: 0; padding-right: 0; text-align: center; }
 }
-@media (max-width: 768px) {
-    html[dir="ltr"] .yellow-box {
-        top: -110px !important; /* Matches RTL height adjustment */
-        left: 15px !important;
-        right: auto !important;
-    }
-}
+
 
 @media (max-width: 640px) {
     .stats-wrapper { grid-template-columns: 1fr; }
@@ -1013,11 +1009,13 @@ html[dir="ltr"] .testimonials-section {
         top: -35px;
         left: 0;
         right: auto;
+        display: none !important; /* Hide on small screens to prevent overlap */
     }
     html[dir="ltr"] .blue-box {
         bottom: -35px;
         right: 0;
         left: auto;
+        display: none !important;
     }
 }
 /* تهيئة الحاوية لدعم التأثيرات ثلاثية الأبعاد للكروت */

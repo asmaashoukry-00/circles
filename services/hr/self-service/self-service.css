@@ -75,6 +75,42 @@ ul {
 
 
 /* ========================================
+  banner
+   ======================================== */
+
+
+.full-width-banner {
+    width: 100vw; 
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    margin-top: 50px;
+    margin-bottom: 50px; 
+    overflow: hidden;
+}
+
+.banner-image {
+    width: 100%;
+    height: auto; 
+    display: block;
+    padding: 0 5%;
+    object-fit: cover; 
+}
+
+
+@media (max-width: 768px) {
+    .full-width-banner {
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+}
+
+
+/* ========================================
    HERO SECTION
    ======================================== */
    .hero-features-inline {
@@ -85,6 +121,10 @@ ul {
         font-size: 0.88rem;
         text-align: center;
         font-weight: 500;
+    }
+    .features-inline-bold{
+      /* font-weight: 700 !important; */
+      color: #2b2b2c; 
     }
 
     .divider {
