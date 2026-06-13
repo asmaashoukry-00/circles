@@ -1,47 +1,38 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ar" dir="rtl">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title
-      class="lang-key"
-      data-ar="الخدمات المحاسبية | Circles Soft"
-      data-en="Accounting Services | Circles Soft"
-    >
-      الخدمات المحاسبية | Circles Soft
-    </title>
+<title data-ar="الأنظمة المحاسبية | سيركلز سوفت" data-en="Accounting Systems | Circles Soft">Accounting Systems - CirclesSoft</title>    
     <!-- light mode -->
-    <meta name="color-scheme" content="only light" />
-    <meta name="supported-color-schemes" content="only light" />
-    <link rel="stylesheet" href="light-mode.css" />
-    <!-- ----------- -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&family=Almarai:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-    />
+    <meta name="color-scheme" content="only light">
+    <meta name="supported-color-schemes" content="only light">
+    <link rel="stylesheet" href="/light-mode.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&family=Almarai:wght@400;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet" />
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-    <link rel="stylesheet" href="/services/finance/accounting/accounting.css" />
-    <link rel="icon" href="/favicon.png" />
+    <link rel="stylesheet" href="/services/hr/attendance/attendance.css" />
+    
     <!-- solutions -->
-    <link
-      rel="stylesheet"
-      href="/global/circles-solutions/circles-solutions.css"
-    />
-    <!-- footer & navbar styles -->
+    <link rel="stylesheet" href="/global/circles-solutions/circles-solutions.css" />
+    
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="icon" href="/favicon.png">
+
+    <!-- navbar & footer styles -->
     <link rel="stylesheet" href="/footer/footer.css" />
     <link rel="stylesheet" href="/navbar/navbar.css" />
-  </head>
-  <body>
+</head>
+<body>
+    <!-- Navbar -->
     <div id="navbar-placeholder"></div>
 
+  
+  <!-- hero -->
     <section class="hero-creative-layered">
       <div class="container hero-inner">
         <div class="floating-elements">
@@ -158,7 +149,8 @@
         </div>
       </div>
     </section>
-
+    
+<!-- Services Section -->
     <section class="services-section">
       <div class="container">
         <div class="service-row" data-aos="fade-up">
@@ -598,19 +590,34 @@
       </div>
     </section>
 
-    <!-- solutions -->
+    <!-- Solutions -->
     <div id="solutions-placeholder"></div>
-    <!-- footer -->
-    <div id="footer-placeholder"></div>
-    <script src="/global/circles-solutions/circles-solutions.js"></script>
 
-    <script src="/navbar/navbar.js"></script>
-    <script src="/footer/footer.js"></script>
+    <!-- Footer -->
+    <div id="footer-placeholder"></div>
+
+    <script src="/global/circles-solutions/circles-solutions.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="/footer/footer.js"></script>
+    <script src="/navbar/navbar.js"></script>
 
     <script>
-      AOS.init({ duration: 1000, once: true });
+        AOS.init({ duration: 1000, once: true });
+
+        var swiper = new Swiper(".mySwiper", {
+            loop: true,
+            rtl: true,
+            autoplay: {
+                delay: 10000,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+        });
     </script>
     <script src="/english-script.js"></script>
-  </body>
+</body>
 </html>

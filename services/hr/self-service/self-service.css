@@ -71,9 +71,6 @@ ul {
    margin: 0 auto;
    padding: 0 20px;
 }
-
-
-
 /* ========================================
   banner
    ======================================== */
@@ -88,7 +85,7 @@ ul {
     margin-right: -50vw;
     margin-left: -50vw;
     margin-right: -50vw;
-    margin-top: 50px;
+    margin-top: 10px;
     margin-bottom: 50px; 
     overflow: hidden;
 }
@@ -109,6 +106,23 @@ ul {
     }
 }
 
+/* ========================================
+   Swiper
+   ======================================== */
+/* .mySwiper,
+.mySwiper .swiper-wrapper,
+.mySwiper .swiper-slide {
+    direction: ltr !important;
+} */
+
+/* ========================================
+   Swiper
+   ======================================== */
+.mySwiper,
+.mySwiper .swiper-wrapper,
+.mySwiper .swiper-slide {
+    direction: ltr !important;
+}
 
 /* ========================================
    HERO SECTION
@@ -121,10 +135,6 @@ ul {
         font-size: 0.88rem;
         text-align: center;
         font-weight: 500;
-    }
-    .features-inline-bold{
-      /* font-weight: 700 !important; */
-      color: #2b2b2c; 
     }
 
     .divider {
@@ -226,7 +236,22 @@ ul {
 .services-section {
    padding: 70px 0;
 }
+/* html[dir="ltr"] .payroll1, html[dir="ltr"] .payroll2 {
+  
+     grid-template-columns: .8fr 1.2fr !important
+} */
+ html[lang="en"] .payroll2 .service-image {
+   max-width: 900px !important;
+   min-width: 700px !important;
+}
 
+
+.payroll1{
+   grid-template-columns: .8fr 1.2fr !important; 
+}
+.payroll2{
+    grid-template-columns: .7fr .1.3fr !important; 
+}
 .service-row {
    display: grid;
   grid-template-columns: .9fr 1fr ;
@@ -253,7 +278,7 @@ ul {
    text-align: right;
 }
 .service-image {
-  max-width: 660px;
+  /* max-width: 750px; */
   border-radius: 20px;
   overflow: hidden;
 }
@@ -263,6 +288,7 @@ ul {
   height: auto;
   display: block;
   object-fit: contain;
+  
 }
 
 
@@ -336,6 +362,12 @@ ul {
 
 @media (max-width: 991px) {
    .service-row,
+   .payroll1, .payroll2 {
+      grid-template-columns: 1fr !important;
+      gap: 40px;
+      text-align: center;
+       direction: rtl;
+   }
    .service-row.reverse {
       grid-template-columns: 1fr;
       gap: 40px;
@@ -382,6 +414,17 @@ ul {
       font-size: 1.8rem;
    }
 }
+/* PAYROLL2 STRONG FIX */
+html[lang="en"] .payroll2,
+html[dir="ltr"] .payroll2 {
+   grid-template-columns: 0.6fr 1.4fr !important;   /* أعطيت الصورة مساحة أكبر */
+}
+
+html[lang="en"] .payroll2 .service-image,
+html[dir="ltr"] .payroll2 .service-image {
+   max-width: 880px !important;     /* حجم أكبر مخصوص لـ payroll2 */
+   justify-self: center;
+}
 /* ======================================================================
    PERFECT ENGLISH LTR FIX (USING FLEX/GRID ORDER SYSTEM)
    ====================================================================== */
@@ -395,7 +438,7 @@ html[dir="ltr"] .service-row p  {
 }
 html[lang="en"] .service-row {
     direction: ltr !important; /* Force standard layout direction */
-    grid-template-columns: 1fr 1fr !important; /* Balanced layout for English text */
+   grid-template-columns: .9fr 1.1fr !important ;
     gap: 60px;
 }
 
@@ -411,7 +454,7 @@ html[lang="en"] .service-row .service-image {
 
 /* --- Reverse Row Fix for English --- */
 html[lang="en"] .service-row.reverse {
-    grid-template-columns: 1fr 1fr !important;
+    grid-template-columns: 1.1fr .9fr !important ;
 }
 
 html[lang="en"] .service-row.reverse .service-content {

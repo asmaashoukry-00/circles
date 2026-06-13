@@ -8,7 +8,7 @@
     <!-- light mode -->
     <meta name="color-scheme" content="only light">
     <meta name="supported-color-schemes" content="only light">
-    <link rel="stylesheet" href="light-mode.css">
+    <link rel="stylesheet" href="/light-mode.css">
 
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&family=Almarai:wght@400;700&display=swap" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet" />
@@ -94,9 +94,9 @@
                 <div class="service-image">
                     <div class="swiper mySwiper">
                         <div class="swiper-wrapper">
-                            <div class="swiper-slide"><img src="assets/payroll1-1.png" alt="صورة 1"></div>
-                            <div class="swiper-slide"><img src="assets/payroll1-2.png" alt="صورة 2"></div>
-                            <div class="swiper-slide"><img src="assets/payroll1-3.png" alt="صورة 3"></div>
+                            <div class="swiper-slide"><img src="assets/payroll1-1.png" class="lang-image" data-ar-src="assets/payroll1-1.png" data-en-src="assets/payroll1-1-en.png" alt="صورة 1"></div>
+                            <div class="swiper-slide"><img src="assets/payroll1-2.png" class="lang-image" data-ar-src="assets/payroll1-2.png" data-en-src="assets/payroll1-2-en.png" alt="صورة 2"></div>
+                            <div class="swiper-slide"><img src="assets/payroll1-3.png" class="lang-image" data-ar-src="assets/payroll1-3.png" data-en-src="assets/payroll1-3-en.png" alt="صورة 3"></div>
                         </div>
                         <div class="swiper-pagination"></div>
                     </div>
@@ -119,7 +119,7 @@
                     </ul>
                 </div>
                 <div class="service-image">
-                    <img src="assets/payroll2.png" alt="الملف المالي" />
+                    <img src="assets/payroll2.png" class="lang-image" data-ar-src="assets/payroll2.png" data-en-src="assets/payroll2-en.png" alt="الملف المالي" />
                 </div>
             </div>
 
@@ -138,8 +138,15 @@
                         <li><i class="fas fa-check"></i> <span class="lang-key" data-ar="استيراد الحركات عبر ملفات الإكسل" data-en="Import movements via Excel">استيراد الحركات عبر ملفات الإكسل</span></li>
                     </ul>
                 </div>
-                <div class="service-image">
-                    <img src="assets/payroll3.png" alt="حركات الموظفين" />
+               <div class="service-image payroll3">
+                    <div class="swiper mySwiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide"><img src="assets/payroll3-1.png" class="lang-image" data-ar-src="assets/payroll3-1.png" data-en-src="assets/payroll3-1-en.png" alt="صورة 1"></div>
+                            <div class="swiper-slide"><img src="assets/payroll3-2.png" class="lang-image" data-ar-src="assets/payroll3-2.png" data-en-src="assets/payroll3-2-en.png" alt="صورة 2"></div>
+                            <div class="swiper-slide"><img src="assets/payroll3-3.png" class="lang-image" data-ar-src="assets/payroll3-3.png" data-en-src="assets/payroll3-3-en.png" alt="صورة 3"></div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
                 </div>
             </div>
 
@@ -159,7 +166,7 @@
                     </ul>
                 </div>
                 <div class="service-image">
-                    <img src="assets/payroll4.png" alt="بطاقة الدوام والمشاريع" />
+                    <img src="assets/payroll4.png" class="lang-image" data-ar-src="assets/payroll4.png" data-en-src="assets/payroll4-en.png" alt="بطاقة الدوام والمشاريع" />
                 </div>
             </div>
 
@@ -179,14 +186,34 @@
                     </ul>
                 </div>
                 <div class="service-image">
-                    <img src="assets/payroll5.png" alt="إدارة السلف" />
+                    <img src="assets/payroll5.png" class="lang-image" data-ar-src="assets/payroll5.png" data-en-src="assets/payroll5-en.png" alt="إدارة السلف" />
                 </div>
             </div>
 
             <!-- Service 6 -->
-            <div class="service-row reverse" data-aos="fade-up">
+           <div class="service-row reverse" data-aos="fade-up">
+    <div class="service-content">
+        <span class="service-number">06</span>
+        <h2 class="lang-key" data-ar="نظام إدارة الموافقات والاعتمادات" data-en="Approval & Workflow Management">نظام إدارة الموافقات والاعتمادات</h2>
+        <p class="lang-key" data-ar="أتمتة كاملة لدورة الاعتمادات والموافقات داخل منشأتك بما يطابق الهيكل الإداري للشركة، مع نظام ذكي لتتبع الطلبات واتخاذ القرارات الفورية لضمان سير العمل دون تعطيل." data-en="Complete automation of approval workflows tailored to your organizational hierarchy, featuring real-time tracking and instant decision-making to ensure seamless operations.">
+            أتمتة كاملة لدورة الاعتمادات والموافقات داخل منشأتك بما يطابق الهيكل الإداري للشركة، مع نظام ذكي لتتبع الطلبات واتخاذ القرارات الفورية لضمان سير العمل دون تعطيل.
+        </p>
+        <ul class="service-features">
+            <li><i class="fas fa-check"></i> <span class="lang-key" data-ar="تنظيم مخطط العمل والموافقات حسب التسلسل الإداري للمنشأة" data-en="Structuring approval workflows based on company hierarchy">تنظيم مخطط العمل والموافقات حسب التسلسل الإداري للمنشأة</span></li>
+            <li><i class="fas fa-check"></i> <span class="lang-key" data-ar="تحديد الفئات المستهدفة وضبط أولويات الاعتماد لكل نوع طلب" data-en="Defining target categories and setting approval priorities">تحديد الفئات المستهدفة وضبط أولويات الاعتماد لكل نوع طلب</span></li>
+            <li><i class="fas fa-check"></i> <span class="lang-key" data-ar="إشعارات فورية عبر البريد الإلكتروني لمتابعة حالة الطلبات أولاً بأول" data-en="Instant email notifications for real-time request tracking">إشعارات فورية عبر البريد الإلكتروني لمتابعة حالة الطلبات أولاً بأول</span></li>
+            <li><i class="fas fa-check"></i> <span class="lang-key" data-ar="تحكم كامل للمسؤول في تمرير، قبول، أو رفض الطلبات بمرونة" data-en="Full admin control to seamlessly approve, forward, or reject requests">تحكم كامل للمسؤول (Admin) في تمرير، قبول، أو رفض الطلبات بمرونة</span></li>
+        </ul>
+    </div>
+    <div class="service-image">
+        <img src="assets/payroll6.png" class="lang-image" data-ar-src="assets/payroll6.png" data-en-src="assets/payroll6-en.png" alt="إدارة الموافقات" />
+    </div>
+</div>
+
+            <!-- Service 7 -->
+            <!-- <div class="service-row " data-aos="fade-up">
                 <div class="service-content">
-                    <span class="service-number">06</span>
+                    <span class="service-number">07</span>
                     <h2 class="lang-key" data-ar="حركات مالية خارج الراتب" data-en="Non-Salary Financial Transactions">حركات مالية خارج الراتب</h2>
                     <p class="lang-key" data-ar="إدارة كاملة لكل الحركات المالية خارج الراتب الأساسي مثل المكافآت، الخصومات، البدلات العينية والاقتطاعات مع ربط تلقائي بالمسير الشهري." data-en="Complete management of all non-salary financial movements with automatic payroll linkage.">
                         إدارة كاملة لكل الحركات المالية خارج الراتب الأساسي مثل المكافآت، الخصومات، البدلات العينية والاقتطاعات مع ربط تلقائي بالمسير الشهري.
@@ -199,9 +226,9 @@
                     </ul>
                 </div>
                 <div class="service-image">
-                    <img src="assets/payroll6.png" alt="حركات خارج الراتب" />
+                    <img src="assets/payroll7.png" class="lang-key" data-ar-src="assets/payroll7.png" data-en-src="assets/payroll7-en.png" alt="حركات خارج الراتب" />
                 </div>
-            </div>
+            </div> -->
 
         </div>
     </section>

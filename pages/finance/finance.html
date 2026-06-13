@@ -1,10 +1,9 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="en" dir="ltr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Financial Systems - CirclesSoft</title>
-      <!-- light mode -->
+<title data-ar="الأنظمة المالية | سيركلز سوفت" data-en="Financial Systems | Circles Soft">Financial Systems - CirclesSoft</title>   <!-- light mode -->
 <meta name="color-scheme" content="only light">
 <meta name="supported-color-schemes" content="only light">
 <link rel="stylesheet" href="/light-mode.css">
@@ -23,7 +22,6 @@
 
     <link rel="icon" href="../../global/favicon.png" />
 
-    
 </head>
 <body>
     <!-- navbar -->
@@ -148,85 +146,92 @@
 
 
  <!--  -->
-  <script src="/footer/footer.js"></script>
-<script src="  /navbar/navbar.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const tabItems = document.querySelectorAll('.tab-item');
+    const displayImg = document.querySelector('.display-img');
+    const tabsContainer = document.querySelector('.tabs-side-list');
 
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const tabItems = document.querySelectorAll('.tab-item');
-        const displayImg = document.querySelector('.display-img');
-        const tabsContainer = document.querySelector('.tabs-side-list');
+    const dashboardImages = [
+        { ar: '/pages/finance/assets/accounting.png',          en: '/pages/finance/assets/accounting-en.png' },
+        { ar: '/pages/finance/assets/bank.png',   en: '/pages/finance/assets/bank-en.png' },
+        { ar: '/pages/finance/assets/receivable.png',     en: '/pages/finance/assets/receivable-en.png' },
+        { ar: '/pages/finance/assets/payable.png',  en: '/pages/finance/assets/payable-en.png' },
+        { ar: '/pages/finance/assets/fixed-assets.png',  en: '/pages/finance/assets/fixed-assets-en.png' },
+        { ar: '/pages/finance/assets/projects.png',  en: '/pages/finance/assets/projects-en.png' }
+    ];
 
-        const dashboardImages = [
-            { ar: '/pages/finance/assets/accounting.png', en: '/pages/finance/assets/accounting-en.png' },
-            { ar: '/pages/finance/assets/bank.png', en: '/pages/finance/assets/bank-en.png' },
-            { ar: '/pages/finance/assets/receivable4.png', en: '/pages/finance/assets/receivable4-en.png' },
-            { ar: '/pages/finance/assets/payable.png', en: '/pages/finance/assets/payable-en.png' },
-            { ar: '/pages/finance/assets/fixed-assets.png', en: '/pages/finance/assets/fixed-assets-en.png' },
-            { ar: '/pages/finance/assets/projects.png', en: '/pages/finance/assets/projects-en.png' }
-        ];
+    function getCurrentLang() {
+        return document.documentElement.lang === 'ar' ? 'ar' : 'en';
+    }
 
-        function switchImages(lang) {
-            document.querySelectorAll('.lang-image').forEach(img => {
-                if (lang === 'en' && img.dataset.enSrc) {
-                    img.src = img.dataset.enSrc;
-                } else if (lang === 'ar' && img.dataset.arSrc) {
-                    img.src = img.dataset.arSrc;
-                }
-            });
-        }
-
-        function scrollToActiveTab(index) {
-            if (window.innerWidth <= 992 && tabsContainer) {
-                const activeCard = tabItems[index];
-                const containerWidth = tabsContainer.offsetWidth;
-                const cardOffset = activeCard.offsetLeft;
-                const cardWidth = activeCard.offsetWidth;
-                
-                const scrollPosition = cardOffset - (containerWidth / 2) + (cardWidth / 2);
-                tabsContainer.scrollTo({
-                    left: scrollPosition,
-                    behavior: 'smooth'
-                });
-            }
-        }
-
-        tabItems.forEach((tab, index) => {
-            tab.addEventListener('click', () => {
-                tabItems.forEach(t => t.classList.remove('active'));
-                tab.classList.add('active');
-                
-                if (displayImg) {
-                    const currentLang = document.documentElement.lang || 'ar';
-                    displayImg.src = (currentLang === 'en') ? dashboardImages[index].en : dashboardImages[index].ar;
-                    displayImg.alt = tab.querySelector('span:last-child').textContent;
-                }
-                scrollToActiveTab(index);
-            });
+    function updateAllLangImages() {
+        const lang = getCurrentLang();
+        document.querySelectorAll('.lang-image').forEach(img => {
+            const src = img.getAttribute(`data-${lang}-src`);
+            if (src) img.src = src;
         });
+    }
 
-        let activeTab = 0;
-        setInterval(() => {
-            tabItems[activeTab].classList.remove('active');
-            activeTab = (activeTab + 1) % tabItems.length;
-            tabItems[activeTab].classList.add('active');
-            
-            if (displayImg) {
-                const currentLang = document.documentElement.lang || 'ar';
-                displayImg.src = (currentLang === 'en') ? dashboardImages[activeTab].en : dashboardImages[activeTab].ar;
-            }
-            
-            scrollToActiveTab(activeTab);
-        }, 4000);
+    function updateDisplayImage(index) {
+        const lang = getCurrentLang();
+        if (displayImg) {
+            displayImg.src = dashboardImages[index][lang];
+        }
+    }
 
-        // Initial language check
-        const initialLang = document.documentElement.lang || 'ar';
-        switchImages(initialLang);
+    function scrollToActiveTab(index) {
+        if (window.innerWidth <= 992 && tabsContainer) {
+            const activeCard = tabItems[index];
+            const containerWidth = tabsContainer.offsetWidth;
+            const cardOffset = activeCard.offsetLeft;
+            const cardWidth = activeCard.offsetWidth;
+            const scrollPosition = cardOffset - (containerWidth / 2) + (cardWidth / 2);
+            tabsContainer.scrollTo({ left: scrollPosition, behavior: 'smooth' });
+        }
+    }
+
+    // Click handler
+    tabItems.forEach((tab, index) => {
+        tab.addEventListener('click', () => {
+            tabItems.forEach(t => t.classList.remove('active'));
+            tab.classList.add('active');
+            updateDisplayImage(index);
+            scrollToActiveTab(index);
+        });
     });
-    
+
+    // Auto-rotate مع تحديث اللغة
+    let activeTab = 0;
+    const autoRotate = setInterval(() => {
+        tabItems[activeTab].classList.remove('active');
+        activeTab = (activeTab + 1) % tabItems.length;
+        tabItems[activeTab].classList.add('active');
+        
+        updateDisplayImage(activeTab);
+        scrollToActiveTab(activeTab);
+    }, 4000);
+
+    // تحديث عند تغيير اللغة
+    window.addEventListener('languageChanged', () => {
+        updateAllLangImages();
+        updateDisplayImage(activeTab);   // مهم: تحديث الصورة الكبيرة فورًا
+    });
+
+    // أول تحميل + إعادة تحديث بعد نص ثانية (للحالات اللي اللغة بتتغير بعد الـ load)
+    updateAllLangImages();
+    updateDisplayImage(0);
+
+    setTimeout(() => {
+        updateAllLangImages();
+        updateDisplayImage(activeTab);
+    }, 800);
+});
 </script>
 <!-- navbar & footer scripts -->
 <script src="/global/circles-solutions/circles-solutions.js"></script>
-    <script src="/english-script.js"></script>
-    </body>
+     <script src="/footer/footer.js"></script>
+<script src="/navbar/navbar.js"></script>
+<script src="/english-script.js"></script>
+</body>
 </html>

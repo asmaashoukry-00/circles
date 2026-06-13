@@ -399,7 +399,7 @@ html[dir="ltr"] .service-row p  {
 }
 html[lang="en"] .service-row {
     direction: ltr !important; /* Force standard layout direction */
-    grid-template-columns: 1fr 1fr !important; /* Balanced layout for English text */
+     grid-template-columns: .9fr 1.1fr !important ;
     gap: 60px;
 }
 
@@ -415,7 +415,7 @@ html[lang="en"] .service-row .service-image {
 
 /* --- Reverse Row Fix for English --- */
 html[lang="en"] .service-row.reverse {
-    grid-template-columns: 1fr 1fr !important;
+      grid-template-columns: 1.1fr .9fr !important ;
 }
 
 html[lang="en"] .service-row.reverse .service-content {
