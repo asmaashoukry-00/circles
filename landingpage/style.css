@@ -188,76 +188,143 @@ body {
 /* ----------------------------------------------------------- */
 
 .logos-showcase {
-    background: #ffffff;
-    padding: 80px 0;
-    border-top: 1px solid #f1f5f9;
-    width: 100%;
-    position: relative;
-    z-index: 50;
+  padding: 40px 16px;
+  background-color: #f8fafc;
+  overflow: hidden;
+  margin-bottom: 60px;
+}
+
+.logos-showcase .container {
+  max-width: 1280px;
+  margin: 0 auto;
 }
 
 .logos-title {
-    text-align: center;
-    opacity: 0.8;
-    font-size: 22px !important; 
-    font-weight: 800;
-    color: #1e293b;
-    margin-bottom: 40px;
+  font-size: 1.875rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #1e1b4b;
+  line-height: 1.4;
 }
 
+/* .logos-title {
+  font-size: 1.675rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #323233;
+  line-height: 1.4;
+} */
+
 .marquee-wrapper {
-    position: relative;
-    overflow: hidden;
-    white-space: nowrap;
-    display: flex;
+  position: relative;
+  overflow: hidden;
+  padding: 16px 0;
+  display: flex;
+  width: 100%;
 }
 
 .fade-edge {
-    position: absolute;
-    top: 0;
-    z-index: 2;
-    width: 150px;
-    height: 100%;
-    pointer-events: none;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 120px;
+  z-index: 2;
+  pointer-events: none;
 }
-.fade-edge.left { left: 0; background: linear-gradient(to right, white, transparent); }
-.fade-edge.right { right: 0; background: linear-gradient(to left, white, transparent); }
+
+.fade-edge.left {
+  left: 0;
+  background: linear-gradient(to right, #f8fafc 0%, rgba(248, 250, 252, 0) 100%);
+}
+
+.fade-edge.right {
+  right: 0;
+  background: linear-gradient(to left, #f8fafc 0%, rgba(248, 250, 252, 0) 100%);
+}
 
 .marquee-content {
-    display: flex;
-    gap: 100px;
-    animation: scroll-left 30s linear infinite;
-    min-width: 100%;
-}
-
-.logo-item {
-    flex-shrink: 0;
-    display: flex;
-    align-items: center;
-}
-
-@keyframes scroll-left {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(50%); } 
+  display: flex;
+  gap: 24px;
+  width: max-content;
+  animation: slideMarquee 35s linear infinite;
 }
 
 .marquee-wrapper:hover .marquee-content {
-    animation-play-state: paused;
+  animation-play-state: paused;
+}
+
+.logo-item {
+  flex-shrink: 0;
+  width: 250px;
+  height: 150px;
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  border-radius: 16px;
+  box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.05);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.logo-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
 }
 
 .logo-item img {
-    height: 65px !important; 
-    width: auto;
-    filter: grayscale(1);
-    opacity: 0.6;
-    transition: 0.3s;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  filter: grayscale(100%);
+  opacity: 0.9;
+  transition: filter 0.3s ease, opacity 0.3s ease;
 }
 
 .logo-item:hover img {
-    filter: grayscale(0);
-    opacity: 1;
+  filter: grayscale(0%);
+  opacity: 1;
 }
 
+@keyframes slideMarquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+html[dir="rtl"] .marquee-content {
+  animation: slideMarqueeRTL 35s linear infinite;
+}
+
+@keyframes slideMarqueeRTL {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(50%);
+  }
+}
+
+@media (max-width: 768px) {
+  .logos-title {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  .logo-item {
+    width: 190px;
+    height: 130px;
+    padding: 16px;
+  }
+  .fade-edge {
+    width: 60px;
+  }
+}
 /* ----------------------------------------------------------- */
 /* CIRCLES SOLUTIONS */
 /* ----------------------------------------------------------- */
