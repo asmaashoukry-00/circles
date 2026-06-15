@@ -18,6 +18,7 @@
  <link rel="stylesheet" href="/light-mode.css">
     <!-- Navbar -->
     <link rel="stylesheet" href="/navbar/navbar.css" />
+    <link rel="stylesheet" href="/footer/footer.css" />
     <div id="navbar-placeholder"></div>
 </head>
 <body class="var-partners-page">
@@ -30,7 +31,7 @@
     <main class="main-wrapper hero-wrapper">
         <div class="content-container">
             
-            <div class="contact-master-card hero-card">   <!-- نفس الكارد الفخمة -->
+            <div class="contact-master-card hero-card">   
                 
                 <div class="contact-header">
                     <span class="ultra-label">
@@ -87,7 +88,7 @@
             </div>
 
             <div class="stat-item-luxury">
-                <div class="stat-number">مفتوح</div>
+                <div class=" stat-text-number">مفتوح</div>
                 <div class="stat-text">
                     <span class="lang-key">انضم الآن</span>
                 </div>
@@ -253,97 +254,371 @@
 </section>
 <!-- ====================== PARTNERS DIRECTORY ====================== -->
 <section id="partners" class="partners-section">
-    <div class="partners-container">
-        
-        <div class="section-header">
-            <span class="ultra-label">دليل الشركاء</span>
-            <h2 class="section-title">شركاؤنا المعتمدون</h2>
-        </div>
-
-        <div class="filter-tabs">
-            <button class="filter-tab active" onclick="filterPartners('all', this)">الكل</button>
-            <button class="filter-tab" onclick="filterPartners('gold', this)">Gold</button>
-            <button class="filter-tab" onclick="filterPartners('silver', this)">Silver</button>
-        </div>
-
-        <div class="partners-grid" id="partners-grid">
-
-            <!-- CTA Card -->
-            <div class="partner-card-luxury cta-card" data-tier="cta">
-                <div class="cta-inner">
-                    <div class="globe-icon">🌍</div>
-                    <h3>منطقتك غير مغطاة بعد</h3>
-                    <p>كن أول شريك معتمد لسيركلز سوفت في منطقتك واستفد من الأولوية الجغرافية وعمولات التأسيس.</p>
-                    <a href="#apply" class="btn btn-primary">سجّل شركتك الآن</a>
-                </div>
-            </div>
-
-            <!-- Partner NG - Gold -->
-            <div class="partner-card-luxury" data-tier="gold">
-                <div class="partner-header">
-                    <div class="partner-logo" style="background:#6366F1; color:white;">NG</div>
-                    <span class="tier-badge gold">Gold</span>
-                </div>
-                <h3 class="partner-name">النخبة للتقنية</h3>
-                <p class="partner-location">📍 الرياض، السعودية</p>
-                <p class="partner-desc">متخصصون في تطبيق حلول ERP لمختلف القطاعات. خبرة واسعة في تقديم الحلول التقنية للمنطقة الوسطى.</p>
-                <div class="partner-tags">
-                    <span class="tag">ERP</span>
-                    <span class="tag">الموارد البشرية</span>
-                    <span class="tag">المالية</span>
-                </div>
-                <a href="mailto:info@nokbha-tech.com" class="contact-link">info@nokbha-tech.com</a>
-            </div>
-
-            <!-- Partner RS - Silver -->
-            <div class="partner-card-luxury" data-tier="silver">
-                <div class="partner-header">
-                    <div class="partner-logo" style="background:#10B981; color:white;">RS</div>
-                    <span class="tier-badge silver">Silver</span>
-                </div>
-                <h3 class="partner-name">رؤى للحلول</h3>
-                <p class="partner-location">📍 جدة، السعودية</p>
-                <p class="partner-desc">شريك معتمد متخصص في قطاع الخدمات والتجزئة. فريق مدرب على تطبيق منظومة الموارد البشرية.</p>
-                <div class="partner-tags">
-                    <span class="tag">HR</span>
-                    <span class="tag">التجزئة</span>
-                    <span class="tag">الخدمات</span>
-                </div>
-                <a href="mailto:partners@ruya-solutions.sa" class="contact-link">partners@ruya-solutions.sa</a>
-            </div>
-
-            <!-- Partner QT - Silver -->
-            <div class="partner-card-luxury" data-tier="silver">
-                <div class="partner-header">
-                    <div class="partner-logo" style="background:#F59E0B; color:white;">QT</div>
-                    <span class="tier-badge silver">Silver</span>
-                </div>
-                <h3 class="partner-name">قمة للتكنولوجيا</h3>
-                <p class="partner-location">📍 الدمام، السعودية</p>
-                <p class="partner-desc">خبرة في القطاع الصناعي والمقاولات. يقدمون خدمات التطبيق والتدريب في المنطقة الشرقية.</p>
-                <div class="partner-tags">
-                    <span class="tag">الصناعة</span>
-                    <span class="tag">المقاولات</span>
-                    <span class="tag">المخزون</span>
-                </div>
-                <a href="mailto:sales@qimma-tech.com" class="contact-link">sales@qimma-tech.com</a>
-            </div>
-
-        </div>
+  <div class="tiers-container">
+    
+    <!-- Section Header aligned with previous design -->
+    <div class="partners-header">
+      <div class="header-text-side">
+        <div class="ultra-label">دليل الشركاء</div>
+        <h2 class="section-title">شركاؤنا المعتمدون</h2>
+      </div>
+      <div class="filter-tabs">
+        <button class="filter-tab active" onclick="filterPartners('all', this)">الكل</button>
+        <button class="filter-tab" onclick="filterPartners('gold', this)">Gold</button>
+        <button class="filter-tab" onclick="filterPartners('silver', this)">Silver</button>
+      </div>
     </div>
+
+    <!-- Partners Grid -->
+    <div class="partners-grid-layout" id="partners-grid">
+
+      <!-- Partner Card 1: Gold -->
+      <div class="partner-card-luxury" data-tier="gold">
+        <div class="partner-top-box">
+          <div class="partner-logo-preview bg-gold-subtle">NG</div>
+          <div class="partner-meta-info">
+            <h3>النخبة للتقنية</h3>
+            <div class="partner-location-tag">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+              <span>الرياض، السعودية</span>
+            </div>
+          </div>
+        </div>
+        <span class="partner-tier-badge gold-badge">🥇 Gold</span>
+        <p class="partner-description-text">متخصصون في تطبيق حلول ERP لمختلف القطاعات. خبرة واسعة في تقديم الحلول التقنية للمنشآت بالمنطقة الوسطى.</p>
+        
+        <div class="partner-tags-wrapper">
+          <span class="partner-single-tag">ERP</span>
+          <span class="partner-single-tag">الموارد البشرية</span>
+          <span class="partner-single-tag">المالية</span>
+        </div>
+        
+        <div class="partner-action-footer">
+          <a href="mailto:info@nokbha-tech.com" class="partner-email-link">info@nokbha-tech.com</a>
+          <a href="mailto:info@nokbha-tech.com" class="partner-connect-btn">تواصل</a>
+        </div>
+      </div>
+
+      <!-- Partner Card 2: Silver -->
+      <div class="partner-card-luxury" data-tier="silver">
+        <div class="partner-top-box">
+          <div class="partner-logo-preview bg-silver-subtle">RS</div>
+          <div class="partner-meta-info">
+            <h3>رؤى للحلول</h3>
+            <div class="partner-location-tag">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+              <span>جدة، السعودية</span>
+            </div>
+          </div>
+        </div>
+        <span class="partner-tier-badge silver-badge">🥈 Silver</span>
+        <p class="partner-description-text">شريك معتمد متخصص في قطاع الخدمات والتجزئة. فريق مدرب على تطبيق منظومة الموارد البشرية والرواتب بكفاءة عالية.</p>
+        
+        <div class="partner-tags-wrapper">
+          <span class="partner-single-tag">التجزئة</span>
+          <span class="partner-single-tag">الخدمات</span>
+          <span class="partner-single-tag">HR</span>
+        </div>
+        
+        <div class="partner-action-footer">
+          <a href="mailto:partners@ruya-solutions.sa" class="partner-email-link">partners@ruya-solutions.sa</a>
+          <a href="mailto:partners@ruya-solutions.sa" class="partner-connect-btn">تواصل</a>
+        </div>
+      </div>
+
+      <!-- Partner Card 3: Silver -->
+      <div class="partner-card-luxury" data-tier="silver">
+        <div class="partner-top-box">
+          <div class="partner-logo-preview bg-amber-subtle">QT</div>
+          <div class="partner-meta-info">
+            <h3>قمة للتكنولوجيا</h3>
+            <div class="partner-location-tag">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+              <span>الدمام، السعودية</span>
+            </div>
+          </div>
+        </div>
+        <span class="partner-tier-badge silver-badge">🥈 Silver</span>
+        <p class="partner-description-text">خبرة في القطاع الصناعي والمقاولات. يقدمون خدمات التطبيق والتدريب وما بعد البيع لعملاء المنطقة الشرقية.</p>
+        
+        <div class="partner-tags-wrapper">
+          <span class="partner-single-tag">الصناعة</span>
+          <span class="partner-single-tag">المقاولات</span>
+          <span class="partner-single-tag">المخزون</span>
+        </div>
+        
+        <div class="partner-action-footer">
+          <a href="mailto:sales@qimma-tech.com" class="partner-email-link">sales@qimma-tech.com</a>
+          <a href="mailto:sales@qimma-tech.com" class="partner-connect-btn">تواصل</a>
+        </div>
+      </div>
+
+      <!-- Partner CTA Card (Out-of-the-box style) -->
+      <div class="partner-card-luxury cta-dashed-card" data-tier="cta">
+        <div class="cta-icon-globe animate-pulse">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#4F46E5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+        </div>
+        <h3 class="cta-title">منطقتك غير مغطاة بعد؟</h3>
+        <p class="cta-description">كن أول شريك معتمد لسيركلز سوفت في منطقتك واستفد من الأولوية الجغرافية وعمولات التأسيس الاستثنائية.</p>
+        <a href="#apply" class="btn btn-primary w-full justify-center">سجّل شركتك الآن</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+<!-- ----------- -->
+<section id="apply" class="apply-section">
+  <div class="container">
+    <div class="apply-wrapper">
+      
+      <div class="apply-info-side">
+        <div class="section-tag">انضم إلينا</div>
+        <h2 class="section-title">كيف تصبح شريكاً معتمداً؟</h2>
+        <p class="section-desc">العملية بسيطة وسريعة — أرسل طلبك وسيتواصل معك فريقنا خلال 48 ساعة لمناقشة التفاصيل واختيار المستوى المناسب.</p>
+        
+        <ul class="apply-steps">
+          <li>
+            <div class="step-num">1</div>
+            <div class="step-text">
+              <h4>أرسل طلب الانضمام</h4>
+              <p>أملأ النموذج المجاور بمعلومات شركتك وتخصصك.</p>
+            </div>
+          </li>
+          <li>
+            <div class="step-num">2</div>
+            <div class="step-text">
+              <h4>مقابلة تعريفية</h4>
+              <p>سيتواصل معك مدير الشراكات خلال 48 ساعة لمناقشة الفرصة.</p>
+            </div>
+          </li>
+          <li>
+            <div class="step-num">3</div>
+            <div class="step-text">
+              <h4>التوقيع والتفعيل</h4>
+              <p>نوقع اتفاقية الشراكة وتحصل على وصول فوري لبوابة الشريك.</p>
+            </div>
+          </li>
+          <li>
+            <div class="step-num">4</div>
+            <div class="step-text">
+              <h4>البدء بالبيع</h4>
+              <p>تدريب سريع، مواد جاهزة، ودعم كامل — ابدأ أولى صفقاتك.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <div class="apply-form-side">
+        <div class="apply-form-card" id="apply-form-container">
+          <div class="form-card-header">
+            <h3>طلب انضمام شريك جديد</h3>
+            <p>جميع الحقول المحددة بـ <span class="req">*</span> مطلوبة</p>
+          </div>
+          
+          <form id="partner-form" onsubmit="submitForm(event)">
+            <div class="form-row">
+              <div class="form-group">
+                <label><span class="req">*</span> اسم الشركة</label>
+                <input type="text" placeholder="شركة التقنية المتقدمة" required>
+              </div>
+              <div class="form-group">
+                <label><span class="req">*</span> اسم مقدم الطلب</label>
+                <input type="text" placeholder="محمد الأحمد" required>
+              </div>
+            </div>
+            
+            <div class="form-row">
+              <div class="form-group">
+                <label><span class="req">*</span> البريد الإلكتروني</label>
+                <input type="email" placeholder="info@company.com" required>
+              </div>
+              <div class="form-group">
+                <label><span class="req">*</span> رقم الجوال</label>
+                <input type="tel" placeholder="+966 5X XXX XXXX" required>
+              </div>
+            </div>
+            
+            <div class="form-row">
+              <div class="form-group">
+                <label><span class="req">*</span> البلد والمدينة</label>
+                <input type="text" placeholder="السعودية، الرياض" required>
+              </div>
+              <div class="form-group">
+                <label>المستوى المستهدف</label>
+                <select>
+                  <option value="">اختر المستوى</option>
+                  <option>Silver</option>
+                  <option>Gold</option>
+                  <option>Platinum</option>
+                </select>
+              </div>
+            </div>
+            
+            <div class="form-group full-width">
+              <label><span class="req">*</span> القطاعات التي تخدمها</label>
+              <input type="text" placeholder="مثل: الصحة، التجزئة، التعليم..." required>
+            </div>
+            
+            <div class="form-group full-width">
+              <label>نبذة عن شركتك وخبرتك التقنية</label>
+              <textarea placeholder="أخبرنا عن نشاط شركتك، عدد العملاء الحاليين، وأي منتجات برمجية مشابهة تبيعها حالياً..."></textarea>
+            </div>
+            
+            <button type="submit" class="form-submit-btn">إرسال طلب الانضمام ←</button>
+            <div class="form-card-note">بالإرسال توافق على شروط برنامج الشركاء. سنرد عليك خلال 48 ساعة.</div>
+          </form>
+
+          <div class="success-box-inside" id="success-msg" style="display: none;">
+            <div class="success-icon">✅</div>
+            <h3>تم استلام طلبك بنجاح!</h3>
+            <p>شكراً لاهتمامك بالانضمام إلى شبكة شركاء سيركلز سوفت.<br>سيتواصل معك فريقنا على البريد الإلكتروني المُدخل خلال 48 ساعة.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+<!-- ---- -->
+<section class="faq-section">
+  <div class="container">
+    <div class="faq-header">
+      <div class="section-tag">أسئلة شائعة</div>
+      <h2 class="section-title">كل ما تريد معرفته عن الشراكة</h2>
+    </div>
+    
+    <div class="faq-grid" id="faq-grid">
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          <span>هل التدريب مدفوع؟</span>
+          <span class="arrow">▾</span>
+        </div>
+        <div class="faq-a">
+          <p>التدريب الأساسي مجاني لجميع الشركاء. البرامج التدريبية المتقدمة والمتخصصة متاحة مجاناً لشركاء Gold وPlatinum.</p>
+        </div>
+      </div>
+      
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          <span>كيف تُحسب وتُصرف العمولات؟</span>
+          <span class="arrow">▾</span>
+        </div>
+        <div class="faq-a">
+          <p>تُحسب العمولات على قيمة الاشتراك السنوي لكل صفقة تغلقها. تُصرف شهرياً عبر تحويل بنكي بعد التحقق من الفواتير.</p>
+        </div>
+      </div>
+      
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          <span>هل هناك حد أدنى لحجم الأعمال؟</span>
+          <span class="arrow">▾</span>
+        </div>
+        <div class="faq-a">
+          <p>لا يوجد حد أدنى لمستوى Silver. مستوى Gold يتطلب إغلاق 5 صفقات سنوياً، وPlatinum يتطلب 15 صفقة أو أكثر أو حجم أعمال معين.</p>
+        </div>
+      </div>
+      
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          <span>هل يمكنني البيع خارج بلدي؟</span>
+          <span class="arrow">▾</span>
+        </div>
+        <div class="faq-a">
+          <p>نعم، ما لم يكن الإقليم مغطى باتفاقية حصرية مع شريك آخر. نحن ندير التغطية الجغرافية بشكل عادل لضمان عدم التعارض.</p>
+        </div>
+      </div>
+      
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          <span>ما المدة اللازمة للحصول على الموافقة؟</span>
+          <span class="arrow">▾</span>
+        </div>
+        <div class="faq-a">
+          <p>بعد استلام الطلب، نتواصل معك خلال 48 ساعة. عملية الموافقة الكاملة والتوقيع تستغرق عادةً من 5 إلى 7 أيام عمل.</p>
+        </div>
+      </div>
+      
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          <span>هل يمكن الترقية من Silver إلى Gold؟</span>
+          <span class="arrow">▾</span>
+        </div>
+        <div class="faq-a">
+          <p>بالطبع. يتم تقييم مستوى الشريك كل 6 أشهر، وترقى تلقائياً عند تحقيق معايير المستوى التالي مع مزايا محسّنة فورية.</p>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 
+
+<div id="footer-placeholder"></div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script>
-        gsap.from(".hero-card", { 
-            duration: 1.4, 
-            y: 60, 
-            opacity: 0, 
-            ease: "expo.out" 
-        });
-    </script>
+  <script>
+  function filterPartners(tier, btn) {
+    document.querySelectorAll('.filter-tab').forEach(t => t.classList.remove('active'));
+    btn.classList.add('active');
+    document.querySelectorAll('.partner-card').forEach(card => {
+      if (card.dataset.tier === 'cta') {
+        card.style.display = 'flex';
+      } else if (tier === 'all' || card.dataset.tier === tier) {
+        card.style.display = 'block';
+      } else {
+        card.style.display = 'none';
+      }
+    });
+  }
+
+  function toggleFaq(el) {
+    const answer = el.nextElementSibling;
+    const isOpen = answer.classList.contains('open');
+    document.querySelectorAll('.faq-a').forEach(a => a.classList.remove('open'));
+    document.querySelectorAll('.faq-q').forEach(q => q.classList.remove('open'));
+    if (!isOpen) {
+      answer.classList.add('open');
+      el.classList.add('open');
+    }
+  }
+
+  function submitForm(e) {
+    e.preventDefault();
+    const form = document.getElementById('partner-form');
+    const success = document.getElementById('success-msg');
+    const emailInput = form.querySelector('input[type="email"]');
+    const email = emailInput ? emailInput.value : 'partners@circlessoft.com';
+
+    const subject = encodeURIComponent('طلب انضمام شريك جديد - سيركلز سوفت');
+    const companyInput = form.querySelectorAll('input')[0];
+    const nameInput = form.querySelectorAll('input')[1];
+    const phoneInput = form.querySelectorAll('input[type="tel"]')[0];
+    const cityInput = form.querySelectorAll('input')[3];
+    const tierSelect = form.querySelector('select');
+    const sectorsInput = form.querySelectorAll('input')[4];
+    const notes = form.querySelector('textarea');
+
+    const body = encodeURIComponent(
+      `طلب انضمام شريك جديد\n` +
+      `================================\n` +
+      `اسم الشركة: ${companyInput?.value || ''}\n` +
+      `اسم مقدم الطلب: ${nameInput?.value || ''}\n` +
+      `البريد الإلكتروني: ${email}\n` +
+      `رقم الجوال: ${phoneInput?.value || ''}\n` +
+      `البلد والمدينة: ${cityInput?.value || ''}\n` +
+      `المستوى المستهدف: ${tierSelect?.value || ''}\n` +
+      `القطاعات: ${sectorsInput?.value || ''}\n\n` +
+      `نبذة عن الشركة:\n${notes?.value || ''}`
+    );
+
+    window.location.href = `mailto:partners@circlessoft.com?subject=${subject}&body=${body}`;
+
+    form.style.display = 'none';
+    success.style.display = 'block';
+  }
+  
+</script>
 
     <script src="/navbar/navbar.js"></script>
+    <script src="/footer/footer.js"></script>
     <script src="/english-script.js"></script>
 </body>
 </html>
