@@ -198,13 +198,14 @@ ul {
   margin-bottom: 20px;
   padding-top: 40px;
 }
-
 .gradient-text {
-  background: linear-gradient(90deg, #3a3a3a, #555555);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: #606060;
   font-weight: 600;
 
+  /* إلغاء خواص التدرج القديمة تماماً ليعمل اللون العادي */
+  background: none !important;
+  -webkit-background-clip: initial !important;
+  -webkit-text-fill-color: initial !important;
 }
 
 .hero-subtitle {
