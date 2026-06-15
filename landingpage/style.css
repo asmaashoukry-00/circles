@@ -188,15 +188,53 @@ body {
 /* ----------------------------------------------------------- */
 
 .logos-showcase {
-  padding: 40px 16px;
-  background-color: #f8fafc;
+  position: relative;
+  padding: 100px 16px 100px 16px;
+  background-color: #f8f8f8;
   overflow: hidden;
-  margin-bottom: 60px;
+  margin-bottom: 30px;
 }
 
+.wave-divider-top,
+.wave-divider-bottom {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 140px;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.wave-divider-top {
+  top: 0;
+}
+
+.wave-divider-bottom {
+  bottom: 0;
+}
+
+.wave-divider-top svg,
+.wave-divider-bottom svg {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+@media (max-width: 768px) {
+  .logos-showcase {
+    padding: 100px 16px;
+  }
+  .wave-divider-top,
+  .wave-divider-bottom {
+    height: 70px;
+  }
+}
 .logos-showcase .container {
   max-width: 1280px;
   margin: 0 auto;
+   position: relative;
+  z-index: 3;
 }
 
 .logos-title {
@@ -310,7 +348,11 @@ html[dir="rtl"] .marquee-content {
     transform: translateX(50%);
   }
 }
-
+@media (hover: none) or (max-width: 768px) {
+  .marquee-wrapper:hover .marquee-content {
+    animation-play-state: running !important;
+  }
+}
 @media (max-width: 768px) {
   .logos-title {
     font-size: 1.5rem;
@@ -931,7 +973,7 @@ html[dir="ltr"] .icon-flip {
         text-align: center;
     }
     .card-title-black { font-size: 26px; }
-    .card-visual-box img { max-width: 400px; }
+    .card-visual-box img { max-width: 300px; }
     .stats-wrapper { grid-template-columns: repeat(2, 1fr); }
     .stats-title { font-size: 32px; }
 }
