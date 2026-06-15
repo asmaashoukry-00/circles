@@ -150,10 +150,14 @@ ul {
 }
 
 .gradient-text {
-  background: linear-gradient(90deg, #3a3a3a, #555555);
+background: linear-gradient(90deg, #3a3a3a, #555555);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-weight: 600;
+  
+  display: inline-block;
+  padding: 4px 0; 
+  margin-top: -4px;
 
 }
 
