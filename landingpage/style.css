@@ -1030,6 +1030,7 @@ html[dir="ltr"] .icon-flip {
         bottom: -75px;
         left: -6px;
         right: auto;
+        display: none !important; 
     }
 
     .blue-box .arrow-b {
@@ -1078,6 +1079,7 @@ html[dir="ltr"] .yellow-box {
     top: -75px; 
     left: -190px; 
     right: auto;
+    display: none !important;
 }
 
 html[dir="ltr"] .arrow-y {
@@ -1089,6 +1091,7 @@ html[dir="ltr"] .blue-box {
     bottom: -15px; 
     right: -120px; 
     left: auto;
+    display: none !important;
 }
 
 html[dir="ltr"] .arrow-b {
