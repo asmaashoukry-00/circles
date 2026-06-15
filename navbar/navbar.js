@@ -40,7 +40,7 @@ const megaMenuData = {
     titleEn: "Sales & Inventory",
     links: [
       { url: "/services/operations/sales/sales.html", ar: "إدارة المبيعات", en: "Sales Management" },
-      { url: "/services/operations/procurement/procurement.html", ar: "إدارة المشتريات", en: "Procurement Management" },
+      { url: "/services/operations/purchases/purchases.html", ar: "إدارة المشتريات", en: "Procurement Management" },
       { url: "/services/operations/inventory/inventory.html", ar: "إدارة المستودعات والمخزون", en: "Warehouse & Inventory" }
     ]
   }
