@@ -62,19 +62,7 @@ body.var-partners-page {
     margin: 0 auto;
 }
 
-/* Ultra Label */
-.ultra-label {
-    font-size: 10px;
-    font-weight: 600;
-    color: #424242;
-    background: rgba(79, 70, 229, 0.07);
-    padding: 8px 22px;
-    border-radius: 100px;
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    margin-bottom: 20px;
-}
+
 
 /* Main Title */
 .contact-main-title {
@@ -480,16 +468,15 @@ body.var-partners-page {
 }
 
 .ultra-label {
-    font-size: 14px;
+    font-size: 12px;
     font-weight: 700;
-    color: #4338ca;
-    background: rgba(79, 70, 229, 0.1);
-    padding: 10px 26px;
-    border-radius: 9999px;
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    margin-bottom: 20px;
+    color: #424242;
+    /* color: #5856D6; */
+    background: rgba(79, 70, 229, 0.06);
+    padding: 6px 16px;
+    border-radius: 100px;
+    display: inline-block;
+    margin-bottom: 15px;
 }
 
 .section-title {
@@ -748,11 +735,13 @@ body.var-partners-page {
     font-weight: 700;
     padding: 8px 20px;
     border-radius: 100px;
-    transition: background 0.3s ease;
+   transition: all 0.3s ease;
 }
 
 .partner-connect-btn:hover {
-    background: #4F46E5;
+    /* background: #4F46E5; */
+     transform: translatey(-4px);
+
 }
 
 /* ====================== THE CTA DASHED CARD ====================== */
@@ -819,21 +808,20 @@ body.var-partners-page {
 /* ======================== FIXED SPLIT-GRID APPLY SECTION ======================== */
 .apply-section {
     padding: 90px 0;
-    background-color: #f8fafc; /* خلفية رمادية خفيفة لإبراز الكارد الأبيض */
+    background-color: #f8fafc; 
     direction: rtl;
 }
 
-/* تقسيم السيكشن لعمودين متوازيين يمين وشمال */
+
 .apply-wrapper {
     display: grid;
-    grid-template-columns: 1.15fr 1.35fr; 
-    gap: 50px;
+    grid-template-columns: .7fr 1fr; 
+    gap: 30px;
     align-items: start;
     max-width: 1200px;
     margin: 0 auto;
 }
 
-/* الجانب الأيمن: العناوين وقائمة الخطوات المصغرة */
 .apply-info-side {
     text-align: right;
     padding-top: 15px;
@@ -983,7 +971,7 @@ body.var-partners-page {
 
 /* زر الارسال الدائري الفاخر */
 .form-submit-btn {
-    background: #4F46E5;
+    background: #101010;
     color: #ffffff;
     width: 100%;
     padding: 14px;
@@ -997,8 +985,8 @@ body.var-partners-page {
 }
 
 .form-submit-btn:hover {
-    background: #3b33c7;
-    transform: translateY(-1px);
+    /* background: #3b33c7; */
+    transform: translateY(-4px);
 }
 
 .form-card-note {
